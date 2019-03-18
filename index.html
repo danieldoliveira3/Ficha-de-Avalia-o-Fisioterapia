@@ -7,8 +7,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
   <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="Garlic.js-1.4.2/garlic.js"></script>
+  <!--bootstrap-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-------------->
   <link href="tema.css" rel="stylesheet">
   <!---começo dos scripts usados-->
   <script src="scripts/desabilitarSubmit.js"></script> 
@@ -42,20 +47,36 @@
   <div id="tudo">
 
     <header>
+      
       <img src="img/logo.png" alt="logo LACAF">
-        <h1>Laboratório de Cinesiologia e 
+        <h1>Laboratório de Cinesiologia <br>e 
           Avaliação Funcional<br>
           LACAF - UFPE</h1>
       
-      
+          <div class="dropdown" style="display:none">
+              <a class="btn button btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                MENU
+              </a>
+            
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="/index.html">Ficha de Avaliação</a>
+                <a class="dropdown-item" href="ajuda.html">Ajuda</a>
+                <a class="dropdown-item" href="#">Referências</a>
+                <a class="dropdown-item" href="https://instagram.com/propeslacaf" target="_blank" style="color: rgb(1, 0, 53); text-align: center; font-size:26px;"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div><br>
+
       <nav class="none">
+
+          
         <ul>
             <li class="pagina-atual"><a href="index.html">Ficha de Avaliação</a></li>
           <li><a href="ajuda.html">Ajuda</a></li>
           <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSKN2WuRaUuHQsk460Lr1dQdnDSm2NxsEB-KoygrsjYYxIz5mklRQbYwIObsIDXZ6ltJIs5pWrKsRZ_/pub?output=xlsx"
               target="_blank" title="Planilha atualizada">Planilha</a></li>
+              <li><a href="#">Referências</a></li>
 
-              <li class="redes" style="background:transparent; font-size:40px; "><a href="https://instagram.com/propeslacaf" tagert="_blank" style="color: rgb(11, 0, 112)"><i class="fab fa-instagram"></i></a></li>
+              <li class="redes" style="background:transparent; font-size:40px; "><a href="https://instagram.com/propeslacaf" target="_blank" style="color: rgb(1, 0, 53)"><i class="fab fa-instagram"></i></a></li>
         </ul>
 
       </nav>
@@ -700,7 +721,67 @@ Quanto tempo no total você gasta sentado durante em um <b style="font-size:18px
 
 
 
+<article>
+    <h2 class="article-title">DOBRAS CUTÂNEAS (mm)</h2>
+    <br>
+    <div class="form-row justify-content-center align-items-center">
+    <div class="col">
 
+      <label for="tricipital">TRICIPITAL</label>
+    <input type="number" class="gordura" id="tricipital" name="tricipital"><br>
+    </div>
+
+    <div class="col">
+
+      <label for="subescapular">SUBESCAPULAR</label>
+      <input type="number" class="gordura" id="subescapular" name="subescapular"><br>
+
+    </div></div>
+    
+    <div class="form-row justify-content-center align-items-center">
+
+    <div class="col"><br>
+      <label for="axilar media">AXILAR MÉDIA</label>
+    <input type="number" class="gordura" id="axilar" name="axilar media"><br><br>
+    </div>
+
+    <div class="col">
+      <label for="peitoral">PEITORAL</label>
+      <input type="number" class="gordura" id="peitoral" name="peitoral">
+
+    </div></div>
+
+    <div class="form-row justify-content-center align-items-center">
+    
+    <div class="col">
+      <label for="supra iliaca">SUPRA-ÍLIACA</label><br>
+      <input type="number" class="gordura" id="supra" name="supra iliaca"><br>
+      </div>
+    
+    <div class="col">
+      <label for="abdomen">ABDOMÊN</label><br>
+      <input type="number" class="gordura" id="abdomen" name="abdomen"><br>
+    </div></div>
+
+
+    <div class="form-row justify-content-center align-items-center">
+
+    <div class="col">
+        <br>
+        <label for="coxa">COXA</label>
+        <input type="number" class="gordura" id="coxadobra" name="coxa"><br><br>
+    </div>
+    
+    <div class="col">
+        <br>
+        <label for="perna">PERNA</label>
+        <input type="number" class="gordura"  id="pernaDobra" name="perna"><br><br>
+    </div></div>
+    <br><input type="text" readonly value="% Gordura:" class="resultado " data-destroy="true" >
+    <input type="text" readonly id="resultadodobra" class="resultado">
+   
+  </article>
+  
 
       <article>
           <h2 class="article-title">QUESTIONÁRIO DE TEGNER E LYSHOLM</h2>
@@ -806,67 +887,45 @@ Quanto tempo no total você gasta sentado durante em um <b style="font-size:18px
       </article>
       
       
-      
       <article>
-        <h2 class="article-title">DOBRAS CUTÂNEAS (mm)</h2>
-        <br>
-        <div class="form-row justify-content-center align-items-center">
-        <div class="col">
+          <h2 class="article-title">F.M.S.</h2>
+<br><br>
+          <h2 class="text-left">Y BALANCE TEST</h2>
 
-          <label for="tricipital">TRICIPITAL</label>
-        <input type="number" class="gordura" id="tricipital" name="tricipital"><br>
-        </div>
+          <br>
+          <label for="escoreFinalY">Escore Final do Teste</label>
+          <input type="number" name="Escore Y" id="escoreFinalY" step="0.001">
+<br><br><br>
+          <h2 class="text-left">STEP DOWN</h2><br>
+          <div class="form-row justify-content-center align-items-center">
+          <div class="col">
+          <label for="estrategiademms">Estratégia de mmss</label>
+          <input type="number" id="estrategiademms" step="0.001"><br><br></div>
+          <div class="col"> 
+          <label for="movtronco">Movimento de tronco</label>
+          <input type="number" id="movtronco" step="0.001"><br><br></div></div>
 
-        <div class="col">
+          <div class="form-row justify-content-center align-items-center">
+          <div class="col">
+          <label for="planoPelve">Plano da pelve</label>
+          <input type="number" id="planoPelve" step="0.001"><br><br></div>
+          <div class="col">
+          <label for="posJoelho">Posição do joelho</label>
+          <input type="number" id="posJoelho" step="0.001"><br><br></div></div>
 
-          <label for="subescapular">SUBESCAPULAR</label>
-          <input type="number" class="gordura" id="subescapular" name="subescapular"><br>
+          
+          
+          <label for="valgo2Dedo">Valgo- TAT até o segundo dedo</label>
+          <input type="number" id="valgo2Dedo" step="0.001"><br><br>
+          
+          <label for="manutencaoEmApoioUnipodal">Manutenção da postura em apoio unipodal: Oscilação do membro testado ou queda do step</label>
+          <input type="number" id="manutencaoEmApoioUnipodal" step="0.001">
 
-        </div></div>
         
-        <div class="form-row justify-content-center align-items-center">
+          </article>
 
-        <div class="col"><br>
-          <label for="axilar media">AXILAR MÉDIA</label>
-        <input type="number" class="gordura" id="axilar" name="axilar media"><br><br>
-        </div>
+          
 
-        <div class="col">
-          <label for="peitoral">PEITORAL</label>
-          <input type="number" class="gordura" id="peitoral" name="peitoral">
-
-        </div></div>
-
-        <div class="form-row justify-content-center align-items-center">
-        
-        <div class="col">
-          <label for="supra iliaca">SUPRA-ÍLIACA</label><br>
-          <input type="number" class="gordura" id="supra" name="supra iliaca"><br>
-          </div>
-        
-        <div class="col">
-          <label for="abdomen">ABDOMÊN</label><br>
-          <input type="number" class="gordura" id="abdomen" name="abdomen"><br>
-        </div></div>
-
-
-        <div class="form-row justify-content-center align-items-center">
-
-        <div class="col">
-            <br>
-            <label for="coxa">COXA</label>
-            <input type="number" class="gordura" id="coxadobra" name="coxa"><br><br>
-        </div>
-        
-        <div class="col">
-            <br>
-            <label for="perna">PERNA</label>
-            <input type="number" class="gordura"  id="pernaDobra" name="perna"><br><br>
-        </div></div>
-        <br><input type="text" readonly value="% Gordura:" class="resultado " data-destroy="true" >
-        <input type="text" readonly id="resultadodobra" class="resultado">
-       
-      </article>
 
 
     
@@ -895,13 +954,15 @@ Quanto tempo no total você gasta sentado durante em um <b style="font-size:18px
 
     </form>
   </section>
-<section id="referencias">
+<!---------------COMEÇO DA SESSAO REFERENCIAS
+  <section id="referencias">
 
 
- <article class="secao">
-   <div class="ficha-de-avaliacao"><h2>REFERÊNCIAS</h2></div>
-
+ <article class="sessao">
+   
+    <h2>REFERÊNCIAS</h2>
 <p>
+    
   <ul>
     <li></li>
     <li></li>
@@ -915,6 +976,7 @@ Quanto tempo no total você gasta sentado durante em um <b style="font-size:18px
 
 
 </section>
+FIM DA SESSAO REFERENCIAS-->
     <footer>
       <p>
         Feito por <a href="https://fb.com/dncoliveira" title="contrata a gente pfvr">Daniel Carvalho</a> e <a href="https://www.facebook.com/marcsonsanttos" title="contrata a gente pfvr">Marcson Santos</a><br>Graduandos

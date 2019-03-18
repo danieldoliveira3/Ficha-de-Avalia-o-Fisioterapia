@@ -80,11 +80,11 @@ header{
     padding-top:10px;
     height: 120px;
 
-    background: #fafafa;  
-    box-shadow: 1px 2px 10px  rgb(0, 0, 0, 0.3);
+    background: #fff;  
+    box-shadow: 1px 0.5px 10px  rgb(0, 0, 0, 0.2);
 }
 
-header nav{margin-left:100px; margin-top:10px;}
+header nav{margin-left:50px; margin-top:10px;}
 header nav ul{
     display: flex;
     flex-direction: row;
@@ -102,7 +102,7 @@ header nav a:hover{
 }
 header nav ul li{
     border:2px solid transparent;
-    background: rgb(11, 0, 112);
+    background: rgb(1, 0, 53);
     border-radius: 30px;
     padding: 7px;
     margin-right: 10px;
@@ -111,7 +111,7 @@ header nav ul li{
 
 header nav ul li:last-child{margin-right:0;}
 
-header h1 {margin-left:16px; padding:10px; font-weight: normal}
+header h1 {margin-left:16px; font-size: 20px; padding:10px; font-weight: normal}
 
 header img{width:100px;}
 .vermelho{
@@ -164,7 +164,7 @@ button{
     display: block;
     color:white;
     font-weight: bolder;
-    background:rgb(8, 0, 77);
+    background: rgb(1, 0, 53);
     padding:5px;
 }
 .button{
@@ -175,7 +175,7 @@ button{
     display: block;
     color:white !important;
     font-weight: bolder;
-    background:rgb(8, 0, 77);
+    background:rgb(1, 0, 53);
     padding:5px;
 }
 
@@ -287,8 +287,8 @@ footer{position: absolute;display: flex;justify-content: center; align-items: ce
     bottom:-170px;;
     min-height: 150px;
     max-height: auto;   
-    background:#fafafa;
-    box-shadow: 1px -2px 10px  rgb(0, 0, 0, 0.3);;
+    background:#fff;
+    box-shadow: 1px -2px 10px  rgb(0, 0, 0, 0.2);;
 }
 footer a{
     color:rgb(59, 59, 59);
@@ -311,7 +311,7 @@ footer p{
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-timing-function: 1s;
-    border: 3px solid rgb(11, 0, 112);
+    border: 3px solid rgb(1, 0, 53);
     transition-duration: 1s;
     animation-direction: alternate;    transition-property: all;
 
@@ -323,8 +323,8 @@ footer p{
 
 
 @keyframes paginaatual {
-    from {background: rgb(11, 0, 112)}
-    to {background: rgb(11, 0, 112); opacity: 0.6}
+    from {background: rgb(1, 0, 53)}
+    to {background: rgb(1, 0, 53); opacity: 0.6}
 
     
   }
@@ -547,24 +547,25 @@ footer{
 }
 
 @media screen and (max-width: 425px) {/*para tablets*/
+    header h1{display:block};
+    header img{width:49%};
     
     article.inicio{width: 100%}
-    article p{font-size:13.5px;;}
+    article p{font-size:13.5px;}
     .titulo{font-size:12px;
     margin-top:-9px;margin-left: -12px}
-.logo {width: 100px; margin-left: -12px; margin-top:-30px;}
-.logo img{width: 120px;}
-    header{height:250px; flex-direction: column;}
+
     .ajeita-botao{width:100%; margin-bottom:10px;}
     .responsive-button{width:100%;}
     .resultado{width:100% !important;}
 
-    header{flex-direction:row; flex-wrap: wrap; height: auto;}
-    header h1{font-size:16px; text-align: center; padding:10px;}
-    header nav{margin-left:0; text-align: center; display: flex; align-items: center; justify-content: center; }
+    header{flex-direction:column; flex-wrap: wrap; height: auto;}
+    header nav{margin-left:0; text-align: center; align-items: center; justify-content: center; display:none}
     header nav a{font-size:14px;}
     nav ul{display:flex; justify-content: center; align-content: center;}
     header nav li.redes a{font-size:40px;}
+    .dropdown{display: block !important; width:80%!important}
+    .dropdown-menu{width:100%!important}
    }
 
 
@@ -580,6 +581,11 @@ footer{
 
         
     }
+    
+
+    header nav{display:none}
+    .dropdown{display: block !important; width:30%!important}
+    .dropdown-menu{width:100%!important}
     .ajeita-botao{width:60%; margin-bottom:10px;}
     .responsive-button{width:60%;}
     .resultado{width:100% !important;}
@@ -598,6 +604,8 @@ footer{
 }
 
 @media screen and (min-width: 1100px){/*para tablets*/
+    header nav{display: block}
+    .dropdown{display: none !important}
     article{
         
     
@@ -666,9 +674,12 @@ padding: 5px;
 .flexarticle{display:flex; flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: center;}
 h2.article-title{font-size:24px;  text-align:center;padding:5px; display:block; margin: 0 auto; border-bottom: 0.0007em solid rgb(189, 189, 189); border-width: thin} 
 
-.secao{
+.sessao{
     width:100%;
     background: #7e7e80
 }
 
-.secao h2{font-size:2.7em !important; font-weight: bold; color:white;}
+.sessao h2{font-size:2.7em !important; font-weight: bold; color:white;margin:0 auto;}
+article.sessao p{margin:0 auto; width:50%; background:#000}
+
+

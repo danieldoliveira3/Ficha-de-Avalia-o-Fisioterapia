@@ -22,10 +22,11 @@
   <script src="scripts/testeTegner.js"></script>
   <script src="scripts/verificaOnline.js"></script>
   <script src="scripts/verificaPreenchimento.js"></script>
+  <script src="scripts/percentualGordura.js"></script>
   <!---fim dos scripts-->
 
 
-  <link rel="icon" href="icon.png">
+  <link rel="icon" href="img/icon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="BANCO DE DADOS LACAF">
   <meta name="author" content="Daniel Carvalho" />
@@ -41,26 +42,27 @@
   <div id="tudo">
 
     <header>
-
-      <div class="logo" id="inicio"><img src="img/logo.png" alt="logo LACAF"></div>
-      <div class="titulo">
-        <h1><span style="font-size:30px; font-style: italic;">LACAF</span><br>LABORATÓRIO DE CINESIOLOGIA<br>E
-          AVALIAÇÃO FUNCIONAL
+      <img src="img/logo.png" alt="logo LACAF">
+        <h1>Laboratório de Cinesiologia e 
+          Avaliação Funcional<br>
           LACAF - UFPE</h1>
-      </div>
+      
+      
       <nav class="none">
         <ul>
+            <li class="pagina-atual"><a href="index.html">Ficha de Avaliação</a></li>
           <li><a href="ajuda.html">Ajuda</a></li>
-          <li class="pagina-atual"><a href="index.html">Ficha de Avaliação</a></li>
           <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSKN2WuRaUuHQsk460Lr1dQdnDSm2NxsEB-KoygrsjYYxIz5mklRQbYwIObsIDXZ6ltJIs5pWrKsRZ_/pub?output=xlsx"
               target="_blank" title="Planilha atualizada">Planilha</a></li>
+
+              <li class="redes" style="background:transparent; font-size:40px; "><a href="https://instagram.com/propeslacaf" tagert="_blank" style="color: rgb(11, 0, 112)"><i class="fab fa-instagram"></i></a></li>
         </ul>
 
       </nav>
-
+  
 
     </header>
-
+<section id="ficha">
     <div class="ficha-de-avaliacao">
       <h2>FICHA DE AVALIAÇÃO PARA ATLETAS</h2>
     </div>
@@ -422,8 +424,9 @@
         <input id="altura" onchange="Obesidade()" class="imc numero" name="ALTURA" min="20" max="330" type="number" /> cm<BR>
         <br>
         IMC<br>
-        <input name="IMC" id="imc" readonly class="resultado" type="number" step="0.0001" style="width:49%;"> 
-        <input class="number texto-center resultado" type="text"  readonly  id="imcresult" name="ESCALA IMC" value="" style="width:49%;background:transparent; border:3px solid transparent;">
+         <input value="I.M.C" class="resultado" type="text" readonly>
+        <input name="IMC" id="imc" readonly class="resultado" type="number" step="0.0001" style="width:49%; "> <br><br>
+        <input class="number texto-center resultado" type="text"  readonly  id="imcresult" name="ESCALA IMC" value="" style="display:none; width:98.8% !important;">
         <input class="number texto-center"  type="text" class="maiuscula resultado" readonly  id="obesidade" name="OBESIDADE" value="" style="width:49%; opacity: 0; position: absolute;">
 
         
@@ -598,7 +601,7 @@ Quanto tempo no total você gasta sentado durante em um <b style="font-size:18px
 <!--FIM QUESTAO-->
 
 <br>
-<input class="resultado" style="font-size:16px; font-weight: bold; border: 1px solid #ccc" value="NÍVEL DE ATIVIDADE FÍSICA:"> </span><input class="resultado" id="resultadoipac" name="ATIVIDADE FÍSICA" readonly>
+<input class="resultado" style="font-size:16px; font-weight: bold" value="NÍVEL DE ATIVIDADE FÍSICA:"> </span><input class="resultado" id="resultadoipac" name="ATIVIDADE FÍSICA" readonly>
 
 
 
@@ -675,19 +678,19 @@ Quanto tempo no total você gasta sentado durante em um <b style="font-size:18px
 
   <div class="form-row justify-content-center align-items-center">
     <div class="col">
-      Cintura<input id="cintura" class="rcq" type="number" name="Cintura">
+      Cintura<input id="cintura" step="0.001" class="rcq" type="number" name="Cintura">
     </div>
     <div class="col">
-      Quadril<input id="quadril" class="rcq" type="number" name="Quadril">
+      Quadril<input id="quadril" step="0.001" class="rcq" type="number" name="Quadril">
     </div>
   </div><br>
 
   
     
-      <input class="resultado" style="font-size:14px;" type="text" readonly value="Relacao Cintura Quadril:">
+      <input class="resultado" style="font-size:14px;" type="text" readonly value="Relação Cintura Quadril:">
     
     
-      <input class="resultado" id="rcq" type="text" readonly name="RCQ">
+      <input class="resultado" style="font-size:14px;" id="rcq" type="text" readonly name="RCQ">
     
   <br>
 
@@ -695,10 +698,14 @@ Quanto tempo no total você gasta sentado durante em um <b style="font-size:18px
   
 </article>
 
+
+
+
+
       <article>
           <h2 class="article-title">QUESTIONÁRIO DE TEGNER E LYSHOLM</h2>
 
-
+<br>
             
         INSTABILIDADE
           <select name="INSTABILIDADE" class="soma" value="" >
@@ -791,13 +798,75 @@ Quanto tempo no total você gasta sentado durante em um <b style="font-size:18px
               <option name="APOIO" value="0">IMPOSSÍVEL (0)</option>
             </optgroup>
           </select><BR><br>
+            <div class="form-row justify-content-center align-items-center">
 
-          RESULTADO<br>
-          <input type="text" class="maiuscula resultado" style="border: 1px solid #ccc; font-weight: bold;" readonly id="input_resultado" name="RESULTADO" value="">
-          <input type="text" readonly class="texto-center resultado" id="resultado" name="ESCALA TEGNER E LYSHOLM" value="" style=" margin: 0 auto; background:transparent; border:3px solid transparent;">
+          <input type="text" class="maiuscula resultado" style=" font-weight: bold;" readonly id="input_resultado" name="RESULTADO" value="">
+          <input type="text" readonly class="texto-center resultado" id="resultado" name="ESCALA TEGNER E LYSHOLM" value="" style=" margin: 0 auto; ">
 
       </article>
+      
+      
+      
+      <article>
+        <h2 class="article-title">DOBRAS CUTÂNEAS (mm)</h2>
+        <br>
+        <div class="form-row justify-content-center align-items-center">
+        <div class="col">
 
+          <label for="tricipital">TRICIPITAL</label>
+        <input type="number" class="gordura" id="tricipital" name="tricipital"><br>
+        </div>
+
+        <div class="col">
+
+          <label for="subescapular">SUBESCAPULAR</label>
+          <input type="number" class="gordura" id="subescapular" name="subescapular"><br>
+
+        </div></div>
+        
+        <div class="form-row justify-content-center align-items-center">
+
+        <div class="col"><br>
+          <label for="axilar media">AXILAR MÉDIA</label>
+        <input type="number" class="gordura" id="axilar" name="axilar media"><br><br>
+        </div>
+
+        <div class="col">
+          <label for="peitoral">PEITORAL</label>
+          <input type="number" class="gordura" id="peitoral" name="peitoral">
+
+        </div></div>
+
+        <div class="form-row justify-content-center align-items-center">
+        
+        <div class="col">
+          <label for="supra iliaca">SUPRA-ÍLIACA</label><br>
+          <input type="number" class="gordura" id="supra" name="supra iliaca"><br>
+          </div>
+        
+        <div class="col">
+          <label for="abdomen">ABDOMÊN</label><br>
+          <input type="number" class="gordura" id="abdomen" name="abdomen"><br>
+        </div></div>
+
+
+        <div class="form-row justify-content-center align-items-center">
+
+        <div class="col">
+            <br>
+            <label for="coxa">COXA</label>
+            <input type="number" class="gordura" id="coxadobra" name="coxa"><br><br>
+        </div>
+        
+        <div class="col">
+            <br>
+            <label for="perna">PERNA</label>
+            <input type="number" class="gordura"  id="pernaDobra" name="perna"><br><br>
+        </div></div>
+        <br><input type="text" readonly value="% Gordura:" class="resultado " data-destroy="true" >
+        <input type="text" readonly id="resultadodobra" class="resultado">
+       
+      </article>
 
 
     
@@ -809,7 +878,7 @@ Quanto tempo no total você gasta sentado durante em um <b style="font-size:18px
       
       <div id="botoes" >
         <div class="ajeita-botao">
-        <button id="true-button"  class="none" style="display:block;"  type="submit"
+        <button id="true-button"  class="none resultado" style="display:block; border-radius:20px;"  type="submit"
         name="myButton">Enviar</button>
       <button id="fake-button" class="none" type="button" style="display:none; " onclick="semInternet()">Enviar</button>
       <p id="semInternet" style="display:none; width:100%;  background:rgb(255, 110, 110); margin-top:20px;padding:12px; border-radius:10px; text-align: center; width: 100% !important"></p>
@@ -822,9 +891,30 @@ Quanto tempo no total você gasta sentado durante em um <b style="font-size:18px
         <div class="button" style="display:flex !important; justify-content: center; align-items: center !important;" id="none1"><a  target="_blank" 
           href="https://docs.google.com/spreadsheets/d/1iYf_4JgkzIE_98C4sA4fKpT3B5OhZgFb-8G8Vch1DSE/edit#gid=0" >Editar Dados</a>
       </div></div></div>
+
+
     </form>
+  </section>
+<section id="referencias">
 
 
+ <article class="secao">
+   <div class="ficha-de-avaliacao"><h2>REFERÊNCIAS</h2></div>
+
+<p>
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</p>
+
+ </article>
+
+
+
+
+</section>
     <footer>
       <p>
         Feito por <a href="https://fb.com/dncoliveira" title="contrata a gente pfvr">Daniel Carvalho</a> e <a href="https://www.facebook.com/marcsonsanttos" title="contrata a gente pfvr">Marcson Santos</a><br>Graduandos

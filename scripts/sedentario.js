@@ -36,7 +36,7 @@ $(document).ready(function () {
         
         if ((somaFrequencia == 0 && somaMinutos == 0))   {
           $("#resultadoipac").val('SEDENTÁRIO');
-          $('#resultadoipac').css({ 'color': 'WHITE', 'background': '#ec0000', 'font-size': '18px', 'font-weight' : 'bold' })
+          $('#resultadoipac').css({ 'color': '#ec0000', 'border-bottom': '5px solid #ec0000', 'font-size': '18px', 'font-weight' : 'bold' })
   
         }
   
@@ -91,7 +91,7 @@ $(document).ready(function () {
   
         if ((vigorosa3a >= 5 && vigorosa3b >= 30) || ((vigorosa3a >= 3 && vigorosa3b >= 20) && ((moderada2a >= 5 && moderada2b >= 30) || (caminhada1a >= 5 && caminhada1b >= 30))) || (vigorosa3a >= 3 && somaFrequencia >= 8 && somaMinutos >= 240) )   {
           $("#resultadoipac").val('MUITO ATIVO');
-          $('#resultadoipac').css({ 'color': 'black', 'background': '#00da00', 'font-size': '18px', 'font-weight' : 'bold' })
+          $('#resultadoipac').css({ 'color': '#00da00', 'border-bottom': '5px solid #00da00', 'font-size': '18px', 'font-weight' : 'bold' })
   
         }
   
@@ -101,24 +101,24 @@ $(document).ready(function () {
         || (somaFrequencia >= 5 && somaMinutos >= 150) )  {
           console.log(somaFrequencia, somaMinutos)
           $("#resultadoipac").val('ATIVO');
-          $('#resultadoipac').css({ 'color': 'WHITE', 'background': 'GREEN', 'font-size': '18px', 'font-weight' : 'bold' })
+          $('#resultadoipac').css({ 'color': 'WHITE', 'border-bottom': '5px solid GREEN', 'font-size': '18px', 'font-weight' : 'bold' })
   
         }
         else if ((somaFrequencia >= 5 || somaMinutos >= 150) )  {
           console.log(somaFrequencia, somaMinutos)
           $("#resultadoipac").val('IRREGULARMENTE ATIVO A');
-          $('#resultadoipac').css({ 'color': 'black', 'background': 'yellow', 'font-size': '18px', 'font-weight' : 'bold' })
+          $('#resultadoipac').css({ 'color': 'black', 'border-bottom': '5px solid yellow', 'font-size': '18px', 'font-weight' : 'bold' })
   
         }
         else if ((somaFrequencia < 5 && somaFrequencia >=1) && (somaMinutos < 150 && somaMinutos >=1) )  {
           console.log(somaFrequencia, somaMinutos)
           $("#resultadoipac").val('IRREGULARMENTE ATIVO B');
-          $('#resultadoipac').css({ 'color': 'black', 'background': '#e7d000', 'font-size': '18px', 'font-weight' : 'bold' })
+          $('#resultadoipac').css({ 'color': 'black', 'border-bottom': '5px solid #e7d000', 'font-size': '18px', 'font-weight' : 'bold' })
   
         }
         if ((somaFrequencia == 0 && somaMinutos == 0) || (($("#valor1a").val() + $("#valor2a").val() + $("#valor3a").val() == "000")))   {
           $("#resultadoipac").val('SEDENTÁRIO');
-          $('#resultadoipac').css({ 'color': 'WHITE', 'background': '#ec0000', 'font-size': '18px', 'font-weight' : 'bold' })
+          $('#resultadoipac').css({ 'color': 'WHITE', 'border-bottom': '5px solid #ec0000', 'font-size': '18px', 'font-weight' : 'bold' })
   
         }
   

@@ -22,51 +22,53 @@ $(document).ready(function () {
   
       $(document).ready(function () {
         if ($("#imc").val() >= 40) {
+          $('#imcresult').css({ 'display': 'block' })
+          $('#imcresult').css({ 'color': 'red', 'border-bottom': '5px solid red', 'font-size': '18px' })
           $("#imcresult").val('OBESIDADE III');
-          $('#imcresult').css({ 'color': 'white' })
-          $('#imcresult').css({ 'background': 'RED' })
+          
+          
           $('#imcresult').css({ 'font-size': '18px' })
         }
         else if ($("#imc").val() < 40 && $("#imc").val() >= 35) {
+          $('#imcresult').css({ 'display': 'block' })
           $("#imcresult").val('OBESIDADE II');
-          $('#imcresult').css({ 'color': 'white' })
-          $('#imcresult').css({ 'background': '#ff3a3a' })
-          $('#imcresult').css({ 'font-size': '18px' })
+          $('#imcresult').css({ 'color': 'red', 'border-bottom': '5px solid red', 'font-size': '18px' })
+          
         }
   
         else if ($("#imc").val() < 35 && $("#imc").val() >= 30) {
+          $('#imcresult').css({ 'display': 'block' })
           $("#imcresult").val('OBESIDADE I');
-          $('#imcresult').css({ 'color': 'white' })
-          $('#imcresult').css({ 'background': '#ff6868' })
-          $('#imcresult').css({ 'font-size': '18px' })
+          $('#imcresult').css({ 'color': 'red', 'border-bottom': '5px solid red', 'font-size': '18px' })
+
         }
   
         else if ($("#imc").val() < 30 && $("#imc").val() >= 25) {
+          $('#imcresult').css({ 'display': 'block' })
           $("#imcresult").val('ACIMA DO PESO');
-          $('#imcresult').css({ 'color': 'black' })
-          $('#imcresult').css({ 'background': '#ff8e8e' })
-          $('#imcresult').css({ 'font-size': '18px' })
+          $('#imcresult').css({ 'color': '#ff8e8e', 'border-bottom': '5px solid #ff8e8e', 'font-size': '18px' })
+
         }
   
         else if ($("#imc").val() < 25 && $("#imc").val() >= 18.5) {
+          $('#imcresult').css({ 'display': 'block' })
           $("#imcresult").val('PESO NORMAL');
-          $('#imcresult').css({ 'color': 'white' })
-          $('#imcresult').css({ 'background': '#2b9527' })
-          $('#imcresult').css({ 'font-size': '18px' })
+          $('#imcresult').css({ 'color': '#2b9527', 'border-bottom': '5px solid #2b9527', 'font-size': '18px' })
+
         }
         
         else if ($("#imc").val() < 18.5 && $("#imc").val() >= 17) {
+          $('#imcresult').css({ 'display': 'block' })
           $("#imcresult").val('ABAIXO DO PESO');
-          $('#imcresult').css({ 'color': 'black' })
-          $('#imcresult').css({ 'background': '#ff8e8e' })
-          $('#imcresult').css({ 'font-size': '18px' })
+          $('#imcresult').css({ 'color': '#ff8e8e', 'border-bottom': '5px solid #ff8e8e', 'font-size': '18px' })
+
         }
   
         else if ($("#imc").val() < 17 && $("#imc").val() >= 0) {
+          $('#imcresult').css({ 'display': 'block' })
           $("#imcresult").val('MUITO ABAIXO DO PESO');
-          $('#imcresult').css({ 'color': 'white' })
-          $('#imcresult').css({ 'background': '#ff3a3a' })
-          $('#imcresult').css({ 'font-size': '18px' })
+          $('#imcresult').css({ 'color': '#ff3a3a', 'border-bottom': '5px solid #ff3a3a', 'font-size': '18px' })
+
         }
   
       })

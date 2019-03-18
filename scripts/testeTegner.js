@@ -4,10 +4,9 @@ $(document).ready(function () {
     $(".soma").load("load change check", function () {//fica observando pra ver se ocorre o evento
     
         $(document).ready(function () {
-        $("#resultado").val('EXCELENTE');
-          $('#resultado').css({ 'color': 'white' })
-          $('#resultado').css({ 'background': '00da00', 'font-weight' : 'bold' })
-          $('#resultado').css({ 'font-size': '18px' })
+        $("#resultado").val('TA PEGANDO');
+          $('#resultado').css({ 'color': 'white', 'border': '1px 1px 1px 1px solid', 'font-weight' : 'bold', 'font-size': '18px'  })
+          
         })
     
     
@@ -47,30 +46,29 @@ $(document).ready(function () {
       $(document).ready(function () {
         if ($('#input_resultado').val() >= 95) {
           $("#resultado").val('EXCELENTE');
-          $('#resultado').css({ 'color': 'white' })
-          $('#resultado').css({ 'background': 'green' })
-          $('#resultado').css({ 'font-size': '18px' })
+          $('#resultado').css({ 'color': 'green', 'border-bottom': '5px solid green', 'font-size': '18px' })
+         
         }
         else if ($('#input_resultado').val() < 95 && $('#input_resultado').val() >= 84) {
           $("#resultado").val('BOM');
-          $('#resultado').css({ 'color': 'white' })
-          $('#resultado').css({ 'background': '#2b9527' })
+          $('#resultado').css({ 'color': '#2b9527' })
+          $('#resultado').css({ 'border-bottom': '5px solid #2b9527' })
           $('#resultado').css({ 'font-size': '18px' })
 
         }
 
         else if ($('#input_resultado').val() < 84 && $('#input_resultado').val() >= 65) {
           $("#resultado").val('REGULAR');
-          $('#resultado').css({ 'color': 'white' })
-          $('#resultado').css({ 'background': '#5db1ff' })
+          $('#resultado').css({ 'color': '#5db1ff' })
+          $('#resultado').css({ 'border-bottom': '5px solid #5db1ff' })
           $('#resultado').css({ 'font-size': '18px' })
 
         }
 
         else if ($('#input_resultado').val() < 65 && $('#input_resultado').val() >= 0) {
           $("#resultado").val('RUIM');
-          $('#resultado').css({ 'color': 'white' })
-          $('#resultado').css({ 'background': '#ff3e3e' })
+          $('#resultado').css({ 'color': '#ff3e3e' })
+          $('#resultado').css({ 'border-bottom': '5px solid #ff3e3e' })
           $('#resultado').css({ 'font-size': '18px' })
 
         }
@@ -104,30 +102,30 @@ $("#input_resultado").val(total.toFixed(2));
 $(document).ready(function () {
   if ($('#input_resultado').val() >= 95) {
     $("#resultado").val('EXCELENTE');
-    $('#resultado').css({ 'color': 'white' })
-    $('#resultado').css({ 'background': 'green' })
+    $('#resultado').css({ 'color': 'green' })
+    $('#resultado').css({ 'border-bottom': '5px solid green' })
     $('#resultado').css({ 'font-size': '18px' })
   }
   else if ($('#input_resultado').val() < 95 && $('#input_resultado').val() >= 84) {
     $("#resultado").val('BOM');
-    $('#resultado').css({ 'color': 'white' })
-    $('#resultado').css({ 'background': '#2b9527' })
+    $('#resultado').css({ 'color': '#2b9527' })
+    $('#resultado').css({ 'border-bottom': '5px solid #2b9527' })
     $('#resultado').css({ 'font-size': '18px' })
 
   }
 
   else if ($('#input_resultado').val() < 84 && $('#input_resultado').val() >= 65) {
     $("#resultado").val('REGULAR');
-    $('#resultado').css({ 'color': 'white' })
-    $('#resultado').css({ 'background': '#5db1ff' })
+    $('#resultado').css({ 'color': '#5db1ff' })
+    $('#resultado').css({ 'border-bottom': '5px solid #5db1ff' })
     $('#resultado').css({ 'font-size': '18px' })
 
   }
 
   else if ($('#input_resultado').val() < 65 && $('#input_resultado').val() >= 0) {
     $("#resultado").val('RUIM');
-    $('#resultado').css({ 'color': 'white' })
-    $('#resultado').css({ 'background': '#ff3e3e' })
+    $('#resultado').css({ 'color': '#ff3e3e' })
+    $('#resultado').css({ 'border-bottom': '5px solid #ff3e3e' })
     $('#resultado').css({ 'font-size': '18px' })
 
   }

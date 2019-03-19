@@ -305,8 +305,7 @@
         }
         
 
-        console.log(dcMacho)
-        console.log('pg:', pgMacho)
+        
         
    
       })

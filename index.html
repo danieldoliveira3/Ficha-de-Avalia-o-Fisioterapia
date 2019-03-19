@@ -7,16 +7,23 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
   <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
   <script src="Garlic.js-1.4.2/garlic.js"></script>
   <!--bootstrap-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!-------------->
   <link href="tema.css" rel="stylesheet">
   <!---começo dos scripts usados-->
-  <script src="scripts/desabilitarSubmit.js"></script> 
+  <script src="scripts/desabilitarSubmit.js"></script>
   <script src="scripts/formMaiusculo.js"></script>
   <script src="scripts/idade.js"></script>
   <script src="scripts/imc.js"></script>
@@ -28,6 +35,8 @@
   <script src="scripts/verificaOnline.js"></script>
   <script src="scripts/verificaPreenchimento.js"></script>
   <script src="scripts/percentualGordura.js"></script>
+  <script src="scripts/stepDown.js"></script>
+  <script src="scripts/yteste.js">  </script>
   <!---fim dos scripts-->
 
 
@@ -36,8 +45,8 @@
   <meta name="description" content="BANCO DE DADOS LACAF">
   <meta name="author" content="Daniel Carvalho" />
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
 
 
@@ -47,752 +56,876 @@
   <div id="tudo">
 
     <header>
-      
-      <img src="img/logo.png" alt="logo LACAF">
-        <h1>Laboratório de Cinesiologia <br>e 
-          Avaliação Funcional<br>
-          LACAF - UFPE</h1>
-      
-          <div class="dropdown" style="display:none">
-              <a class="btn button btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                MENU
-              </a>
-            
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="/index.html">Ficha de Avaliação</a>
-                <a class="dropdown-item" href="ajuda.html">Ajuda</a>
-                <a class="dropdown-item" href="#">Referências</a>
-                <a class="dropdown-item" href="https://instagram.com/propeslacaf" target="_blank" style="color: rgb(1, 0, 53); text-align: center; font-size:26px;"><i class="fab fa-instagram"></i></a>
-              </div>
-            </div><br>
+
+      <a href="/index.html"><img src="img/logo.png" alt="logo LACAF"></a>
+      <h1>Laboratório de Cinesiologia <br>e
+        Avaliação Funcional<br>
+        LACAF - UFPE</h1>
+
+      <div class="dropdown" style="display:none">
+        <a class="btn button btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          MENU
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="/index.html">Ficha de Avaliação</a>
+          <a class="dropdown-item" href="ajuda.html">Ajuda</a>
+          <a class="dropdown-item" href="#">Referências</a>
+          <a class="dropdown-item" href="https://instagram.com/propeslacaf" target="_blank"
+            style="color: rgb(1, 0, 53); text-align: center; font-size:26px;"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div><br>
 
       <nav class="none">
 
-          
-        <ul>
-            <li class="pagina-atual"><a href="index.html">Ficha de Avaliação</a></li>
-          <li><a href="ajuda.html">Ajuda</a></li>
-          <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSKN2WuRaUuHQsk460Lr1dQdnDSm2NxsEB-KoygrsjYYxIz5mklRQbYwIObsIDXZ6ltJIs5pWrKsRZ_/pub?output=xlsx"
-              target="_blank" title="Planilha atualizada">Planilha</a></li>
-              <li><a href="#">Referências</a></li>
 
-              <li class="redes" style="background:transparent; font-size:40px; "><a href="https://instagram.com/propeslacaf" target="_blank" style="color: rgb(1, 0, 53)"><i class="fab fa-instagram"></i></a></li>
+        <ul>
+          <li class="pagina-atual"><a href="index.html">Ficha de Avaliação</a></li>
+          <li><a href="ajuda.html">Ajuda</a></li>
+          <li><a
+              href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSKN2WuRaUuHQsk460Lr1dQdnDSm2NxsEB-KoygrsjYYxIz5mklRQbYwIObsIDXZ6ltJIs5pWrKsRZ_/pub?output=xlsx"
+              target="_blank" title="Planilha atualizada">Planilha</a></li>
+          <li><a href="#">Referências</a></li>
+
+          <li class="redes" style="background:transparent; font-size:40px; "><a href="https://instagram.com/propeslacaf"
+              target="_blank" style="color: rgb(1, 0, 53)"><i class="fab fa-instagram"></i></a></li>
         </ul>
 
       </nav>
-  
+
 
     </header>
-<section id="ficha">
-    <div class="ficha-de-avaliacao">
-      <h2>FICHA DE AVALIAÇÃO PARA ATLETAS</h2>
-    </div>
+    <section id="ficha">
+      <div class="ficha-de-avaliacao">
+        <h2>FICHA DE AVALIAÇÃO PARA ATLETAS</h2>
+      </div>
 
-    <form data-persist="garlic" name="submit-to-google-sheet" method="POST" onsubmit="desabilitar(form)">
-      
-      <article>
-        <h2 class="article-title">IDENTIFICAÇÃO</h2>
-          
+      <form data-persist="garlic" name="submit-to-google-sheet" method="POST" onsubmit="desabilitar(form)">
 
-        
-        <br>
-        
+        <article>
+          <h2 class="article-title">IDENTIFICAÇÃO</h2>
+
+
+
+          <br>
+
           <h2 class="text-left">DADOS DO AVALIADOR</h2>
-        
-        <br> AVALIADOR<span class="vermelho none"> <b>*</b></span><br>
-        <input required name="AVALIADOR" type="text" class="maiuscula" placeholder="Nome do avaliador" maxlength="140"> <br><br>
-        DATA<span class="vermelho none"> *</span><br>
-        <input required name="DATA ATUAL" type="date" min="2000-01-01" placeholder="Data de Hoje"> <br><br><br>
+
+          <br> AVALIADOR<span class="vermelho none"> <b>*</b></span><br>
+          <input required name="AVALIADOR" type="text" class="maiuscula" placeholder="Nome do avaliador"
+            maxlength="140"> <br><br>
+          DATA<span class="vermelho none"> *</span><br>
+          <input required name="DATA ATUAL" type="date" min="2000-01-01" placeholder="Data de Hoje"> <br><br><br>
 
 
 
-        <div id="dadosPaciente text-left">
-          
+          <div id="dadosPaciente text-left">
+
             <h2 class="text-left">DADOS DO PACIENTE</h2>
 
             <span class="none" style="color: red;">PREENCHA CUIDADOSAMENTE OS DADOS ABAIXO</span>
-            
-          
-        </div>
-        <br>
-        <br>NOME COMPLETO<span class="vermelho none"> *</span><br>
-        <input id="nome-completo" name="NOME" type="text" class="maiuscula" placeholder="Nome Completo do PACIENTE" maxlength="140"> <br><br>
-        DATA DE NASCIMENTO<span class="vermelho none"> *</span><br>
-        <input onchange="Idade()" id="data-de-nascimento" name="DATA DE NASCIMENTO" min="1900-01-01" max="2001-01-01"
-          type="date" placeholder="Data de Nascimento">
-        <br><br>
-        IDADE<span class="vermelho none"> *</span><br>
-        <input required value="" id="idade" name="IDADE" readonly class="idade" type="number" placeholder="Idade" min="16" max="130">
-        <br>
-        <!---sexo-->
-        <br>
-
-        SEXO<span class="vermelho none"> *</span>
-        <p class="sexo">
-
-          <select required id="sexo" name="SEXO">
-            <optgroup label="SEXO">
-              <option name="SEXO" value="MASCULINO" selected>MASCULINO</option>
-              <option name="SEXO" value="FEMININO">FEMININO</option>
-              <option name="SEXO" value="OUTROS">OUTROS</option>
-            </optgroup>
-          </select>
-        </p><br>
-
-        <!---estado civil-->
-
-        ESTADO CIVIL<span class="vermelho none"> *</span>
-        <select  required id="estado-civil" name="ESTADO CIVIL">
-          <optgroup label="ESTADO CIVIL">
-            <option value="SOLTEIRO" selected>SOLTEIRO</option>
-            <option value="CASADO">CASADO</option>
-            <option value="SEPARADO">SEPARADO</option>
-            <option value="DIVORCIADO">DIVORCIADO</option>
-            <option value="VIÚVO">VIÚVO</option>
-            <option value="OUTRO">OUTRO</option>
-          </optgroup>
-        </select>
-        </p>
 
 
-        <!---GRAU DE INSTRUCAO-->
-        <br>GRAU DE INSTRUÇÃO<span class="vermelho none"> *</span>
-        <p class="grauDeInstrucao">
-          <select  required name="GRAU DE INSTRUCAO">
-            <optgroup label="GRAU DE INSTRUÇÃO">
-              <option value="ANALFABETO" selected>ANALFABETO</option>
-              <option value="ENSINO FUNDAMENTAL INCOMPLETO">ENSINO FUND. INCOMPLETO</option>
-              <option value="ENSINO FUDAMENTAL COMPLETO">ENSINO FUND COMPLETO </option>
-              <option value="ENSINO MEDIO INCOMPLETO">ENSINO MEDIO INCOMPLETO</option>
-              <option value="ENSINO MEDIO COMPLETO">ENSINO MÉDIO COMPLETO</option>
-              <option value="SUPERIOR COMPLETO">SUPERIOR COMPLETO</option>
-              <option value="PÓS GRADUAÇÃO">PÓS GRADUAÇÃO</option>
-            </optgroup>
-          </select>
-        </p>
-        
-        <!---profissão atual-->
-        <br>PROFISSÃO ATUAL<span class="vermelho none"> *</span>
-        <input required name="PROFISSAO ATUAL" type="text" class="maiuscula" placeholder="Profissao atual" maxlength="100">
-        <br><br>ENDEREÇO<span class="vermelho none"> *</span>
-        <input required name="ENDERECO" type="text" class="maiuscula" placeholder="Rua, Nº" maxlength="280">
-        <br><br>CIDADE<span class="vermelho none"> *</span>
-        <input required name="CIDADE" type="text" class="maiuscula" placeholder="Cidade" maxlength="140">
-        <br><br>BAIRRO<span class="vermelho none"> *</span>
-        <input required name="BAIRRO" type="text" class="maiuscula" placeholder="Bairro" maxlength="140">
-        <br><br>ESTADO<span class="vermelho none"> *</span>
-        <select required name="ESTADO">
-          <optgroup label="ESTADOS">
-            <option value="AC">AC</option>
-            <option value="AL">AL</option>
-            <option value="AP">AP</option>
-            <option value="AM">AM</option>
-            <option value="BA">BA</option>
-            <option value="CE">CE</option>
-            <option value="DF">DF</option>
-            <option value="ES">ES</option>
-            <option value="GO">GO</option>
-            <option value="MA">MA</option>
-            <option value="MT">MT</option>
-            <option value="MS">MS</option>
-            <option value="MG">MG</option>
-            <option value="PA">PA</option>
-            <option value="PB">PB</option>
-            <option value="PR">PR</option>
-            <option selected value="PE">PE</option>
-            <option value="PI">PI</option>
-            <option value="RJ">RJ</option>
-            <option value="RN">RN</option>
-            <option value="RS">RS</option>
-            <option value="RO">RO</option>
-            <option value="RR">RR</option>
-            <option value="SC">SC</option>
-            <option value="SP">SP</option>
-            <option value="SE">SE</option>
-            <option value="TO">TO</option>
-          </optgroup>
-        </select>
-
-        <br><br>CEP<span class="vermelho none"> *</span>
-        <input required name="CEP" type="text" class="maiuscula" placeholder="SOMENTE NUMEROS" maxlength="8" pattern="[0-9]+$">
-        <br><br>TELEFONE
-        <input required name="TELEFONE" type="tel" placeholder="DDD XXXX-XXXX" maxlength="11" value="" pattern="[0-9]+$">
-        <br><br>CELULAR<span class="vermelho none"> *</span>
-        <input required name="CELULAR" type="tel" placeholder="DDD 9XXXX-XXXX" value="" maxlength="12" pattern="[0-9]+$">
-        <br><br>Email<span class="vermelho none" maxlength="256"> *</span>
-        <input required name="EMAIL" type="email" placeholder="email@email.com">
-        <br><br>MODALIDADE ESPORTIVA
-        <input name="MODALIDADE ESPORTIVA" type="text" class="maiuscula" value="" maxlength="140" placeholder="Modalidade Esportiva">
-        <br><br>POSIÇÃO
-        <input name="POSICAO" type="text" class="maiuscula" maxlength="140" placeholder="Posição">
-        <br><br>MEMBRO SUPERIOR DOMINANTE<span class="vermelho none"> *</span>
-        <select required name="MEMBRO SUPERIOR DOMINANTE">
-          <optgroup label="MEMBRO SUPERIOR DOMINANTE">
-            <option value="DIREITO" selected>DIREITO</option>
-            <option value="ESQUERDO">ESQUERDO</option>
-            <option value="NÃO SE APLICA">NÃO SE APLICA</option>
-          </optgroup>
-        </select>
-        <br><br>MEMBRO INFERIOR DOMINANTE<span class="vermelho none"> *</span>
-        <select required name="MEMBRO INFERIOR DOMINANTE">
-          <optgroup label="MEMBRO INFERIOR DOMINANTE">
-            <option value="DIREITO" selected>DIREITO</option>
-            <option value="ESQUERDO">ESQUERDO</option>
-            <option value="NÃO SE APLICA">NÃO SE APLICA</option>
-          </optgroup>
-        </select><br><br>
-        FUMANTE<span class="vermelho none"> *</span>
-        <select required onchange="DesabilitarOpcao()" id="fumante" name="FUMANTE">
-          <optgroup label="FUMANTE">
-            <option value="SIM">SIM</option>
-            <option value="NÃO" selected>NÃO</option>
-
-          </optgroup>
-        </select><br><br>
-        <div id="desaparecer-fumante" style="display:none">
-          HÁ QUANTO TEMPO<br><input id="fumante-resposta" name="TEMPO FUMANTE" type="text" class="maiuscula" maxlength="140" placeholder="EM MESES"><br><br>
-        </div>
-
-        ETILISMO<span class="vermelho none"> *</span>
-        <select required name="ETILISMO">
-          <optgroup label="ETILISMO">
-            <option name="ETILISMO" value="SIM">SIM</option>
-            <option name="ETILISMO" value="NÃO" selected>NÃO</option>
-
-          </optgroup>
-        </select>
-        <br><br>
-
-
-        DIABETES MELLITUS<span class="vermelho none"> *</span>
-        <select required name="DIABETES">
-          <optgroup label="DIABETES MELLITUS">
-            <option name="DIABETES" value="SIM">SIM</option>
-            <option name="DIABETES" value="NÃO" selected>NÃO</option>
-
-          </optgroup>
-        </select>
-        <br><br>
-
-        HAS<span class="vermelho none"> *</span>
-        <select required name="HAS">
-          <optgroup label="HAS">
-            <option name="HAS" value="SIM">SIM</option>
-            <option name="HAS" value="NÃO" selected>NÃO</option>
-
-          </optgroup>
-        </select>
-        <br><br>
-
-        DOENÇAS CARDIOVASCULARES<span class="vermelho none"> *</span>
-        <select required name="DOENCAS CARDIACAS">
-          <optgroup label="DOENÇAS CARDIOVASCULARES">
-            <option name="DOENCAS CARDIACAS" value="SIM">SIM</option>
-            <option name="DOENCAS CARDIACAS" value="NÃO" selected>NÃO</option>
-
-          </optgroup>
-        </select>
-        <br><br>
-
-        
-
-        PRÁTICA DE EXERCÍCIO FÍSICO ALÉM DA MODALIDADE ESPORTIVA <span class="vermelho none"> *</span>
-        <select required onchange="DesabilitarOpcao()" id="exercicio-fisico" name="EXERCICIO FISICO">
-          <optgroup label="EXERCÍCIO FÍSICO">
-            <option name="EXERCICIO FISICO" value="SIM">SIM</option>
-            <option name="EXERCICIO FISICO" value="NÃO" selected>NÃO</option>
-
-      
-          </optgroup>
-        </select><br><br>
-        
-        <div id="desaparecer-exercicio" style="display: none;">
-          MODALIDADE
-          <input type="text" class="maiuscula" name="ATV REALIZADA" maxlength="140" placeholder="Exercício físico realizado">
-          <br><br>FREQUENCIA SEMANAL
-          <input class="numero" name="FREQUENCIA SEMANAL" type="number" min="1" max="7"> dias
-          
+          </div>
           <br>
-          <br>TEMPO DE EXERCÍCIO REALIZADO, POR TREINO, PARA CADA MODALIDADE
-          <input class="numero" name="MINUTOS DE ATV" type="number">
-          <br> </div>
-        <br>
+          <br>NOME COMPLETO<span class="vermelho none"> *</span><br>
+          <input id="nome-completo" name="NOME" type="text" class="maiuscula" placeholder="Nome Completo do PACIENTE"
+            maxlength="140"> <br><br>
+          DATA DE NASCIMENTO<span class="vermelho none"> *</span><br>
+          <input onchange="Idade()" id="data-de-nascimento" name="DATA DE NASCIMENTO" min="1900-01-01" max="2001-01-01"
+            type="date" placeholder="Data de Nascimento">
+          <br><br>
+          IDADE<span class="vermelho none"> *</span><br>
+          <input required value="" id="idade" name="IDADE" readonly class="idade" type="number" placeholder="Idade"
+            min="16" max="130">
+          <br>
+          <!---sexo-->
+          <br>
+
+          SEXO<span class="vermelho none"> *</span>
+          <p class="sexo">
+
+            <select required id="sexo" name="SEXO">
+              <optgroup label="SEXO">
+                <option name="SEXO" value="MASCULINO" selected>MASCULINO</option>
+                <option name="SEXO" value="FEMININO">FEMININO</option>
+                <option name="SEXO" value="OUTROS">OUTROS</option>
+              </optgroup>
+            </select>
+          </p><br>
+
+          <!---estado civil-->
+
+          ESTADO CIVIL<span class="vermelho none"> *</span>
+          <select required id="estado-civil" name="ESTADO CIVIL">
+            <optgroup label="ESTADO CIVIL">
+              <option value="SOLTEIRO" selected>SOLTEIRO</option>
+              <option value="CASADO">CASADO</option>
+              <option value="SEPARADO">SEPARADO</option>
+              <option value="DIVORCIADO">DIVORCIADO</option>
+              <option value="VIÚVO">VIÚVO</option>
+              <option value="OUTRO">OUTRO</option>
+            </optgroup>
+          </select>
+          </p>
 
 
-        
+          <!---GRAU DE INSTRUCAO-->
+          <br>GRAU DE INSTRUÇÃO<span class="vermelho none"> *</span>
+          <p class="grauDeInstrucao">
+            <select required name="GRAU DE INSTRUCAO">
+              <optgroup label="GRAU DE INSTRUÇÃO">
+                <option value="ANALFABETO" selected>ANALFABETO</option>
+                <option value="ENSINO FUNDAMENTAL INCOMPLETO">ENSINO FUND. INCOMPLETO</option>
+                <option value="ENSINO FUDAMENTAL COMPLETO">ENSINO FUND COMPLETO </option>
+                <option value="ENSINO MEDIO INCOMPLETO">ENSINO MEDIO INCOMPLETO</option>
+                <option value="ENSINO MEDIO COMPLETO">ENSINO MÉDIO COMPLETO</option>
+                <option value="SUPERIOR COMPLETO">SUPERIOR COMPLETO</option>
+                <option value="PÓS GRADUAÇÃO">PÓS GRADUAÇÃO</option>
+              </optgroup>
+            </select>
+          </p>
+
+          <!---profissão atual-->
+          <br>PROFISSÃO ATUAL<span class="vermelho none"> *</span>
+          <input required name="PROFISSAO ATUAL" type="text" class="maiuscula" placeholder="Profissao atual"
+            maxlength="100">
+          <br><br>ENDEREÇO<span class="vermelho none"> *</span>
+          <input required name="ENDERECO" type="text" class="maiuscula" placeholder="Rua, Nº" maxlength="280">
+          <br><br>CIDADE<span class="vermelho none"> *</span>
+          <input required name="CIDADE" type="text" class="maiuscula" placeholder="Cidade" maxlength="140">
+          <br><br>BAIRRO<span class="vermelho none"> *</span>
+          <input required name="BAIRRO" type="text" class="maiuscula" placeholder="Bairro" maxlength="140">
+          <br><br>ESTADO<span class="vermelho none"> *</span>
+          <select required name="ESTADO">
+            <optgroup label="ESTADOS">
+              <option value="AC">AC</option>
+              <option value="AL">AL</option>
+              <option value="AP">AP</option>
+              <option value="AM">AM</option>
+              <option value="BA">BA</option>
+              <option value="CE">CE</option>
+              <option value="DF">DF</option>
+              <option value="ES">ES</option>
+              <option value="GO">GO</option>
+              <option value="MA">MA</option>
+              <option value="MT">MT</option>
+              <option value="MS">MS</option>
+              <option value="MG">MG</option>
+              <option value="PA">PA</option>
+              <option value="PB">PB</option>
+              <option value="PR">PR</option>
+              <option selected value="PE">PE</option>
+              <option value="PI">PI</option>
+              <option value="RJ">RJ</option>
+              <option value="RN">RN</option>
+              <option value="RS">RS</option>
+              <option value="RO">RO</option>
+              <option value="RR">RR</option>
+              <option value="SC">SC</option>
+              <option value="SP">SP</option>
+              <option value="SE">SE</option>
+              <option value="TO">TO</option>
+            </optgroup>
+          </select>
+
+          <br><br>CEP<span class="vermelho none"> *</span>
+          <input required name="CEP" type="text" class="maiuscula" placeholder="SOMENTE NUMEROS" maxlength="8"
+            pattern="[0-9]+$">
+          <br><br>TELEFONE
+          <input required name="TELEFONE" type="tel" placeholder="DDD XXXX-XXXX" maxlength="11" value=""
+            pattern="[0-9]+$">
+          <br><br>CELULAR<span class="vermelho none"> *</span>
+          <input required name="CELULAR" type="tel" placeholder="DDD 9XXXX-XXXX" value="" maxlength="12"
+            pattern="[0-9]+$">
+          <br><br>Email<span class="vermelho none" maxlength="256"> *</span>
+          <input required name="EMAIL" type="email" placeholder="email@email.com">
+          <br><br>MODALIDADE ESPORTIVA
+          <input name="MODALIDADE ESPORTIVA" type="text" class="maiuscula" value="" maxlength="140"
+            placeholder="Modalidade Esportiva">
+          <br><br>POSIÇÃO
+          <input name="POSICAO" type="text" class="maiuscula" maxlength="140" placeholder="Posição">
+          <br><br>MEMBRO SUPERIOR DOMINANTE<span class="vermelho none"> *</span>
+          <select required name="MEMBRO SUPERIOR DOMINANTE">
+            <optgroup label="MEMBRO SUPERIOR DOMINANTE">
+              <option value="DIREITO" selected>DIREITO</option>
+              <option value="ESQUERDO">ESQUERDO</option>
+              <option value="NÃO SE APLICA">NÃO SE APLICA</option>
+            </optgroup>
+          </select>
+          <br><br>MEMBRO INFERIOR DOMINANTE<span class="vermelho none"> *</span>
+          <select required name="MEMBRO INFERIOR DOMINANTE">
+            <optgroup label="MEMBRO INFERIOR DOMINANTE">
+              <option value="DIREITO" selected>DIREITO</option>
+              <option value="ESQUERDO">ESQUERDO</option>
+              <option value="NÃO SE APLICA">NÃO SE APLICA</option>
+            </optgroup>
+          </select><br><br>
+          FUMANTE<span class="vermelho none"> *</span>
+          <select required onchange="DesabilitarOpcao()" id="fumante" name="FUMANTE">
+            <optgroup label="FUMANTE">
+              <option value="SIM">SIM</option>
+              <option value="NÃO" selected>NÃO</option>
+
+            </optgroup>
+          </select><br><br>
+          <div id="desaparecer-fumante" style="display:none">
+            HÁ QUANTO TEMPO<br><input id="fumante-resposta" name="TEMPO FUMANTE" type="text" class="maiuscula"
+              maxlength="140" placeholder="EM MESES"><br><br>
+          </div>
+
+          ETILISMO<span class="vermelho none"> *</span>
+          <select required name="ETILISMO">
+            <optgroup label="ETILISMO">
+              <option name="ETILISMO" value="SIM">SIM</option>
+              <option name="ETILISMO" value="NÃO" selected>NÃO</option>
+
+            </optgroup>
+          </select>
+          <br><br>
+
+
+          DIABETES MELLITUS<span class="vermelho none"> *</span>
+          <select required name="DIABETES">
+            <optgroup label="DIABETES MELLITUS">
+              <option name="DIABETES" value="SIM">SIM</option>
+              <option name="DIABETES" value="NÃO" selected>NÃO</option>
+
+            </optgroup>
+          </select>
+          <br><br>
+
+          HAS<span class="vermelho none"> *</span>
+          <select required name="HAS">
+            <optgroup label="HAS">
+              <option name="HAS" value="SIM">SIM</option>
+              <option name="HAS" value="NÃO" selected>NÃO</option>
+
+            </optgroup>
+          </select>
+          <br><br>
+
+          DOENÇAS CARDIOVASCULARES<span class="vermelho none"> *</span>
+          <select required name="DOENCAS CARDIACAS">
+            <optgroup label="DOENÇAS CARDIOVASCULARES">
+              <option name="DOENCAS CARDIACAS" value="SIM">SIM</option>
+              <option name="DOENCAS CARDIACAS" value="NÃO" selected>NÃO</option>
+
+            </optgroup>
+          </select>
+          <br><br>
+
+
+
+          PRÁTICA DE EXERCÍCIO FÍSICO ALÉM DA MODALIDADE ESPORTIVA <span class="vermelho none"> *</span>
+          <select required onchange="DesabilitarOpcao()" id="exercicio-fisico" name="EXERCICIO FISICO">
+            <optgroup label="EXERCÍCIO FÍSICO">
+              <option name="EXERCICIO FISICO" value="SIM">SIM</option>
+              <option name="EXERCICIO FISICO" value="NÃO" selected>NÃO</option>
+
+
+            </optgroup>
+          </select><br><br>
+
+          <div id="desaparecer-exercicio" style="display: none;">
+            MODALIDADE
+            <input type="text" class="maiuscula" name="ATV REALIZADA" maxlength="140"
+              placeholder="Exercício físico realizado">
+            <br><br>FREQUENCIA SEMANAL
+            <input class="numero" name="FREQUENCIA SEMANAL" type="number" min="1" max="7"> dias
+
+            <br>
+            <br>TEMPO DE EXERCÍCIO REALIZADO, POR TREINO, PARA CADA MODALIDADE
+            <input class="numero" name="MINUTOS DE ATV" type="number">
+            <br> </div>
+          <br>
+
+
+
           <h2 class="text-left">ANTECEDENTES FAMILIARES</h2>
-        
-        <br>
+
+          <br>
 
 
-        ETILISMO
-        <select name="ATECEDENTE COM ETILISMO">
-          <optgroup label="ETILISMO">
-            <option name="ATECEDENTE COM ETILISMO" value="SIM">SIM</option>
-            <option name="ATECEDENTE COM ETILISMO" value="NÃO" selected>NÃO</option>
+          ETILISMO
+          <select name="ATECEDENTE COM ETILISMO">
+            <optgroup label="ETILISMO">
+              <option name="ATECEDENTE COM ETILISMO" value="SIM">SIM</option>
+              <option name="ATECEDENTE COM ETILISMO" value="NÃO" selected>NÃO</option>
 
-          </optgroup>
-        </select>
-        <br><br>
+            </optgroup>
+          </select>
+          <br><br>
 
-        DIABETES MELLITUS
-        <select name="ANTECEDENTE COM DIABETES">
-          <optgroup label="DIABETES MELLITUS">
-            <option name="ANTECEDENTE COM DIABETES" value="SIM">SIM</option>
-            <option name="ANTECEDENTE COM DIABETES" value="NÃO" selected>NÃO</option>
+          DIABETES MELLITUS
+          <select name="ANTECEDENTE COM DIABETES">
+            <optgroup label="DIABETES MELLITUS">
+              <option name="ANTECEDENTE COM DIABETES" value="SIM">SIM</option>
+              <option name="ANTECEDENTE COM DIABETES" value="NÃO" selected>NÃO</option>
 
-          </optgroup>
-        </select>
-        <br><br>
+            </optgroup>
+          </select>
+          <br><br>
 
-        HAS
-        <select name="ATECEDENTE COM HAS">
-          <optgroup label="HAS">
-            <option name="ATECEDENTE COM HAS" value="SIM">SIM</option>
-            <option name="ATECEDENTE COM HAS" value="NÃO" selected>NÃO</option>
+          HAS
+          <select name="ATECEDENTE COM HAS">
+            <optgroup label="HAS">
+              <option name="ATECEDENTE COM HAS" value="SIM">SIM</option>
+              <option name="ATECEDENTE COM HAS" value="NÃO" selected>NÃO</option>
 
-          </optgroup>
-        </select>
-        <br><br>
+            </optgroup>
+          </select>
+          <br><br>
 
-        DOENÇAS CARDIOVASCULARES
-        <select name="ATECEDENTE COM DOENCA CARDIACA">
-          <optgroup label="DOENÇAS CARDIOVASCULARES">
-            <option name="ATECEDENTE COM DOENCA CARDIACA" value="SIM">SIM</option>
-            <option name="ATECEDENTE COM DOENCA CARDIACA" value="NÃO" selected>NÃO</option>
+          DOENÇAS CARDIOVASCULARES
+          <select name="ATECEDENTE COM DOENCA CARDIACA">
+            <optgroup label="DOENÇAS CARDIOVASCULARES">
+              <option name="ATECEDENTE COM DOENCA CARDIACA" value="SIM">SIM</option>
+              <option name="ATECEDENTE COM DOENCA CARDIACA" value="NÃO" selected>NÃO</option>
 
-          </optgroup>
-        </select>
-        <br><br>
-
-
-        OUTROS:
-        <input name="ATECEDENTE COM OUTRAS DOENCAS" type="text" class="maiuscula" maxlength="140" placeholder="Se não, deixe vazio.">
+            </optgroup>
+          </select>
+          <br><br>
 
 
-      </article>
+          OUTROS:
+          <input name="ATECEDENTE COM OUTRAS DOENCAS" type="text" class="maiuscula" maxlength="140"
+            placeholder="Se não, deixe vazio.">
 
-      
-      <article>
 
-        <h2 class="article-title">ANAMNESE</h2>
-          
+        </article>
 
-        
-        <br>
-        
-         <h2 class="text-left">HISTÓRIA CLÍNICA</h2> 
-        
-        <br>QUEIXA PRINCIPAL/FUNCIONAL<br><input name="QUEIXA PRINCIPAL/FUNCIONAL" type="text" class="maiuscula" maxlength="140"
-          placeholder="Queixa principal/funcional" value="">
-        <br>
-        <br>HISTÓRIA DA QUEIXA APRESENTADA <span class="vermelho none" style="font-weight:bold; font-size: 12px; margin-top:-16px; margin-bottom:-16px; display: block;"><br>(TEMPO
-          DE EXISTÊNCIA, TRATAMENTOS REALIZADOS)</span><br><input name="HISTÓRIA DA QUEIXA" type="text" class="maiuscula" maxlength="500"
-          placeholder="História da queixa" value="">
-        <br>
 
-        <br>NATUREZA DA QUEIXA APRESENTADA
-        <select onchange="DesabilitarOpcao()" id="natureza-da-lesao" name="NATUREZA DA QUEIXA">
-          <optgroup label="NATUREZA DA QUEIXA">
-            <option value="" selected></option>
-            <option value="OSSEA">ÓSSEA</option>
-            <option value="MUSCULAR">MUSCULAR</option>
-            <option value="LIGAMENTO">LIGAMENTO</option>
-            <option value="ARTICULAR">ARTICULAR</option>
-            <option value="CARTILAGINOSA">CARTILAGINOSA</option>
-            <option value="OUTRA">OUTRA</option>
-          </optgroup>
-        </select>
-        <br>
-        <div id="desaparecer-natureza" style="display:none"><br>
-          OUTRO TIPO DE NATUREZA
-          <input name="NATUREZA DA QUEIXA" type="text" class="maiuscula" maxlength="140" placeholder="Escreva o tipo de natureza da queixa">
-          <br></div>
+        <article>
 
-        <br>HISTÓRICO DE LESÕES ANTERIORES <span class="vermelho none" style="font-weight:bold; font-size: 12px; margin-top:-16px; margin-bottom:-16px; display: block;"><br>(ESPECIFIQUE
-          QUAIS CONDUTAS FORAM REALIZADAS CONSERVADORA E CIRÚRGICAMENTE)</span><br><input name="HISTÓRICO DE LESÕES"
-          type="text" class="maiuscula" maxlength="500" placeholder="História de lesões anteriores" value="">
-        <br>
+          <h2 class="article-title">ANAMNESE</h2>
 
-        <br>ESTÁ EM ACOMPANHAMENTO FISIOTERAPÊUTICO?
-        <select onchange="DesabilitarOpcao()" id="faz-fisio" name="FAZ FISIOTERAPIA">
-          <optgroup label="NATUREZA DA QUEIXA APRESENTADA">
-            <option value="SIM">SIM</option>
-            <option value="NÃO" selected>NÃO</option>
-          </optgroup>
-        </select><br>
-        <div id="desaparecer-faz-fisio" style="display:none;">
-          <br>ESPECIFIQUE O RECURSO UTILIZADO E OBJETIVO TERAPÊUTICO<br><input name="RECURSO E OBJETIVO UTILIZADO" type="text" class="maiuscula"
-            maxlength="500" placeholder="Especifique o recurso e o objetivo utilizado" value="">
-        </div><br>
-      
+
+
+          <br>
+
+          <h2 class="text-left">HISTÓRIA CLÍNICA</h2>
+
+          <br>QUEIXA PRINCIPAL/FUNCIONAL<br><input name="QUEIXA PRINCIPAL/FUNCIONAL" type="text" class="maiuscula"
+            maxlength="140" placeholder="Queixa principal/funcional" value="">
+          <br>
+          <br>HISTÓRIA DA QUEIXA APRESENTADA <span class="vermelho none"
+            style="font-weight:bold; font-size: 12px; margin-top:-16px; margin-bottom:-16px; display: block;"><br>(TEMPO
+            DE EXISTÊNCIA, TRATAMENTOS REALIZADOS)</span><br><input name="HISTÓRIA DA QUEIXA" type="text"
+            class="maiuscula" maxlength="500" placeholder="História da queixa" value="">
+          <br>
+
+          <br>NATUREZA DA QUEIXA APRESENTADA
+          <select onchange="DesabilitarOpcao()" id="natureza-da-lesao" name="NATUREZA DA QUEIXA">
+            <optgroup label="NATUREZA DA QUEIXA">
+              <option value="" selected></option>
+              <option value="OSSEA">ÓSSEA</option>
+              <option value="MUSCULAR">MUSCULAR</option>
+              <option value="LIGAMENTO">LIGAMENTO</option>
+              <option value="ARTICULAR">ARTICULAR</option>
+              <option value="CARTILAGINOSA">CARTILAGINOSA</option>
+              <option value="OUTRA">OUTRA</option>
+            </optgroup>
+          </select>
+          <br>
+          <div id="desaparecer-natureza" style="display:none"><br>
+            OUTRO TIPO DE NATUREZA
+            <input name="NATUREZA DA QUEIXA" type="text" class="maiuscula" maxlength="140"
+              placeholder="Escreva o tipo de natureza da queixa">
+            <br></div>
+
+          <br>HISTÓRICO DE LESÕES ANTERIORES <span class="vermelho none"
+            style="font-weight:bold; font-size: 12px; margin-top:-16px; margin-bottom:-16px; display: block;"><br>(ESPECIFIQUE
+            QUAIS CONDUTAS FORAM REALIZADAS CONSERVADORA E CIRÚRGICAMENTE)</span><br><input name="HISTÓRICO DE LESÕES"
+            type="text" class="maiuscula" maxlength="500" placeholder="História de lesões anteriores" value="">
+          <br>
+
+          <br>ESTÁ EM ACOMPANHAMENTO FISIOTERAPÊUTICO?
+          <select onchange="DesabilitarOpcao()" id="faz-fisio" name="FAZ FISIOTERAPIA">
+            <optgroup label="NATUREZA DA QUEIXA APRESENTADA">
+              <option value="SIM">SIM</option>
+              <option value="NÃO" selected>NÃO</option>
+            </optgroup>
+          </select><br>
+          <div id="desaparecer-faz-fisio" style="display:none;">
+            <br>ESPECIFIQUE O RECURSO UTILIZADO E OBJETIVO TERAPÊUTICO<br><input name="RECURSO E OBJETIVO UTILIZADO"
+              type="text" class="maiuscula" maxlength="500" placeholder="Especifique o recurso e o objetivo utilizado"
+              value="">
+          </div><br>
+
           <h2 class="text-left">EXAME FÍSICO</h2>
-      
-        <br>
-        P.A.<br>
-        <input name="PRESSAO ARTERIAL" class="numero" type="text" class="maiuscula" min="0" step="0.1" placeholder="Pressão Arterial"> mmHg<br><br>
-        F.R.<br>
-        <input name="PFR" class="numero" type="number" min="0" placeholder="P.F.R"> <br><br>
-        F.C.<br>
-        <input name="FC" class="numero" type="number" placeholder="F.C" min="0"> bpm<br><br>
-        SpO2<br>
-        <input name="SPO2" type="number" min="0" placeholder="SpO2"><br><br>
-
-
-        PESO<BR>
-        <input id="peso" onchange="Obesidade()" class="imc numero" name="PESO" min="20" max="330" step="0.1" type="number" /> kg<BR><br>
-        ALTURA<br>
-        <input id="altura" onchange="Obesidade()" class="imc numero" name="ALTURA" min="20" max="330" type="number" /> cm<BR>
-        <br>
-        IMC<br>
-         <input value="I.M.C" class="resultado" type="text" readonly>
-        <input name="IMC" id="imc" readonly class="resultado" type="number" step="0.0001" style="width:49%; "> <br><br>
-        <input class="number texto-center resultado" type="text"  readonly  id="imcresult" name="ESCALA IMC" value="" style="display:none; width:98.8% !important;">
-        <input class="number texto-center"  type="text" class="maiuscula resultado" readonly  id="obesidade" name="OBESIDADE" value="" style="width:49%; opacity: 0; position: absolute;">
-
-        
-
-
-
-</article>
-
-<article>
-  <h2 class="article-title">QUESTIONÁRIO INTERNACIONAL DE ATIVIDADE FÍSICA – VERSÃO CURTA</h2>
-
-    
-
-  <br>
-  <p class="atividade">Para responder as questões lembre que:<br><br>
-        
-    - Atividades físicas <b>VIGOROSAS</b> são aquelas que precisam de um grande
-      esforço físico e que fazem respirar MUITO mais forte que o normal.
-    <br><br>- Atividades físicas <b>MODERADAS</b> são aquelas que precisam de algum esforço
-        físico e que fazem respirar UM POUCO mais forte que o normal.
-
-        <br><br>- Pense <b>somente nas atividades que você realiza por
-pelo menos 10 minutos</b> contínuos de cada vez.
-  </p>
-  
-<!--COMEÇO QUESTAO-->    
-<br><br>
- <div id="1a"> <fieldset class="align-left questoes-ipac">
-      <legend>Questão 1a </legend>
-    </fieldset>
-<p  class="paragrafoIPAC">
-
-   Em quantos dias da última semana você <b style="font-size:16px;">CAMINHOU</b> por <u style="font-size:18px;">pelo menos 10
-minutos contínuos</u> em casa ou no trabalho, como forma de transporte para ir de um
-lugar para outro, por lazer, por prazer ou como forma de exercício?
-<br><br><b>Dias/Semana</b> <input onchange="resultadoIpac()" class="ipac" name="1a-q" id="1a-q" type="number" min="1" max="7" value="" ><br>
-
-
-</p>
-</div>
-<p  class="paragrafoIPAC bold">Nenhum <input onchange="desaparecer1a()" onclick="resultadoIpac()" class="ipac" value="1" name="1a-q" id="valor1a" type="checkbox"></p>
-<!--FIM QUESTAO-->
-
-<!--COMEÇO QUESTAO--> 
-<div id="1b" style="display:block">
-<br>
-  <fieldset class="align-left questoes-ipac">
-      <legend>Questão 1b </legend>
-    </fieldset>
-<p class="paragrafoIPAC">
-
-Nos dias em que você caminhou por <u style="font-size:18px;">pelo menos 10 minutos contínuos</u> quanto
-tempo no total você gastou caminhando <u style="font-size:18px;"><b>por dia</b></u>?
-<br><br>Tempo (Em minutos) <input onchange="resultadoIpac()" class="ipac" id="1b-q" name="1b-q" type="number" value="">
-
-</p>
-</div>  
-<!--FIM QUESTAO-->
-
-
-<!--COMEÇO QUESTAO-->    
-<br><br>
- <div id="2a"> <fieldset class="align-left questoes-ipac">
-      <legend>Questão 2a </legend>
-    </fieldset>
-<p  class="paragrafoIPAC">
-
-Em quantos dias da última semana, você realizou atividades  <b style="font-size:16px;">MODERADAS</b> por <u style="font-size:18px;">pelo menos 10
-  minutos contínuos</u>, como por exemplo pedalar leve na bicicleta,
-nadar, dançar, fazer ginástica aeróbica leve, jogar vôlei recreativo, carregar pesos
-leves, fazer serviços domésticos na casa, no quintal ou no jardim como varrer,
-aspirar, cuidar do jardim, ou qualquer atividade que fez aumentar <b>moderadamente</b> sua respiração ou batimentos do coração <b>(POR FAVOR NÃO
-INCLUA CAMINHADA)</b>
-<br><br>Dias/Semana <input onchange="resultadoIpac()" class="ipac" name="2a-q" id="2a-q" value="" type="number" min="1" max="7" ><br>
-
-
-</p>
-</div>
-<p  class="paragrafoIPAC bold">Nenhum <input onchange="desaparecer2a()" onclick="resultadoIpac()" class="ipac" value="1" name="2a-q" id="valor2a" type="checkbox"></p>
-<!--FIM QUESTAO-->
 
-<!--COMEÇO QUESTAO--> 
-<div id="2b" style="display:block">
-<br>
-  <fieldset class="align-left questoes-ipac">
-      <legend>Questão 2b </legend>
-    </fieldset>
-<p class="paragrafoIPAC">
-
-Nos dias em que você fez essas atividades moderadas <u style="font-size:18px;">por pelo menos 10
-  minutos contínuos</u>, quanto tempo no total você gastou fazendo essas atividades
-  <u style="font-size:18px;"><b>por dia?</b></u>
-<br><br>Tempo (Em minutos) <input onchange="resultadoIpac()" class="ipac" id="2b-q" name="2b-q" type="number" value="">
-
-</p>
-</div>  
-<!--FIM QUESTAO-->
-
-<!--COMEÇO QUESTAO-->    
-<br><br>
- <div id="3a"> <fieldset class="align-left questoes-ipac">
-      <legend>Questão 3a </legend>
-    </fieldset>
-<p  class="paragrafoIPAC">
-
-Em quantos dias da última semana, você realizou atividades <b style="font-size:18px;" >VIGOROSAS</b> <u style="font-size:18px;">por
-pelo menos 10 minutos contínuos</u>, como por exemplo correr, fazer ginástica
-aeróbica, jogar futebol, pedalar rápido na bicicleta, jogar basquete, fazer serviços
-domésticos pesados em casa, no quintal ou cavoucar no jardim, carregar pesos
-elevados ou qualquer atividade que fez aumentar <b style="font-size:18px;">MUITO</b> sua respiração ou
-batimentos do coração.
-<br><br>Dias/Semana <input onchange="resultadoIpac()" class="ipac" name="3a-q" id="3a-q" type="number" min="1" max="7" value=""><br>
-
-
-</p>
-</div>
-<p  class="paragrafoIPAC bold">Nenhum <input onchange="desaparecer3a()"  onclick="resultadoIpac()" class="ipac" value="1" name="3a-q" id="valor3a" type="checkbox"></p>
-<!--FIM QUESTAO-->
-
-<!--COMEÇO QUESTAO--> 
-<div id="3b" style="display:block">
-<br>
-  <fieldset class="align-left questoes-ipac">
-      <legend>Questão 3b </legend>
-    </fieldset>
-<p class="paragrafoIPAC">
-
-Nos dias em que você fez essas atividades vigorosas <u style="font-size:18px;">por pelo menos 10
-  minutos contínuos</u>, quanto tempo no total você gastou fazendo essas atividades
-  <u style="font-size:18px;"><b>por dia?</b></u>
-<br><br>Tempo (Em minutos) <input onchange="resultadoIpac()" class="ipac" id="3b-q" name="3b-q" type="number" value="">
-
-</p>
-</div>  
-<!--FIM QUESTAO-->
-
-
-
-
-<p class="atividade">Estas últimas questões são sobre o tempo que você permanece sentado todo dia,
-no trabalho, na escola ou faculdade, em casa e durante seu tempo livre. Isto inclui
-o tempo sentado estudando, sentado enquanto descansa, fazendo lição de casa
-visitando um amigo, lendo, sentado ou deitado assistindo TV. Não inclua o tempo
-gasto sentando durante o transporte em ônibus, trem, metrô ou carro.</p>
-
-
-<!--COMEÇO QUESTAO-->    
-<br><br>
-<fieldset class="align-left questoes-ipac">
-<legend>Questão 4a </legend>
-</fieldset>
-<p class="paragrafoIPAC">
-
-Quanto tempo no total você gasta sentado durante um <b style="font-size:18px;">dia de semana?</b>
-<br><br>Tempo (formato: 24:00) <input name="TEMPO SENTADO SEMANA" type="time">
-
-</p>
-<!--FIM QUESTAO-->
-
-<!--COMEÇO QUESTAO-->    
-<br>
-<fieldset class="align-left questoes-ipac">
-<legend class="">Questão 4b </legend>
-</fieldset>
-<p class="paragrafoIPAC">
-
-Quanto tempo no total você gasta sentado durante em um <b style="font-size:18px;">dia de final de
-  semana?</b>
-<br><br>Tempo (formato: 24:00) <input name="TEMPO SENTADO FINAL DE SEMANA" type="time">
-
-</p>
-<!--FIM QUESTAO-->
-
-<br>
-<input class="resultado" style="font-size:16px; font-weight: bold" value="NÍVEL DE ATIVIDADE FÍSICA:"> </span><input class="resultado" id="resultadoipac" name="ATIVIDADE FÍSICA" readonly>
-
-
-
-</article>
-
-
-<article>
-    <h2 class="article-title">PERIMETRIA (Cm)</h2>
-
-  <br>
-  <div class="form-row">
-    <div class="col">
-      Braço Relaxado (Esquerdo)<input type="number" name="BRelaxadoEsquerdo">
-    </div>
-    <div class="col">
-      Braço Relaxado (Direito)<input type="number" name="BRelaxadoDireito">
-    </div>
-  </div><br>
-
-  <div class="form-row justify-content-center align-items-center">
-    <div class="col">
-      Braço Contraido (Esquerdo)<input type="number" name="BContraidoEsquerdo">
-    </div>
-    <div class="col">
-      Braço Contraido (Direito)<input type="number" name="BContraidooDireito">
-    </div>
-  </div><br>
-
-  <div class="form-row justify-content-center align-items-center">
-    <div class="col">
-      Toráx<input type="number" name="Toráx">
-    </div>
-    <div class="col">
-      Abdômen<input type="number" name="Abdômen">
-    </div>
-  </div><br>
-
-  <div class="form-row justify-content-center align-items-center">
-    <div class="col">
-      Coxa Proximal (Esquerda)<input type="number" name="Coxa Proximal Esquerda">
-    </div>
-    <div class="col">
-      Coxa Proximal (Direita)<input type="number" name="Coxa Proximal Direita">
-    </div>
-  </div><br>
-
-  <div class="form-row justify-content-center align-items-center">
-    <div class="col">
-      Coxa Media (Esquerda)<input type="number" name="Coxa Media Esquerda">
-    </div>
-    <div class="col">
-      Coxa Media (Direita)<input type="number" name="Coxa Media Direita">
-    </div>
-  </div><br>
-
-
-  <div class="form-row justify-content-center align-items-center">
-    <div class="col">
-      Coxa Distal (Esquerda)<input type="number" name="Coxa Distal Esquerda">
-    </div>
-    <div class="col">
-      Coxa Distal (Direita)<input type="number" name="Coxa Distal Direita">
-    </div>
-  </div><br>
-
-  <div class="form-row justify-content-center align-items-center">
-    <div class="col">
-      Perna (Esquerda)<input type="number" name="Perna Esquerda">
-    </div>
-    <div class="col">
-      Perna (Direita)<input type="number" name="Perna Direita">
-    </div>
-  </div><br>
-
-  <div class="form-row justify-content-center align-items-center">
-    <div class="col">
-      Cintura<input id="cintura" step="0.001" class="rcq" type="number" name="Cintura">
-    </div>
-    <div class="col">
-      Quadril<input id="quadril" step="0.001" class="rcq" type="number" name="Quadril">
-    </div>
-  </div><br>
-
-  
-    
-      <input class="resultado" style="font-size:14px;" type="text" readonly value="Relação Cintura Quadril:">
-    
-    
-      <input class="resultado" style="font-size:14px;" id="rcq" type="text" readonly name="RCQ">
-    
-  <br>
-
-
-  
-</article>
-
-
-
-<article>
-    <h2 class="article-title">DOBRAS CUTÂNEAS (mm)</h2>
-    <br>
-    <div class="form-row justify-content-center align-items-center">
-    <div class="col">
-
-      <label for="tricipital">TRICIPITAL</label>
-    <input type="number" class="gordura" id="tricipital" name="tricipital"><br>
-    </div>
-
-    <div class="col">
-
-      <label for="subescapular">SUBESCAPULAR</label>
-      <input type="number" class="gordura" id="subescapular" name="subescapular"><br>
-
-    </div></div>
-    
-    <div class="form-row justify-content-center align-items-center">
-
-    <div class="col"><br>
-      <label for="axilar media">AXILAR MÉDIA</label>
-    <input type="number" class="gordura" id="axilar" name="axilar media"><br><br>
-    </div>
-
-    <div class="col">
-      <label for="peitoral">PEITORAL</label>
-      <input type="number" class="gordura" id="peitoral" name="peitoral">
-
-    </div></div>
-
-    <div class="form-row justify-content-center align-items-center">
-    
-    <div class="col">
-      <label for="supra iliaca">SUPRA-ÍLIACA</label><br>
-      <input type="number" class="gordura" id="supra" name="supra iliaca"><br>
-      </div>
-    
-    <div class="col">
-      <label for="abdomen">ABDOMÊN</label><br>
-      <input type="number" class="gordura" id="abdomen" name="abdomen"><br>
-    </div></div>
-
-
-    <div class="form-row justify-content-center align-items-center">
-
-    <div class="col">
-        <br>
-        <label for="coxa">COXA</label>
-        <input type="number" class="gordura" id="coxadobra" name="coxa"><br><br>
-    </div>
-    
-    <div class="col">
-        <br>
-        <label for="perna">PERNA</label>
-        <input type="number" class="gordura"  id="pernaDobra" name="perna"><br><br>
-    </div></div>
-    <br><input type="text" readonly value="% Gordura:" class="resultado " data-destroy="true" >
-    <input type="text" readonly id="resultadodobra" class="resultado">
-   
-  </article>
-  
-
-      <article>
+          <br>
+          P.A.<br>
+          <input name="PRESSAO ARTERIAL" class="numero" type="text" class="maiuscula" min="0" step="0.1"
+            placeholder="Pressão Arterial"> mmHg<br><br>
+          F.R.<br>
+          <input name="PFR" class="numero" type="number" min="0" placeholder="P.F.R"> <br><br>
+          F.C.<br>
+          <input name="FC" class="numero" type="number" placeholder="F.C" min="0"> bpm<br><br>
+          SpO2<br>
+          <input name="SPO2" type="number" min="0" placeholder="SpO2"><br><br>
+
+
+          PESO<BR>
+          <input id="peso" onchange="Obesidade()" class="imc numero" name="PESO" min="20" max="330" step="0.1"
+            type="number" /> kg<BR><br>
+          ALTURA<br>
+          <input id="altura" onchange="Obesidade()" class="imc numero" name="ALTURA" min="20" max="330" type="number" />
+          cm<BR>
+          <br>
+          IMC<br>
+          <input value="I.M.C" class="resultado" type="text" readonly>
+          <input name="IMC" id="imc" readonly class="resultado" type="number" step="0.0001" style="width:49%; ">
+          <br><br>
+          <input class="number texto-center resultado" type="text" readonly id="imcresult" name="ESCALA IMC" value=""
+            style="display:none; width:98.8% !important;">
+          <input class="number texto-center" type="text" class="maiuscula resultado" readonly id="obesidade"
+            name="OBESIDADE" value="" style="width:49%; opacity: 0; position: absolute;">
+
+
+
+
+
+        </article>
+
+        <article>
+          <h2 class="article-title">QUESTIONÁRIO INTERNACIONAL DE ATIVIDADE FÍSICA – VERSÃO CURTA</h2>
+
+
+
+          <br>
+          <p class="atividade">Para responder as questões lembre que:<br><br>
+
+            - Atividades físicas <b>VIGOROSAS</b> são aquelas que precisam de um grande
+            esforço físico e que fazem respirar MUITO mais forte que o normal.
+            <br><br>- Atividades físicas <b>MODERADAS</b> são aquelas que precisam de algum esforço
+            físico e que fazem respirar UM POUCO mais forte que o normal.
+
+            <br><br>- Pense <b>somente nas atividades que você realiza por
+              pelo menos 10 minutos</b> contínuos de cada vez.
+          </p>
+
+          <!--COMEÇO QUESTAO-->
+          <br><br>
+          <div id="1a">
+            <fieldset class="align-left questoes-ipac">
+              <legend>Questão 1a </legend>
+            </fieldset>
+            <p class="paragrafoIPAC">
+
+              Em quantos dias da última semana você <b style="font-size:16px;">CAMINHOU</b> por <u
+                style="font-size:18px;">pelo menos 10
+                minutos contínuos</u> em casa ou no trabalho, como forma de transporte para ir de um
+              lugar para outro, por lazer, por prazer ou como forma de exercício?
+              <br><br><b>Dias/Semana</b> <input onchange="resultadoIpac()" class="ipac" name="1a-q" id="1a-q"
+                type="number" min="1" max="7" value=""><br>
+
+
+            </p>
+          </div>
+          <p class="paragrafoIPAC bold">Nenhum <input onchange="desaparecer1a()" onclick="resultadoIpac()" class="ipac"
+              value="1" name="1a-q" id="valor1a" type="checkbox"></p>
+          <!--FIM QUESTAO-->
+
+          <!--COMEÇO QUESTAO-->
+          <div id="1b" style="display:block">
+            <br>
+            <fieldset class="align-left questoes-ipac">
+              <legend>Questão 1b </legend>
+            </fieldset>
+            <p class="paragrafoIPAC">
+
+              Nos dias em que você caminhou por <u style="font-size:18px;">pelo menos 10 minutos contínuos</u> quanto
+              tempo no total você gastou caminhando <u style="font-size:18px;"><b>por dia</b></u>?
+              <br><br>Tempo (Em minutos) <input onchange="resultadoIpac()" class="ipac" id="1b-q" name="1b-q"
+                type="number" value="">
+
+            </p>
+          </div>
+          <!--FIM QUESTAO-->
+
+
+          <!--COMEÇO QUESTAO-->
+          <br><br>
+          <div id="2a">
+            <fieldset class="align-left questoes-ipac">
+              <legend>Questão 2a </legend>
+            </fieldset>
+            <p class="paragrafoIPAC">
+
+              Em quantos dias da última semana, você realizou atividades <b style="font-size:16px;">MODERADAS</b> por <u
+                style="font-size:18px;">pelo menos 10
+                minutos contínuos</u>, como por exemplo pedalar leve na bicicleta,
+              nadar, dançar, fazer ginástica aeróbica leve, jogar vôlei recreativo, carregar pesos
+              leves, fazer serviços domésticos na casa, no quintal ou no jardim como varrer,
+              aspirar, cuidar do jardim, ou qualquer atividade que fez aumentar <b>moderadamente</b> sua respiração ou
+              batimentos do coração <b>(POR FAVOR NÃO
+                INCLUA CAMINHADA)</b>
+              <br><br>Dias/Semana <input onchange="resultadoIpac()" class="ipac" name="2a-q" id="2a-q" value=""
+                type="number" min="1" max="7"><br>
+
+
+            </p>
+          </div>
+          <p class="paragrafoIPAC bold">Nenhum <input onchange="desaparecer2a()" onclick="resultadoIpac()" class="ipac"
+              value="1" name="2a-q" id="valor2a" type="checkbox"></p>
+          <!--FIM QUESTAO-->
+
+          <!--COMEÇO QUESTAO-->
+          <div id="2b" style="display:block">
+            <br>
+            <fieldset class="align-left questoes-ipac">
+              <legend>Questão 2b </legend>
+            </fieldset>
+            <p class="paragrafoIPAC">
+
+              Nos dias em que você fez essas atividades moderadas <u style="font-size:18px;">por pelo menos 10
+                minutos contínuos</u>, quanto tempo no total você gastou fazendo essas atividades
+              <u style="font-size:18px;"><b>por dia?</b></u>
+              <br><br>Tempo (Em minutos) <input onchange="resultadoIpac()" class="ipac" id="2b-q" name="2b-q"
+                type="number" value="">
+
+            </p>
+          </div>
+          <!--FIM QUESTAO-->
+
+          <!--COMEÇO QUESTAO-->
+          <br><br>
+          <div id="3a">
+            <fieldset class="align-left questoes-ipac">
+              <legend>Questão 3a </legend>
+            </fieldset>
+            <p class="paragrafoIPAC">
+
+              Em quantos dias da última semana, você realizou atividades <b style="font-size:18px;">VIGOROSAS</b> <u
+                style="font-size:18px;">por
+                pelo menos 10 minutos contínuos</u>, como por exemplo correr, fazer ginástica
+              aeróbica, jogar futebol, pedalar rápido na bicicleta, jogar basquete, fazer serviços
+              domésticos pesados em casa, no quintal ou cavoucar no jardim, carregar pesos
+              elevados ou qualquer atividade que fez aumentar <b style="font-size:18px;">MUITO</b> sua respiração ou
+              batimentos do coração.
+              <br><br>Dias/Semana <input onchange="resultadoIpac()" class="ipac" name="3a-q" id="3a-q" type="number"
+                min="1" max="7" value=""><br>
+
+
+            </p>
+          </div>
+          <p class="paragrafoIPAC bold">Nenhum <input onchange="desaparecer3a()" onclick="resultadoIpac()" class="ipac"
+              value="1" name="3a-q" id="valor3a" type="checkbox"></p>
+          <!--FIM QUESTAO-->
+
+          <!--COMEÇO QUESTAO-->
+          <div id="3b" style="display:block">
+            <br>
+            <fieldset class="align-left questoes-ipac">
+              <legend>Questão 3b </legend>
+            </fieldset>
+            <p class="paragrafoIPAC">
+
+              Nos dias em que você fez essas atividades vigorosas <u style="font-size:18px;">por pelo menos 10
+                minutos contínuos</u>, quanto tempo no total você gastou fazendo essas atividades
+              <u style="font-size:18px;"><b>por dia?</b></u>
+              <br><br>Tempo (Em minutos) <input onchange="resultadoIpac()" class="ipac" id="3b-q" name="3b-q"
+                type="number" value="">
+
+            </p>
+          </div>
+          <!--FIM QUESTAO-->
+
+
+
+
+          <p class="atividade">Estas últimas questões são sobre o tempo que você permanece sentado todo dia,
+            no trabalho, na escola ou faculdade, em casa e durante seu tempo livre. Isto inclui
+            o tempo sentado estudando, sentado enquanto descansa, fazendo lição de casa
+            visitando um amigo, lendo, sentado ou deitado assistindo TV. Não inclua o tempo
+            gasto sentando durante o transporte em ônibus, trem, metrô ou carro.</p>
+
+
+          <!--COMEÇO QUESTAO-->
+          <br><br>
+          <fieldset class="align-left questoes-ipac">
+            <legend>Questão 4a </legend>
+          </fieldset>
+          <p class="paragrafoIPAC">
+
+            Quanto tempo no total você gasta sentado durante um <b style="font-size:18px;">dia de semana?</b>
+            <br><br>Tempo (formato: 24:00) <input name="TEMPO SENTADO SEMANA" type="time">
+
+          </p>
+          <!--FIM QUESTAO-->
+
+          <!--COMEÇO QUESTAO-->
+          <br>
+          <fieldset class="align-left questoes-ipac">
+            <legend class="">Questão 4b </legend>
+          </fieldset>
+          <p class="paragrafoIPAC">
+
+            Quanto tempo no total você gasta sentado durante em um <b style="font-size:18px;">dia de final de
+              semana?</b>
+            <br><br>Tempo (formato: 24:00) <input name="TEMPO SENTADO FINAL DE SEMANA" type="time">
+
+          </p>
+          <!--FIM QUESTAO-->
+
+          <br>
+          <input class="resultado" style="font-size:16px; font-weight: bold" readonly
+            value="NÍVEL DE ATIVIDADE FÍSICA:"> </span><input class="resultado" id="resultadoipac"
+            name="NÍVEL ATIVIDADE FÍSICA" readonly>
+
+
+
+        </article>
+
+
+        <article>
+          <h2 class="article-title">PERIMETRIA (Cm)</h2>
+
+          <br>
+          <div class="form-row">
+            <div class="col">
+              Braço Relaxado (Esquerdo)<input type="number" step="0.001" name="Braço E. Relaxado">
+            </div>
+            <div class="col">
+              Braço Relaxado (Direito)<input type="number" step="0.001" name="Braço D. Relaxado">
+            </div>
+          </div><br>
+
+          <div class="form-row justify-content-center align-items-center">
+            <div class="col">
+              Braço Contraido (Esquerdo)<input type="number" step="0.001" name="Braço E. Contraído">
+            </div>
+            <div class="col">
+              Braço Contraido (Direito)<input type="number" step="0.001" name="Braço D. Contraído">
+            </div>
+          </div><br>
+
+          <div class="form-row justify-content-center align-items-center">
+            <div class="col">
+              Toráx<input type="number" step="0.001" name="Toráx">
+            </div>
+            <div class="col">
+              Abdômen<input type="number" step="0.001" name="Abdômen-cm">
+            </div>
+          </div><br>
+
+          <div class="form-row justify-content-center align-items-center">
+            <div class="col">
+              Coxa Proximal (Esquerda)<input type="number" step="0.001" name="Coxa Proximal E.">
+            </div>
+            <div class="col">
+              Coxa Proximal (Direita)<input type="number" step="0.001" name="Coxa Proximal D.">
+            </div>
+          </div><br>
+
+          <div class="form-row justify-content-center align-items-center">
+            <div class="col">
+              Coxa Media (Esquerda)<input type="number" step="0.001" name="Coxa Media E.">
+            </div>
+            <div class="col">
+              Coxa Media (Direita)<input type="number" step="0.001" name="Coxa Media D.">
+            </div>
+          </div><br>
+
+
+          <div class="form-row justify-content-center align-items-center">
+            <div class="col">
+              Coxa Distal (Esquerda)<input type="number" step="0.001" name="Coxa Distal E.">
+            </div>
+            <div class="col">
+              Coxa Distal (Direita)<input type="number" step="0.001" name="Coxa Distal D.">
+            </div>
+          </div><br>
+
+          <div class="form-row justify-content-center align-items-center">
+            <div class="col">
+              Perna (Esquerda)<input type="number" step="0.001" name="Perna E.">
+            </div>
+            <div class="col">
+              Perna (Direita)<input type="number" step="0.001" name="Perna D.">
+            </div>
+          </div><br>
+
+          <div class="form-row justify-content-center align-items-center">
+            <div class="col">
+              Cintura<input id="cintura" step="0.001" class="rcq" type="number" name="Cintura">
+            </div>
+            <div class="col">
+              Quadril<input id="quadril" step="0.001" class="rcq" type="number" name="Quadril">
+            </div>
+          </div><br>
+
+
+
+          <input class="resultado" style="font-size:14px;" type="text" readonly value="Relação Cintura Quadril:">
+
+
+          <input class="resultado" style="font-size:14px;" id="rcq" type="text" readonly name="Relação Cintura/Quadril">
+
+          <br>
+
+
+
+        </article>
+
+
+
+        <article>
+          <h2 class="article-title">DOBRAS CUTÂNEAS (mm)</h2>
+          <br>
+          <div class="form-row justify-content-center align-items-center">
+            <div class="col">
+
+              <label for="tricipital">TRICIPITAL</label>
+              <input type="number" class="gordura" id="tricipital" step="0.001" name="TRICIPITAL"><br>
+            </div>
+
+            <div class="col">
+
+              <label for="subescapular">SUBESCAPULAR</label>
+              <input type="number" class="gordura" id="subescapular" step="0.001" name="SUBESCAPULAR"><br>
+
+            </div>
+          </div>
+
+          <div class="form-row justify-content-center align-items-center">
+
+            <div class="col"><br>
+              <label for="axilar media">AXILAR MÉDIA</label>
+              <input type="number" class="gordura" id="axilar" step="0.001" name="AXILAR MÉDIA"><br><br>
+            </div>
+
+            <div class="col">
+              <label for="peitoral">PEITORAL</label>
+              <input type="number" class="gordura" id="peitoral" step="0.001" name="PEITORAL">
+
+            </div>
+          </div>
+
+          <div class="form-row justify-content-center align-items-center">
+
+            <div class="col">
+              <label for="supra iliaca">SUPRA-ÍLIACA</label><br>
+              <input type="number" class="gordura" id="supra" step="0.001" name="SUPRA-ÍLIACA"><br>
+            </div>
+
+            <div class="col">
+              <label for="abdomen">ABDOMÊN</label><br>
+              <input type="number" class="gordura" id="abdomen" step="0.001" name="ABDOMÊN"><br>
+            </div>
+          </div>
+
+
+          <div class="form-row justify-content-center align-items-center">
+
+            <div class="col">
+              <br>
+              <label for="coxa">COXA</label>
+              <input type="number" class="gordura" step="0.001" id="coxadobra" name="COXA"><br><br>
+            </div>
+          </div>
+          <br><input type="text" readonly value="% Gordura:" class="resultado " data-destroy="true">
+          <input type="text" readonly id="resultadodobra" name="PERCENTUAL GORDURA" class="resultado">
+
+        </article>
+
+
+
+
+        <article>
+          <h2 class="article-title">F.M.S.</h2>
+          <br><br>
+          <h2 class="text-left">Y BALANCE TEST</h2>
+
+          <br>
+          <div class="form-row justify-content-center align-items-center">
+            <div class="col">
+              <label for="posturaAnterior">PA</label>
+              <input type="number"id="paytest" class="ytest" step="0.001" name="posturaAnterior">
+            </div>
+
+            <div class="col">
+              <label for="posturaAnterior">PM</label>
+              <input type="number" id="pmytest" class="ytest" step="0.001" name="posturaAnterior">
+            </div>
+          </div>
+
+          <div class="form-row justify-content-center align-items-center">
+            <div class="col"><br>
+              <label for="posturaAnterior">PL</label>
+              <input type="number" id="plytest" class="ytest" step="0.001" name="posturaAnterior">
+            </div>
+
+            <div class="col"><br>
+              <label for="posturaAnterior">CM</label>
+              <input type="number" id="cmytest" class="ytest" step="0.001" name="posturaAnterior">
+            </div>
+          </div><br>
+
+
+          <input type="text"  class="resultado" style="font-size:14px;" value="Escore Final do Teste" readonly>
+          <input type="text" readonly class="resultado" name="ESCORE Y TEST" id="escoreFinalY" step="0.001">
+          
+          
+          <br><br><br>
+          <h2 class="text-left">STEP DOWN</h2><br>
+          <div class="form-row justify-content-center align-items-center">
+            <div class="col">
+              <label for="estrategiademms">Estratégia de mmss</label>
+              <input type="number" class="stepdown" name="Estratégia de mmss" id="estrategiademms" min="0"
+                max="1"><br><br></div>
+            <div class="col">
+              <label for="movtronco">Movimento de tronco</label>
+              <input type="number" class="stepdown" name="Movimento de tronco" id="movtronco" min="0" max="1"><br><br>
+            </div>
+          </div>
+
+          <div class="form-row justify-content-center align-items-center">
+            <div class="col">
+              <label for="planoPelve">Plano da pelve</label>
+              <input type="number" class="stepdown" name="Plano da pelve" id="planoPelve" min="0" max="1"><br><br></div>
+            <div class="col">
+              <label for="posJoelho">Posição do joelho</label>
+              <input type="number" class="stepdown" name="Posição do joelho" id="posJoelho" min="0" max="1"><br><br>
+            </div>
+          </div>
+
+
+
+          <label for="valgo2Dedo">Valgo- TAT até o segundo dedo</label>
+          <input type="number" class="stepdown" name="Valgo- TAT até o segundo dedo" id="valgo2Dedo" min="0"
+            max="1"><br><br>
+
+          <label for="manutencaoEmApoioUnipodal">Manutenção da postura em apoio unipodal: Oscilação do membro testado ou
+            queda do step</label>
+          <input type="number" class="stepdown" name="Manutenção da postura" id="manutencaoEmApoioUnipodal" min="0"
+            max="1">
+
+          <br><br>
+          <label for="scorestepdowntexto">Análise quantitativa do movimento</label><br>
+          <input type="text" id="scorestepdowntexto" readonly value="SCORE FINAL:" class="resultado">
+
+          <input type="text" readonly id="scorestepdown" class="resultado" style="font-size:16px"
+            placeholder="Qualidade do Movimento">
+
+
+        </article>
+
+
+        <article>
           <h2 class="article-title">QUESTIONÁRIO DE TEGNER E LYSHOLM</h2>
 
-<br>
-            
-        INSTABILIDADE
-          <select name="INSTABILIDADE" class="soma" value="" >
-            <optgroup label="INSTABILIDADE" >
+          <br>
+
+          INSTABILIDADE
+          <select name="INSTABILIDADE" class="soma" value="">
+            <optgroup label="INSTABILIDADE">
               <option name="INSTABILIDADE" value="25" unselected>NUNCA FALSEIA (25)</option>
-              <option name="INSTABILIDADE" value="20"unselected>RARAMENTE DURANTE ATIVIDADES FISICAS OU OUTROS EXERCICIOS
+              <option name="INSTABILIDADE" value="20" unselected>RARAMENTE DURANTE ATIVIDADES FISICAS OU OUTROS
+                EXERCICIOS
                 PESADOS (20)</option>
               <option name="INSTABILIDADE" value="15" unselected>FREQUENTEMENTE DURANTE ATIVIDADES ATLÉTICAS OU OUTROS
                 EXERCÍCIOS PESADOS (OU INCAPAZ DE PARTICIPAÇÃO) (15)</option>
@@ -879,82 +1012,57 @@ Quanto tempo no total você gasta sentado durante em um <b style="font-size:18px
               <option name="APOIO" value="0">IMPOSSÍVEL (0)</option>
             </optgroup>
           </select><BR><br>
-            <div class="form-row justify-content-center align-items-center">
-
-          <input type="text" class="maiuscula resultado" style=" font-weight: bold;" readonly id="input_resultado" name="RESULTADO" value="">
-          <input type="text" readonly class="texto-center resultado" id="resultado" name="ESCALA TEGNER E LYSHOLM" value="" style=" margin: 0 auto; ">
-
-      </article>
-      
-      
-      <article>
-          <h2 class="article-title">F.M.S.</h2>
-<br><br>
-          <h2 class="text-left">Y BALANCE TEST</h2>
-
-          <br>
-          <label for="escoreFinalY">Escore Final do Teste</label>
-          <input type="number" name="Escore Y" id="escoreFinalY" step="0.001">
-<br><br><br>
-          <h2 class="text-left">STEP DOWN</h2><br>
           <div class="form-row justify-content-center align-items-center">
-          <div class="col">
-          <label for="estrategiademms">Estratégia de mmss</label>
-          <input type="number" id="estrategiademms" step="0.001"><br><br></div>
-          <div class="col"> 
-          <label for="movtronco">Movimento de tronco</label>
-          <input type="number" id="movtronco" step="0.001"><br><br></div></div>
 
-          <div class="form-row justify-content-center align-items-center">
-          <div class="col">
-          <label for="planoPelve">Plano da pelve</label>
-          <input type="number" id="planoPelve" step="0.001"><br><br></div>
-          <div class="col">
-          <label for="posJoelho">Posição do joelho</label>
-          <input type="number" id="posJoelho" step="0.001"><br><br></div></div>
+            <input type="text" class="maiuscula resultado" style=" font-weight: bold;" readonly id="input_resultado"
+              name="RESULTADO" value="RESULTADO:">
+            <input type="text" readonly class="texto-center resultado" id="resultado" name="ESCALA TEGNER E LYSHOLM"
+              value="" style=" margin: 0 auto; ">
 
-          
-          
-          <label for="valgo2Dedo">Valgo- TAT até o segundo dedo</label>
-          <input type="number" id="valgo2Dedo" step="0.001"><br><br>
-          
-          <label for="manutencaoEmApoioUnipodal">Manutenção da postura em apoio unipodal: Oscilação do membro testado ou queda do step</label>
-          <input type="number" id="manutencaoEmApoioUnipodal" step="0.001">
-
-        
-          </article>
-
-          
-
-
-
-    
+        </article>
 
 
 
 
-      <br>
-      
-      <div id="botoes" >
-        <div class="ajeita-botao">
-        <button id="true-button"  class="none resultado" style="display:block; border-radius:20px;"  type="submit"
-        name="myButton">Enviar</button>
-      <button id="fake-button" class="none" type="button" style="display:none; " onclick="semInternet()">Enviar</button>
-      <p id="semInternet" style="display:none; width:100%;  background:rgb(255, 110, 110); margin-top:20px;padding:12px; border-radius:10px; text-align: center; width: 100% !important"></p>
-    </div>
-        <div class="responsive-button">
-        
-      <button class="none" id="none3" style="display:block;"  onclick="window.print()" type="button">Imprimir</button>
-      <button class="none" id="none2" style="display:block;"  type="reset">Limpar Dados</button>
-
-        <div class="button" style="display:flex !important; justify-content: center; align-items: center !important;" id="none1"><a  target="_blank" 
-          href="https://docs.google.com/spreadsheets/d/1iYf_4JgkzIE_98C4sA4fKpT3B5OhZgFb-8G8Vch1DSE/edit#gid=0" >Editar Dados</a>
-      </div></div></div>
 
 
-    </form>
-  </section>
-<!---------------COMEÇO DA SESSAO REFERENCIAS
+
+
+
+
+
+
+        <br>
+
+        <div id="botoes">
+          <div class="ajeita-botao">
+            <button id="true-button" class="none resultado" style="display:block; border-radius:20px;" type="submit"
+              name="myButton">Enviar</button>
+            <button id="fake-button" class="none" type="button" style="display:none; "
+              onclick="semInternet()">Enviar</button>
+            <p id="semInternet"
+              style="display:none; width:100%;  background:rgb(255, 110, 110); margin-top:20px;padding:12px; border-radius:10px; text-align: center; width: 100% !important">
+            </p>
+          </div>
+          <div class="responsive-button">
+
+            <button class="none" id="none3" style="display:block;" onclick="window.print()"
+              type="button">Imprimir</button>
+            <button class="none" id="none2" style="display:block;" type="reset">Limpar Dados</button>
+
+            <div class="button"
+              style="display:flex !important; justify-content: center; align-items: center !important;" id="none1"><a
+                target="_blank"
+                href="https://docs.google.com/spreadsheets/d/1iYf_4JgkzIE_98C4sA4fKpT3B5OhZgFb-8G8Vch1DSE/edit#gid=0">Editar
+                Dados</a>
+            </div>
+          </div>
+        </div>
+
+
+      </form>
+    </section>
+    <!---------------COMEÇO DA SESSAO REFERENCIAS
   <section id="referencias">
 
 
@@ -979,10 +1087,12 @@ Quanto tempo no total você gasta sentado durante em um <b style="font-size:18px
 FIM DA SESSAO REFERENCIAS-->
     <footer>
       <p>
-        Feito por <a href="https://fb.com/dncoliveira" title="contrata a gente pfvr">Daniel Carvalho</a> e <a href="https://www.facebook.com/marcsonsanttos" title="contrata a gente pfvr">Marcson Santos</a><br>Graduandos
+        Feito por <a href="https://fb.com/dncoliveira" title="contrata a gente pfvr">Daniel Carvalho</a> e <a
+          href="https://www.facebook.com/marcsonsanttos" title="contrata a gente pfvr">Marcson Santos</a><br>Graduandos
         de
         Sistemas de Informação - UFPE<br>
-        Thanks a lot, <a href="https://github.com/jamiewilson/form-to-google-sheets" title="obg por tudo cara">jamiewilson</a>
+        Thanks a lot, <a href="https://github.com/jamiewilson/form-to-google-sheets"
+          title="obg por tudo cara">jamiewilson</a>
         ❤<br>
         2019
       </p>
@@ -991,25 +1101,25 @@ FIM DA SESSAO REFERENCIAS-->
 
 
 
-  
+
 
 
   <script>
-   function Obesidade(){
-     var imc = $("#imcresult").val()
-     var comparacao1 = imc == 'OBESIDADE I'
-     var comparacao2 = imc == 'OBESIDADE II'
-     var comparacao3 = imc == 'OBESIDADE III'
-     console.log(comparacao1, comparacao2, comparacao3)
-     if ( (comparacao1 || comparacao2 || comparacao3) == true ){
-          $("#obesidade").val(imc)
-     }
-     else{
-      $("#obesidade").val("NÃO")
-       console.log('não é obeso')
-     }
-   }
-     
+    function Obesidade() {
+      var imc = $("#imcresult").val()
+      var comparacao1 = imc == 'OBESIDADE I'
+      var comparacao2 = imc == 'OBESIDADE II'
+      var comparacao3 = imc == 'OBESIDADE III'
+      console.log(comparacao1, comparacao2, comparacao3)
+      if ((comparacao1 || comparacao2 || comparacao3) == true) {
+        $("#obesidade").val(imc)
+      }
+      else {
+        $("#obesidade").val("NÃO")
+        console.log('não é obeso')
+      }
+    }
+
 
 
   </script>
@@ -1017,13 +1127,13 @@ FIM DA SESSAO REFERENCIAS-->
 
 
   <script type="text/javascript">
-function buttonVerde(){
-      
-      
+    function buttonVerde() {
+
+
       alert('Sucesso!\nEm alguns segundos a planilha será atualizada.')
       document.getElementById("true-button").setAttribute("style", "background:green;")
       document.getElementById("true-button").innerHTML = "Enviado"
-         
+
     }
 
     const scriptURL = 'https://script.google.com/macros/s/AKfycbyIkBIi1ehMYM7TeujKOPo9cqmG5ORFRZmmHoVkLLQBn3Vk7UY/exec'
@@ -1036,8 +1146,8 @@ function buttonVerde(){
         .catch(error => alert('Ocorreu um erro!\nVerifique a conexão com a internet.'))
     })
 
-   
-    
+
+
 
   </script>
 

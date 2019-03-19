@@ -476,11 +476,14 @@
           cm<BR>
           <br>
           IMC<br>
-          <input value="I.M.C" class="resultado" type="text" readonly>
+          <div class="resultadoFixer">
+              <div class="resultado inputFalso">I.M.C:</div>
           <input name="IMC" id="imc" readonly class="resultado" type="number" step="0.0001" style="width:49%; ">
           <br><br>
+          </div>
           <input class="number texto-center resultado" type="text" readonly id="imcresult" name="ESCALA IMC" value=""
-            style="display:none; width:98.8% !important;">
+          style="display:none; width:98.8% !important;">
+            
           <input class="number texto-center" type="text" class="maiuscula resultado" readonly id="obesidade"
             name="OBESIDADE" value="" style="width:49%; opacity: 0; position: absolute;">
 
@@ -672,9 +675,12 @@
           <!--FIM QUESTAO-->
 
           <br>
-          <input class="resultado" style="font-size:16px; font-weight: bold" readonly
-            value="NÍVEL DE ATIVIDADE FÍSICA:"> </span><input class="resultado" id="resultadoipac"
-            name="NÍVEL ATIVIDADE FÍSICA" readonly>
+
+            
+            <div class="resultadoFixer">
+                <div class="resultado inputFalso" style="font-size:16px; font-weight: bold" >NÍVEL DE ATIVIDADE FÍSICA:</div>
+            <input class="resultado" id="resultadoipac"
+            name="NÍVEL ATIVIDADE FÍSICA" readonly></div>
 
 
 
@@ -760,10 +766,10 @@
 
 
 
-          <input class="resultado" style="font-size:14px;" type="text" readonly value="Relação Cintura Quadril:">
+          <div class="resultadoFixer">
+              <div class="resultado inputFalso" style="font-size:18px" >Relação Cintura Quadril:</div>
 
-
-          <input class="resultado" style="font-size:14px;" id="rcq" type="text" readonly name="Relação Cintura/Quadril">
+          <input class="resultado" style="font-size:14px;" id="rcq" type="text" readonly name="Relação Cintura/Quadril"></div>
 
           <br>
 
@@ -827,8 +833,9 @@
               <input type="number" class="gordura" step="0.001" id="coxadobra" name="COXA"><br><br>
             </div>
           </div>
-          <br><input type="text" readonly value="% Gordura:" class="resultado " data-destroy="true">
-          <input type="text" readonly id="resultadodobra" name="PERCENTUAL GORDURA" class="resultado">
+          <div class="resultadoFixer">
+              <div class="resultado inputFalso" >% Gordura:</div>
+          <input type="text" readonly id="resultadodobra" name="PERCENTUAL GORDURA" class="resultado"></div>
 
         </article>
 
@@ -865,9 +872,9 @@
             </div>
           </div><br>
 
-
-          <input type="text"  class="resultado" style="font-size:14px;" value="Escore Final do Teste" readonly>
-          <input type="text" readonly class="resultado" name="ESCORE Y TEST" id="escoreFinalY" step="0.001">
+          <div class="resultadoFixer">
+          <div class="resultado inputFalso" >Escore Final do Teste:</div>
+          <input type="text" readonly class="resultado" name="ESCORE Y TEST" id="escoreFinalY" step="0.001"></div>
           
           
           <br><br><br>
@@ -906,10 +913,12 @@
 
           <br><br>
           <label for="scorestepdowntexto">Análise quantitativa do movimento</label><br>
-          <input type="text" id="scorestepdowntexto" readonly value="SCORE FINAL:" class="resultado">
+          
 
+          <div class="resultadoFixer">
+              <div class="resultado inputFalso" >SCORE FINAL:</div>
           <input type="text" readonly id="scorestepdown" class="resultado" style="font-size:16px"
-            placeholder="Qualidade do Movimento">
+            placeholder="Qualidade do Movimento"></div>
 
 
         </article>

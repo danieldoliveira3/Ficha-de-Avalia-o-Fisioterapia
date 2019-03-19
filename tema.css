@@ -682,4 +682,7 @@ h2.article-title{font-size:24px;  text-align:center;padding:5px; display:block; 
 .sessao h2{font-size:2.7em !important; font-weight: bold; color:white;margin:0 auto;}
 article.sessao p{margin:0 auto; width:50%; background:#000}
 
+.inputFalso{width:45%; display:flex; justify-content: center; align-items:center; border-radius:4px; background: white;}
+/*classe pra mostrar o titulo do resultado*/
+.resultadoFixer{display:flex; justify-content: center; align-items: center;} /*deixa o resultado e o titulo do resultado alinhado*/
 

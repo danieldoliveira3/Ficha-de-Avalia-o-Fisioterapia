@@ -102,7 +102,6 @@
       </div>
 
       <form data-persist="garlic" name="submit-to-google-sheet" method="POST" onsubmit="desabilitar(form)">
-
         <article>
           <h2 class="article-title">IDENTIFICAÇÃO</h2>
 
@@ -114,10 +113,11 @@
 
           <br> AVALIADOR<span class="vermelho none"> <b>*</b></span><br>
           <input required name="AVALIADOR" type="text" class="maiuscula" placeholder="Nome do avaliador"
-            maxlength="140"> <br><br>
-          DATA<span class="vermelho none"> *</span><br>
-          <input required name="DATA ATUAL" type="date" min="2000-01-01" placeholder="Data de Hoje"> <br><br><br>
-
+            maxlength="140">
+          <br><br>
+          <!-- DATA<span class="vermelho none"> *</span><br>
+          <input  name="DATA ATUAL" type="date" min="2000-01-01" placeholder="Data de Hoje"> 
+--><br>
 
 
           <div id="dadosPaciente text-left">
@@ -130,14 +130,14 @@
           </div>
           <br>
           <br>NOME COMPLETO<span class="vermelho none"> *</span><br>
-          <input id="nome-completo" name="NOME" type="text" class="maiuscula" placeholder="Nome Completo do PACIENTE"
-            maxlength="140"> <br><br>
+          <input id="nome-completo" required name="NOME" type="text" class="maiuscula"
+            placeholder="Nome Completo do PACIENTE" maxlength="140"> <br><br>
           DATA DE NASCIMENTO<span class="vermelho none"> *</span><br>
-          <input onchange="Idade()" id="data-de-nascimento" name="DATA DE NASCIMENTO" min="1900-01-01" max="2001-01-01"
+          <input onchange="Idade()" required id="data-de-nascimento" name="DATA DE NASCIMENTO" min="1900-01-01"
             type="date" placeholder="Data de Nascimento">
           <br><br>
           IDADE<span class="vermelho none"> *</span><br>
-          <input required value="" id="idade" name="IDADE" readonly class="idade" type="number" placeholder="Idade"
+          <input value="" id="idade" required name="IDADE" readonly class="idade" type="number" placeholder="Idade"
             min="16" max="130">
           <br>
           <!---sexo-->
@@ -158,7 +158,7 @@
           <!---estado civil-->
 
           ESTADO CIVIL<span class="vermelho none"> *</span>
-          <select required id="estado-civil" name="ESTADO CIVIL">
+          <select id="estado-civil" required name="ESTADO CIVIL">
             <optgroup label="ESTADO CIVIL">
               <option value="SOLTEIRO" selected>SOLTEIRO</option>
               <option value="CASADO">CASADO</option>
@@ -234,8 +234,7 @@
           <input required name="CEP" type="text" class="maiuscula" placeholder="SOMENTE NUMEROS" maxlength="8"
             pattern="[0-9]+$">
           <br><br>TELEFONE
-          <input required name="TELEFONE" type="tel" placeholder="DDD XXXX-XXXX" maxlength="11" value=""
-            pattern="[0-9]+$">
+          <input name="TELEFONE" type="tel" placeholder="DDD XXXX-XXXX" maxlength="11" value="" pattern="[0-9]+$">
           <br><br>CELULAR<span class="vermelho none"> *</span>
           <input required name="CELULAR" type="tel" placeholder="DDD 9XXXX-XXXX" value="" maxlength="12"
             pattern="[0-9]+$">
@@ -407,13 +406,15 @@
 
           <h2 class="text-left">HISTÓRIA CLÍNICA</h2>
 
-          <br>QUEIXA PRINCIPAL/FUNCIONAL<br><input name="QUEIXA PRINCIPAL/FUNCIONAL" type="text" class="maiuscula"
-            maxlength="140" placeholder="Queixa principal/funcional" value="">
+          <br>QUEIXA PRINCIPAL/FUNCIONAL<br>
+          <textarea placeholder="Queixa principal/funcional" class="maiuscula"
+            name="QUEIXA PRINCIPAL ou FUNCIONAL"></textarea>
           <br>
           <br>HISTÓRIA DA QUEIXA APRESENTADA <span class="vermelho none"
             style="font-weight:bold; font-size: 12px; margin-top:-16px; margin-bottom:-16px; display: block;"><br>(TEMPO
-            DE EXISTÊNCIA, TRATAMENTOS REALIZADOS)</span><br><input name="HISTÓRIA DA QUEIXA" type="text"
-            class="maiuscula" maxlength="500" placeholder="História da queixa" value="">
+            DE EXISTÊNCIA, TRATAMENTOS REALIZADOS)</span><br>
+          <textarea name="HISTÓRIA DA QUEIXA" type="text" class="maiuscula" maxlength="500"
+            placeholder="História da queixa" value=""></textarea>
           <br>
 
           <br>NATUREZA DA QUEIXA APRESENTADA
@@ -443,15 +444,15 @@
 
           <br>ESTÁ EM ACOMPANHAMENTO FISIOTERAPÊUTICO?
           <select onchange="DesabilitarOpcao()" id="faz-fisio" name="FAZ FISIOTERAPIA">
-            <optgroup label="NATUREZA DA QUEIXA APRESENTADA">
+            <optgroup label="FAZ FISIOTERAPIA?">
               <option value="SIM">SIM</option>
               <option value="NÃO" selected>NÃO</option>
             </optgroup>
           </select><br>
           <div id="desaparecer-faz-fisio" style="display:none;">
-            <br>ESPECIFIQUE O RECURSO UTILIZADO E OBJETIVO TERAPÊUTICO<br><input name="RECURSO E OBJETIVO UTILIZADO"
-              type="text" class="maiuscula" maxlength="500" placeholder="Especifique o recurso e o objetivo utilizado"
-              value="">
+            <br>ESPECIFIQUE O RECURSO UTILIZADO E OBJETIVO TERAPÊUTICO<br>
+            <textarea name="RECURSO E OBJETIVO UTILIZADO" type="text" class="maiuscula" maxlength="500"
+              placeholder="Especifique o recurso e o objetivo utilizado" value=""></textarea>
           </div><br>
 
           <h2 class="text-left">EXAME FÍSICO</h2>
@@ -477,13 +478,13 @@
           <br>
           IMC<br>
           <div class="resultadoFixer">
-              <div class="resultado inputFalso">I.M.C:</div>
-          <input name="IMC" id="imc" readonly class="resultado" type="number" step="0.0001" style="width:49%; ">
-          <br><br>
+            <div class="resultado inputFalso">I.M.C:</div>
+            <input name="IMC" id="imc" readonly class="resultado" type="number" step="0.0001" style="width:49%; ">
+            <br><br>
           </div>
           <input class="number texto-center resultado" type="text" readonly id="imcresult" name="ESCALA IMC" value=""
-          style="display:none; width:98.8% !important;">
-            
+            style="display:none; width:98.8% !important;">
+
           <input class="number texto-center" type="text" class="maiuscula resultado" readonly id="obesidade"
             name="OBESIDADE" value="" style="width:49%; opacity: 0; position: absolute;">
 
@@ -676,11 +677,11 @@
 
           <br>
 
-            
-            <div class="resultadoFixer">
-                <div class="resultado inputFalso" style="font-size:16px; font-weight: bold" >NÍVEL DE ATIVIDADE FÍSICA:</div>
-            <input class="resultado" id="resultadoipac"
-            name="NÍVEL ATIVIDADE FÍSICA" readonly></div>
+
+          <div class="resultadoFixer">
+            <div class="resultado inputFalso" style="font-size:16px; font-weight: bold">NÍVEL DE ATIVIDADE FÍSICA:</div>
+            <input class="resultado" id="resultadoipac" name="NÍVEL ATIVIDADE FÍSICA" readonly>
+          </div>
 
 
 
@@ -767,9 +768,11 @@
 
 
           <div class="resultadoFixer">
-              <div class="resultado inputFalso" style="font-size:18px" >Relação Cintura Quadril:</div>
+            <div class="resultado inputFalso" style="font-size:18px">Relação Cintura Quadril:</div>
 
-          <input class="resultado" style="font-size:14px;" id="rcq" type="text" readonly name="Relação Cintura/Quadril"></div>
+            <input class="resultado" style="font-size:14px;" id="rcq" type="text" readonly
+              name="Relação Cintura/Quadril">
+          </div>
 
           <br>
 
@@ -834,8 +837,75 @@
             </div>
           </div>
           <div class="resultadoFixer">
-              <div class="resultado inputFalso" >% Gordura:</div>
-          <input type="text" readonly id="resultadodobra" name="PERCENTUAL GORDURA" class="resultado"></div>
+            <div class="resultado inputFalso">% Gordura:</div>
+            <input type="text" readonly id="resultadodobra" name="PERCENTUAL GORDURA" class="resultado">
+          </div>
+
+          <br><BR>
+          <h2 class="text-left">MASSA ÓSSEA</h2>
+
+          <div class="form-row justify-content-center align-items-center">
+            <div class="col">
+              <label for="be">BE</label>
+              <input type="number" name="be" id="be">
+            </div>
+            <div class="col">
+              <label for="bu">BU</label>
+              <input type="number" name="bu" id="bu">
+            </div>
+          </div>
+          <!--fim do form-row-->
+          <br>
+          <div class="form-row justify-content-center align-items-center">
+            <div class="col">
+              <label for="bf">BF</label>
+              <input type="number" name="bf" id="bf">
+            </div>
+            <div class="col">
+              <label for="bm">BM</label>
+              <input type="number" name="bm" id="bm">
+            </div>
+          </div>
+          <!--fim do form-row-->
+          formula = Math.pow(((be+bu+bf+bm)/4),2)*altura/100(em metros, não esquece de converter)*0.00092
+          <br>
+          <label for="resultadoMassaOsseaNumero">Resultado</label><br>
+          <input type="text" name="resultadoMassaOssea" id="resultadoMassaOssea" class="resultado">
+          <input type="text" name="resultadoMassaOssea" id="resultadoMassaOssea" class="resultado">
+          <!--FIM MASSA OSSEA-->
+          <BR><BR>
+          <h2 class="text-left">MASSA RESIDUAL</h2>
+          unico campo necessário: peso
+          formula:
+          HOMEM: peso*0.241
+          MULHER: peso*0.209
+
+          <label for="resultadoMassaResidualNumero">Resultado</label><br>
+          <input type="text" name="Massa Residual" id="resultadoMassaResidual" class="resultado">
+          <input type="text" name="taxa MR" id="taxaMassaResidual" class="resultado">
+
+          <h2 class="text-left">MASSA CORPORAL GORDA</h2>
+          forumla: peso*percentual de gordura/100
+          <label for="resultadoMassaCorporalGorda">Resultado</label><br>
+          <input type="text" name="Massa Corporal Gorda" id="resultadoMassaCorporalGorda" class="resultado">
+          <input type="text" name="taxa MCG" id="taxaMassaCorporalGorda" class="resultado">
+
+          <h2 class="text-left">MASSA MUSCULAR</h2>
+          FORMULA: Peso – (massa gorda + massa óssea+ massa residual)
+          RESULTADO EM PORCENTAGEM
+
+          <label for="resultadoMassaMuscular">Resultado</label><br>
+          <input type="text" name="Massa Muscular" id="resultadoMassaMuscular" class="resultado">
+          <input type="text" name="taxa MM" id="taxaMassaMuscular" class="resultado">
+
+
+          <h2 class="text-left">MASSA CORPORAL MAGRA</h2>
+          FORMULA: Peso – massa corporal gorda
+
+          <label for="resultadoMassaCorporalMagra">Resultado</label><br>
+          <input type="text" name="Massa Corporal Magra" id="resultadoMassaCorporalMagra" class="resultado">
+          <input type="text" name="taxa MCM" id="taxaMassaCorporalMagra" class="resultado">
+
 
         </article>
 
@@ -850,33 +920,66 @@
           <br>
           <div class="form-row justify-content-center align-items-center">
             <div class="col">
-              <label for="posturaAnterior">PA</label>
-              <input type="number"id="paytest" class="ytest" step="0.001" name="posturaAnterior">
+              <label for="posturaAnterior">PA (Direito)</label>
+              <input type="number" id="paytest" class="ytest" step="0.001" name="posturaAnterior">
+            </div>
+            <div class="col">
+              <label for="posturaAnterior">PA (Esquerdo)</label>
+              <input type="number" id="paytest" class="ytest" step="0.001" name="posturaAnterior">
+            </div>
+
+
+          </div>
+
+          <br>
+
+          <div class="form-row justify-content-center align-items-center">
+            <div class="col">
+              <label for="posturaAnterior">PM (Direito)</label>
+              <input type="number" id="pmytest" class="ytest" step="0.001" name="posturaAnterior">
             </div>
 
             <div class="col">
-              <label for="posturaAnterior">PM</label>
+              <label for="posturaAnterior">PM (Esquerdo)</label>
               <input type="number" id="pmytest" class="ytest" step="0.001" name="posturaAnterior">
             </div>
+
           </div>
 
           <div class="form-row justify-content-center align-items-center">
             <div class="col"><br>
-              <label for="posturaAnterior">PL</label>
+              <label for="posturaAnterior">PL (Direito)</label>
+              <input type="number" id="plytest" class="ytest" step="0.001" name="posturaAnterior">
+            </div>
+            <div class="col"><br>
+              <label for="posturaAnterior">PL (Esquerdo)</label>
               <input type="number" id="plytest" class="ytest" step="0.001" name="posturaAnterior">
             </div>
 
+          </div>
+
+
+          <div class="form-row justify-content-center align-items-center">
             <div class="col"><br>
-              <label for="posturaAnterior">CM</label>
+              <label for="posturaAnterior">CM (Direito)</label>
               <input type="number" id="cmytest" class="ytest" step="0.001" name="posturaAnterior">
             </div>
+
+            <div class="col"><br>
+              <label for="posturaAnterior">CM (Esquerdo)</label>
+              <input type="number" id="cmytest" class="ytest" step="0.001" name="posturaAnterior">
+            </div>
+
           </div><br>
 
+
+
           <div class="resultadoFixer">
-          <div class="resultado inputFalso" >Escore Final do Teste:</div>
-          <input type="text" readonly class="resultado" name="ESCORE Y TEST" id="escoreFinalY" step="0.001"></div>
-          
-          
+            <div class="resultado inputFalso">Escore Final do Teste:</div>
+            <input type="text" readonly class="resultado" name="ESCORE Y TEST" id="escoreFinalY" step="0.001">
+          </div>
+
+
           <br><br><br>
           <h2 class="text-left">STEP DOWN</h2><br>
           <div class="form-row justify-content-center align-items-center">
@@ -904,7 +1007,7 @@
 
           <label for="valgo2Dedo">Valgo- TAT até o segundo dedo</label>
           <input type="number" class="stepdown" name="Valgo- TAT até o segundo dedo" id="valgo2Dedo" min="0"
-            max="1"><br><br>
+            max="2"><br><br>
 
           <label for="manutencaoEmApoioUnipodal">Manutenção da postura em apoio unipodal: Oscilação do membro testado ou
             queda do step</label>
@@ -913,15 +1016,21 @@
 
           <br><br>
           <label for="scorestepdowntexto">Análise quantitativa do movimento</label><br>
-          
+
 
           <div class="resultadoFixer">
-              <div class="resultado inputFalso" >SCORE FINAL:</div>
-          <input type="text" readonly id="scorestepdown" class="resultado" style="font-size:16px"
-            placeholder="Qualidade do Movimento"></div>
+            <div class="resultado inputFalso">SCORE FINAL:</div>
+            <input type="text" readonly id="scorestepdown" class="resultado" style="font-size:16px"
+              placeholder="Qualidade do Movimento">
+          </div>
 
 
         </article>
+
+
+
+
+
 
 
         <article>
@@ -1021,25 +1130,129 @@
               <option name="APOIO" value="0">IMPOSSÍVEL (0)</option>
             </optgroup>
           </select><BR><br>
-          <div class="form-row justify-content-center align-items-center">
 
-            <input type="text" class="maiuscula resultado" style=" font-weight: bold;" readonly id="input_resultado"
-              name="RESULTADO" value="RESULTADO:">
-            <input type="text" readonly class="texto-center resultado" id="resultado" name="ESCALA TEGNER E LYSHOLM"
-              value="" style=" margin: 0 auto; ">
+
+          <input type="text" class="maiuscula resultado" style=" font-weight: bold;" readonly id="input_resultado"
+            name="RESULTADO" value="RESULTADO:">
+          <input type="text" readonly class="texto-center resultado" id="resultado" name="ESCALA TEGNER E LYSHOLM"
+            value="" style=" margin: 0 auto; ">
 
         </article>
 
 
 
 
+        <article>
+          <h2 class="article-title">TESTE DE COOPER</h2>
+          <br>
+          formula: V02máx. (ml. Kg-1, min-1) = Distancia - 504 ÷ 45
+          <label for="distanciaCooper">Distância</label>
+          <input type="number" name="Distancia Teste Cooper" id="distanciaCooper">
+          <br><br>
+          <label for="resultadoTesteCooper">Resultado</label><br>
+          <input type="text" name="Resultado Teste de Cooper" id="resultadoTesteCooper" class="resultado">
+          <input type="text" name="taxa Teste Cooper" id="taxaTesteCooper" class="resultado">
 
 
 
+        </article>
+
+
+        <article>
+          <h2 class="article-title">Yo-Yo Intermittent Recovery Test – Nível 1</h2>
+          <br>
+          formula: (ml/min/kg) = distancia (m) × 0.0084 + 36.4
+          <label for="distanciaYoYo">Distância</label>
+          <input type="number" name="Distancia Teste YoYo" id="distanciaYoYo">
+          <br><br>
+          <label for="resultadoYoYo">Resultado</label><br>
+          <input type="text" name="Resultado YoYo" id="resultadoYoYo" class="resultado">
+          <input type="text" name="taxa YoYo" id="taxaYoYo" class="resultado">
+
+
+        </article>
+
+        <article>
+          <h2 class="article-title">TESTE DE IMPULSÃO VERTICAL</h2>
+          <br>
+          formula: P (Kgm.s) = 2.21 x peso Corporal x (raiz quadrada de Distancia)
+          <label for="distanciaPulo">Distância de Pulo</label>
+          <input type="number" name="Distancia de Pulo" id="distanciaPulo">
+          <br><br>
+          <label for="resultadoImpulsaoVertical">Resultado</label><br>
+          <input type="text" name="Resultado Impulsão Vertical" id="resultadoImpulsaoVertical" class="resultado">
+          <input type="text" name="taxa ImpulsaoVertical" id="taxaImpulsaoVertical" class="resultado">
+
+
+        </article>
+
+
+        <article>
+          <h2 class="article-title">MOBILIDADE DO TORNOZELO</h2>
+          <br>
+
+          <div class="form-row justify-content-center align-items-center">
+            <div class="col"><label for="MTornozeloDireito">Torzonelo (Direito)</label>
+              <input type="number" name="M. Tornozelo Direito" id="MTornozeloDireito"></div>
+            <div class="col"><label for="MTornozeloEsquerdo">Tornozelo (Esquerdo)</label>
+              <input type="number" name="M. Tornozelo Direito" id="MTornozeloDireito"></div>
+          </div>
+        </article>
+
+
+        <article>
+          <h2 class="article-title">PONTE E EXTENSÃO</h2>
+          <br>
+          NÃO QUEDA
+          QUEDA PELVICA LEVE
+          QUEDA PELVICA MODERADA
+          QUEDA PELVICA ACENTUADA
+
+          <h2 class="text-left">LADO DIREITO</h2><BR>
+          <div class="form-row justify-content-center align-items-center" style="width:100%;padding-left:40px;">
+
+            <div class="col">
+              <input type="radio" name="M. Tornozelo Direito" id="MTornozeloDireito">
+              <label for="MTornozeloDireito"><img src="img/logo.png"></label></div>
+            <div class="col">
+              <input type="radio" name="M. Tornozelo Direito" id="MTornozeloDireito">
+              <label for="MTornozeloDireito"><img src="img/logo.png"></label></div>
+            <div class="col">
+              <input type="radio" name="M. Tornozelo Direito" id="MTornozeloDireito">
+              <label for="MTornozeloDireito"><img src="img/logo.png"></label></div>
+            <div class="col">
+              <input type="radio" name="M. Tornozelo Direito" id="MTornozeloDireito">
+              <label for="MTornozeloDireito"><img src="img/logo.png"></label></div>
+
+          </div>
+          <!---FIM DO DIV FORM-ROW-->
+          <BR>
+          <h2 class="text-left">LADO ESQUERDO</h2><BR>
+          <div class="form-row justify-content-center align-items-center" style="width:100%;padding-left:40px;">
+
+            <div class="col">
+              <input type="radio" name="M. Tornozelo Direito" id="MTornozeloDireito">
+              <label for="MTornozeloDireito"><img src="img/logo.png"></label></div>
+            <div class="col">
+              <input type="radio" name="M. Tornozelo Direito" id="MTornozeloDireito">
+              <label for="MTornozeloDireito"><img src="img/logo.png"></label></div>
+            <div class="col">
+              <input type="radio" name="M. Tornozelo Direito" id="MTornozeloDireito">
+              <label for="MTornozeloDireito"><img src="img/logo.png"></label></div>
+            <div class="col">
+              <input type="radio" name="M. Tornozelo Direito" id="MTornozeloDireito">
+              <label for="MTornozeloDireito"><img src="img/logo.png"></label></div>
+
+          </div>
+          <!---FIM DO DIV FORM-ROW-->
+
+          colocar img como opções pra os membros esquerdos e direitos
+
+        </article>
 
 
 
-
+        <BR><BR>
 
         <br>
 

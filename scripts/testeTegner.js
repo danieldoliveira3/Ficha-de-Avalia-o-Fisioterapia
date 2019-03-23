@@ -1,18 +1,5 @@
 //script para somar valores das select
-$(document).ready(function () {
 
-    $(".soma").load("load change check", function () {//fica observando pra ver se ocorre o evento
-    
-        $(document).ready(function () {
-        $("#resultado").val('TA PEGANDO');
-          $('#resultado').css({ 'color': 'white', 'border': '1px 1px 1px 1px solid', 'font-weight' : 'bold', 'font-size': '18px'  })
-          
-        })
-    
-    
-    })
-
-})
 
     
       
@@ -27,8 +14,14 @@ $(document).ready(function () {
 
   //script para somar o teste de tegner
   $(document).ready(function () {
+    var resultadoNumero = $("#input_resultado")
+    var resultadoEscrito = $("#resultado")
+    resultadoNumero.val("RESULTADO")
+    resultadoEscrito.val("Preencha os campos necessários")
+    resultadoEscrito.css({ 'color': 'gray', 'opacity': '0.5','border-bottom': '5px solid gray', 'font-size': '18px' })
+  
 
-    $(".soma").load("load change check", function () {//fica observando pra ver se ocorre o evento
+    $(".soma").on("load change check", function () {//fica observando pra ver se ocorre o evento
       total = 0;
 
 
@@ -44,12 +37,17 @@ $(document).ready(function () {
       $("#input_resultado").val(total.toFixed(2));
 
       $(document).ready(function () {
+
+        
+
         if ($('#input_resultado').val() >= 95) {
+          resultadoEscrito.css({'opacity': '1'})
           $("#resultado").val('EXCELENTE');
           $('#resultado').css({ 'color': 'green', 'border-bottom': '5px solid green', 'font-size': '18px' })
          
         }
         else if ($('#input_resultado').val() < 95 && $('#input_resultado').val() >= 84) {
+          resultadoEscrito.css({'opacity': '1'})
           $("#resultado").val('BOM');
           $('#resultado').css({ 'color': '#2b9527' })
           $('#resultado').css({ 'border-bottom': '5px solid #2b9527' })
@@ -58,6 +56,7 @@ $(document).ready(function () {
         }
 
         else if ($('#input_resultado').val() < 84 && $('#input_resultado').val() >= 65) {
+          resultadoEscrito.css({'opacity': '1'})
           $("#resultado").val('REGULAR');
           $('#resultado').css({ 'color': '#5db1ff' })
           $('#resultado').css({ 'border-bottom': '5px solid #5db1ff' })
@@ -66,6 +65,7 @@ $(document).ready(function () {
         }
 
         else if ($('#input_resultado').val() < 65 && $('#input_resultado').val() >= 0) {
+          resultadoEscrito.css({'opacity': '1'})
           $("#resultado").val('RUIM');
           $('#resultado').css({ 'color': '#ff3e3e' })
           $('#resultado').css({ 'border-bottom': '5px solid #ff3e3e' })

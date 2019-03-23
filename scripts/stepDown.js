@@ -3,12 +3,18 @@
   /*pra manter funcionando quando o usuario interagir*/
   $(document).ready(function () {
   
+    var resultadoEscrito = $('#scorestepdown')
+    resultadoEscrito.val("...")
+    resultadoEscrito.css({ 'color': 'gray', 'opacity': '0.5','border-bottom': '5px solid gray', 'font-size': '18px' })
+
+
     $(".stepdown").change("change check", function () {//fica observando pra ver se ocorre o evento
   
   
       $(document).ready(function () {
   
-  
+        resultadoEscrito.css({'opacity': '1' })
+
         var manutencaoUnipodal = $("#manutencaoEmApoioUnipodal").val(), valgo2Dedo = $("#valgo2Dedo").val(), posJoelho = $("#posJoelho").val()
         var planoPelve = $("#planoPelve").val(), movtronco = $("#movtronco").val(), estrategiademms = $("#estrategiademms").val()
     
@@ -53,9 +59,6 @@ console.log('soma', soma)
         
         
 
-        console.log(dcMacho)
-        console.log('pg:', pgMacho)
-        
    
       })
     });

@@ -5,11 +5,6 @@
   <title>LACAF - Ficha de Avaliação de Atletas</title>
   <meta charset="utf-8">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-  <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
   <script src="Garlic.js-1.4.2/garlic.js"></script>
   <!--bootstrap-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
@@ -37,6 +32,19 @@
   <script src="scripts/percentualGordura.js"></script>
   <script src="scripts/stepDown.js"></script>
   <script src="scripts/yteste.js">  </script>
+  <script src="scripts/testeDeImpulsao.js"></script>
+  <script src="scripts/yoyotest.js"></script>
+  <script src="scripts/testeCooper.js"></script>
+  <script src="scripts/massaMuscular massaOssea.js"></script>
+  <script src="scripts/massaResidual.js"></script>
+  <script src="scripts/massaCorporalGorda.js"></script>
+  <script src="scripts/massaMuscular.js"></script>
+  <script src="scripts/massaCorporalMagra.js" script></script>
+
+
+
+
+
   <!---fim dos scripts-->
 
 
@@ -61,6 +69,8 @@
       <h1>Laboratório de Cinesiologia <br>e
         Avaliação Funcional<br>
         LACAF - UFPE</h1>
+        mudar o nome do teste pelo valor
+        ex: imc muda pra 23.5 e no input ao lado poe a taxa
 
       <div class="dropdown" style="display:none">
         <a class="btn button btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
@@ -470,7 +480,7 @@
 
 
           PESO<BR>
-          <input id="peso" onchange="Obesidade()" class="imc numero" name="PESO" min="20" max="330" step="0.1"
+          <input id="peso" onchange="Obesidade()" class="imc numero massaOssea massaMuscular massaResidual massaCorporalGorda" name="PESO" min="20" max="330" step="0.1"
             type="number" /> kg<BR><br>
           ALTURA<br>
           <input id="altura" onchange="Obesidade()" class="imc numero" name="ALTURA" min="20" max="330" type="number" />
@@ -478,15 +488,13 @@
           <br>
           IMC<br>
           <div class="resultadoFixer">
-            <div class="resultado inputFalso">I.M.C:</div>
+            <input id="imcNumero" type="text" class="resultado" value="" readonly>
             <input name="IMC" id="imc" readonly class="resultado" type="number" step="0.0001" style="width:49%; ">
             <br><br>
           </div>
-          <input class="number texto-center resultado" type="text" readonly id="imcresult" name="ESCALA IMC" value=""
-            style="display:none; width:98.8% !important;">
+          
 
-          <input class="number texto-center" type="text" class="maiuscula resultado" readonly id="obesidade"
-            name="OBESIDADE" value="" style="width:49%; opacity: 0; position: absolute;">
+          
 
 
 
@@ -768,7 +776,7 @@
 
 
           <div class="resultadoFixer">
-            <div class="resultado inputFalso" style="font-size:18px">Relação Cintura Quadril:</div>
+            <input class="resultado inputFalso" style="font-size:18px" id="rcqNumero" name="R.C.Q" readonly>
 
             <input class="resultado" style="font-size:14px;" id="rcq" type="text" readonly
               name="Relação Cintura/Quadril">
@@ -837,8 +845,8 @@
             </div>
           </div>
           <div class="resultadoFixer">
-            <div class="resultado inputFalso">% Gordura:</div>
-            <input type="text" readonly id="resultadodobra" name="PERCENTUAL GORDURA" class="resultado">
+            <input type="text" readonly id="resultadodobraNumero" class="resultado inputFalso">
+            <input type="text" readonly id="resultadodobra" name="PERCENTUAL GORDURA" class="resultado massaMuscular massaCorporalGorda">
           </div>
 
           <br><BR>
@@ -847,11 +855,11 @@
           <div class="form-row justify-content-center align-items-center">
             <div class="col">
               <label for="be">BE</label>
-              <input type="number" name="be" id="be">
+              <input class="massaMuscular massaOssea massaMuscular" type="number" name="be" id="be">
             </div>
             <div class="col">
               <label for="bu">BU</label>
-              <input type="number" name="bu" id="bu">
+              <input type="number" name="bu" class="massaMuscular massaOssea"  id="bu">
             </div>
           </div>
           <!--fim do form-row-->
@@ -859,22 +867,24 @@
           <div class="form-row justify-content-center align-items-center">
             <div class="col">
               <label for="bf">BF</label>
-              <input type="number" name="bf" id="bf">
+              <input type="number" name="bf" id="bf" class="massaMuscular massaOssea" >
             </div>
             <div class="col">
               <label for="bm">BM</label>
-              <input type="number" name="bm" id="bm">
+              <input type="number" name="bm" id="bm" class="massaMuscular massaOssea" >
             </div>
           </div>
           <!--fim do form-row-->
-          formula = Math.pow(((be+bu+bf+bm)/4),2)*altura/100(em metros, não esquece de converter)*0.00092
           <br>
-          <label for="resultadoMassaOsseaNumero">Resultado</label><br>
-          <input type="text" name="resultadoMassaOssea" id="resultadoMassaOssea" class="resultado">
-          <input type="text" name="resultadoMassaOssea" id="resultadoMassaOssea" class="resultado">
+          <label for="resultadomassaMuscular massaOsseaNumero">Resultado</label><br>
+          <div class="resultadoFixer">
+          <input type="text" readonly name="resultadomassaMuscular massaOssea" id="resultadomassaMuscular massaOssea" class="resultado">
+          <input type="text" readonly name="resultadomassaMuscular massaOssea" id="resultadomassaMuscular massaOsseaEscrito" class="resultado"></div>
           <!--FIM MASSA OSSEA-->
+
+          <!---MASSA RESIDUAL =========================== -->
           <BR><BR>
-          <h2 class="text-left">MASSA RESIDUAL</h2>
+            <br><br><h2 class="text-left">MASSA RESIDUAL</h2>
           unico campo necessário: peso
           formula:
           HOMEM: peso*0.241
@@ -883,14 +893,14 @@
           <label for="resultadoMassaResidualNumero">Resultado</label><br>
           <input type="text" name="Massa Residual" id="resultadoMassaResidual" class="resultado">
           <input type="text" name="taxa MR" id="taxaMassaResidual" class="resultado">
-
-          <h2 class="text-left">MASSA CORPORAL GORDA</h2>
+<br>
+<br><h2 class="text-left">MASSA CORPORAL GORDA</h2>
           forumla: peso*percentual de gordura/100
           <label for="resultadoMassaCorporalGorda">Resultado</label><br>
           <input type="text" name="Massa Corporal Gorda" id="resultadoMassaCorporalGorda" class="resultado">
           <input type="text" name="taxa MCG" id="taxaMassaCorporalGorda" class="resultado">
 
-          <h2 class="text-left">MASSA MUSCULAR</h2>
+          <br><br><h2 class="text-left">MASSA MUSCULAR</h2>
           FORMULA: Peso – (massa gorda + massa óssea+ massa residual)
           RESULTADO EM PORCENTAGEM
 
@@ -899,7 +909,7 @@
           <input type="text" name="taxa MM" id="taxaMassaMuscular" class="resultado">
 
 
-          <h2 class="text-left">MASSA CORPORAL MAGRA</h2>
+          <br><br><h2 class="text-left">MASSA CORPORAL MAGRA</h2>
           FORMULA: Peso – massa corporal gorda
 
           <label for="resultadoMassaCorporalMagra">Resultado</label><br>
@@ -1131,11 +1141,11 @@
             </optgroup>
           </select><BR><br>
 
-
+<div class="resultadoFixer">
           <input type="text" class="maiuscula resultado" style=" font-weight: bold;" readonly id="input_resultado"
             name="RESULTADO" value="RESULTADO:">
           <input type="text" readonly class="texto-center resultado" id="resultado" name="ESCALA TEGNER E LYSHOLM"
-            value="" style=" margin: 0 auto; ">
+            value="" style=" margin: 0 auto; "></div>
 
         </article>
 
@@ -1146,12 +1156,13 @@
           <h2 class="article-title">TESTE DE COOPER</h2>
           <br>
           formula: V02máx. (ml. Kg-1, min-1) = Distancia - 504 ÷ 45
-          <label for="distanciaCooper">Distância</label>
-          <input type="number" name="Distancia Teste Cooper" id="distanciaCooper">
+          <label for="distanciaCooper">Distância (m)</label>
+          <input type="number" class="cooper" name="Distancia Teste Cooper" id="distanciaCooper">
           <br><br>
           <label for="resultadoTesteCooper">Resultado</label><br>
+          <div class="resultadoFixer">
           <input type="text" name="Resultado Teste de Cooper" id="resultadoTesteCooper" class="resultado">
-          <input type="text" name="taxa Teste Cooper" id="taxaTesteCooper" class="resultado">
+          <input type="text" name="taxa Teste Cooper" id="taxaTesteCooper" class="resultado"></div>
 
 
 
@@ -1163,25 +1174,27 @@
           <br>
           formula: (ml/min/kg) = distancia (m) × 0.0084 + 36.4
           <label for="distanciaYoYo">Distância</label>
-          <input type="number" name="Distancia Teste YoYo" id="distanciaYoYo">
+          <input type="number"  class="yoyo" name="Distancia Teste YoYo" id="distanciaYoYo">
           <br><br>
           <label for="resultadoYoYo">Resultado</label><br>
-          <input type="text" name="Resultado YoYo" id="resultadoYoYo" class="resultado">
-          <input type="text" name="taxa YoYo" id="taxaYoYo" class="resultado">
+          <div class="resultadoFixer">
+          <input type="text" readonly name="Resultado YoYo" id="resultadoYoYo" class="resultado">
+          <input type="text"  readonly name="taxa YoYo" id="taxaYoYo" class="resultado"></div>
 
 
         </article>
 
         <article>
+          <!----------------TESTE DE IMPULSÃO--------------------------------------=========================================================-->
           <h2 class="article-title">TESTE DE IMPULSÃO VERTICAL</h2>
           <br>
           formula: P (Kgm.s) = 2.21 x peso Corporal x (raiz quadrada de Distancia)
-          <label for="distanciaPulo">Distância de Pulo</label>
-          <input type="number" name="Distancia de Pulo" id="distanciaPulo">
+          <label for="distanciaPulo">Distância Alcançada (Cm)</label>
+          <input type="number" class="testeDeImpulsao" name="Distancia de Pulo" id="distanciaPulo">
           <br><br>
-          <label for="resultadoImpulsaoVertical">Resultado</label><br>
-          <input type="text" name="Resultado Impulsão Vertical" id="resultadoImpulsaoVertical" class="resultado">
-          <input type="text" name="taxa ImpulsaoVertical" id="taxaImpulsaoVertical" class="resultado">
+          <div class="resultadoFixer">
+          <input type="text" readonly name="Resultado Impulsão Vertical" id="resultadoImpulsaoVertical" class="resultado" value="">
+          <input type="text" readonly name="taxa ImpulsaoVertical" id="taxaImpulsaoVertical" class="resultado" value=""></div>
 
 
         </article>
@@ -1201,52 +1214,58 @@
 
 
         <article>
+          <!-------------ponte e extensao====================================-->
           <h2 class="article-title">PONTE E EXTENSÃO</h2>
           <br>
-          NÃO QUEDA
-          QUEDA PELVICA LEVE
-          QUEDA PELVICA MODERADA
-          QUEDA PELVICA ACENTUADA
+          
 
           <h2 class="text-left">LADO DIREITO</h2><BR>
-          <div class="form-row justify-content-center align-items-center" style="width:100%;padding-left:40px;">
+          <div class="form-row justify-content-center align-items-center" style="width:100%;padding-left:20px;">
 
             <div class="col">
-              <input type="radio" name="M. Tornozelo Direito" id="MTornozeloDireito">
-              <label for="MTornozeloDireito"><img src="img/logo.png"></label></div>
+              <input type="radio" checked value="NÃO QUEDA" name="Ponte e Extensão (DIREITO)">
+              <label for="naoquedadireito"><img src="img/ponte-e-extensao/nao-queda.jpg" alt="nao queda"></label></div>
             <div class="col">
-              <input type="radio" name="M. Tornozelo Direito" id="MTornozeloDireito">
-              <label for="MTornozeloDireito"><img src="img/logo.png"></label></div>
-            <div class="col">
-              <input type="radio" name="M. Tornozelo Direito" id="MTornozeloDireito">
-              <label for="MTornozeloDireito"><img src="img/logo.png"></label></div>
-            <div class="col">
-              <input type="radio" name="M. Tornozelo Direito" id="MTornozeloDireito">
-              <label for="MTornozeloDireito"><img src="img/logo.png"></label></div>
+              <input type="radio" value="QUEDA PÉLVICA LEVE" name="Ponte e Extensão (DIREITO)">
+              <label for="naoquedadireito"><img src="img/ponte-e-extensao/queda-leve.jpg"
+                  alt="queda pelvica leve"></label></div>
+              </div><br>
+              <div class="form-row justify-content-center align-items-center" style="width:100%;padding-left:20px;">
 
+            <div class="col">
+              <input type="radio" value="QUEDA PÉLVICA MODERADA" name="Ponte e Extensão (DIREITO)">
+              <label for="naoquedadireito"><img src="img/ponte-e-extensao/queda-moderada.jpg"
+                  alt="queda pelvica moderada"></label></div>
+            <div class="col">
+              <input type="radio" value="QUEDA PÉLVICA ACENTUADA" name="Ponte e Extensão (DIREITO)">
+              <label for="naoquedadireito"><img src="img/ponte-e-extensao/queda-acentuada.jpg"
+                  alt="queda pelvica acentuada"></label></div>
           </div>
           <!---FIM DO DIV FORM-ROW-->
           <BR>
           <h2 class="text-left">LADO ESQUERDO</h2><BR>
-          <div class="form-row justify-content-center align-items-center" style="width:100%;padding-left:40px;">
+          <div class="form-row justify-content-center align-items-center" style="width:100%;padding-left:20px;">
 
             <div class="col">
-              <input type="radio" name="M. Tornozelo Direito" id="MTornozeloDireito">
-              <label for="MTornozeloDireito"><img src="img/logo.png"></label></div>
+              <input type="radio" checked value="NÃO QUEDA" name="Ponte e Extensão (ESQUERDO)">  <label for="naoquedadireito"><img src="img/ponte-e-extensao/nao-queda.jpg" alt="nao queda"></label></div>
             <div class="col">
-              <input type="radio" name="M. Tornozelo Direito" id="MTornozeloDireito">
-              <label for="MTornozeloDireito"><img src="img/logo.png"></label></div>
-            <div class="col">
-              <input type="radio" name="M. Tornozelo Direito" id="MTornozeloDireito">
-              <label for="MTornozeloDireito"><img src="img/logo.png"></label></div>
-            <div class="col">
-              <input type="radio" name="M. Tornozelo Direito" id="MTornozeloDireito">
-              <label for="MTornozeloDireito"><img src="img/logo.png"></label></div>
+              <input type="radio" value="QUEDA PÉLVICA LEVE" name="Ponte e Extensão (ESQUERDO)">
+              <label for="naoquedadireito"><img src="img/ponte-e-extensao/queda-leve.jpg"
+                  alt="queda pelvica leve"></label></div>
+              </div><br>
+              <div class="form-row justify-content-center align-items-center" style="width:100%;padding-left:20px;">
 
+            <div class="col">
+              <input type="radio" value="QUEDA PÉLVICA MODERADA" name="Ponte e Extensão (ESQUERDO)">
+              <label for="naoquedadireito"><img src="img/ponte-e-extensao/queda-moderada.jpg"
+                  alt="queda pelvica moderada"></label></div>
+            <div class="col">
+              <input type="radio" value="QUEDA PÉLVICA ACENTUADA" name="Ponte e Extensão (ESQUERDO)">
+              <label for="naoquedadireito"><img src="img/ponte-e-extensao/queda-acentuada.jpg"
+                  alt="queda pelvica acentuada"></label></div>
           </div>
           <!---FIM DO DIV FORM-ROW-->
 
-          colocar img como opções pra os membros esquerdos e direitos
 
         </article>
 

@@ -1,73 +1,81 @@
 /*script para calcular o imc*/
 $(document).ready(function () {
+  
+  $("#imc").attr("type","text")
+  $("#imcNumero").val('Resultado')
+  $("#imc").val('...');
+  $('#imc').css({ 'color': 'gray', 'opacity': '0.5','border-bottom': '5px solid gray', 'font-size': '18px' })
+    
+  var peso = Number($("#peso").val()), altura = Number($("#altura").val())/100
+  var imc = peso/(altura*altura)
 
-    $(".imc").on("blur change check", function () {//fica observando pra ver se ocorre o evento
-      total = 0;
+  $(".imc").change("change", function () {//fica observando pra ver se ocorre o evento
+      
+    
+    
+    peso = Number($("#peso").val()), altura = Number($("#altura").val())/100
+    imc = peso/(altura*altura)
+    
   
   
-      $(".imc").each(function () {//pra cada elemento marcado com a class soma ele faz isso 
-  
-  
-        if ($(this).attr('type') == 'text' || $(this).is('select') || $(this).attr('type') == 'number') { //se tiver um tipo texto ou um tipo select ele faz isso ai
-          var peso = $('#peso').val()
-          var altura = $('#altura').val() / 100
-          total = (peso / (altura * altura));//transforma string em float e soma
-        }//fim do if
-  
-      });//escopo da funcao e parentese do each
-  
-      $("#imc").val(total.toFixed(2));
-  
-  
-  
+      $('#imc').css({ 'color': 'black','border-bottom': '5px solid transparent', 'opacity': '1', 'font-size': '18px' })
+
       $(document).ready(function () {
-        if ($("#imc").val() >= 40) {
-          $('#imcresult').css({ 'display': 'block' })
-          $('#imcresult').css({ 'color': 'red', 'border-bottom': '5px solid red', 'font-size': '18px' })
-          $("#imcresult").val('OBESIDADE III');
+        
+        imc = peso/(altura*altura)
+        console.log(imc)
+        if (imc >= 40) {
+          $("#imcNumero").val(imc.toFixed(2))
+
+          $('#imc').css({ 'color': 'red', 'border-bottom': '5px solid red', 'font-size': '18px' })
+          $("#imc").val('OBESIDADE III');
           
           
-          $('#imcresult').css({ 'font-size': '18px' })
+          $('#imc').css({ 'font-size': '18px' })
         }
-        else if ($("#imc").val() < 40 && $("#imc").val() >= 35) {
-          $('#imcresult').css({ 'display': 'block' })
-          $("#imcresult").val('OBESIDADE II');
-          $('#imcresult').css({ 'color': 'red', 'border-bottom': '5px solid red', 'font-size': '18px' })
+        else if (imc < 40 && imc >= 35) {
+          $("#imcNumero").val(imc.toFixed(2))
+
+          $("#imc").val('OBESIDADE II');
+          $('#imc').css({ 'color': 'red', 'border-bottom': '5px solid red', 'font-size': '18px' })
           
         }
   
-        else if ($("#imc").val() < 35 && $("#imc").val() >= 30) {
-          $('#imcresult').css({ 'display': 'block' })
-          $("#imcresult").val('OBESIDADE I');
-          $('#imcresult').css({ 'color': 'red', 'border-bottom': '5px solid red', 'font-size': '18px' })
+        else if (imc < 35 && imc >= 30) {
+          $("#imcNumero").val(imc.toFixed(2))
+
+          $("#imc").val('OBESIDADE I');
+          $('#imc').css({ 'color': 'red', 'border-bottom': '5px solid red', 'font-size': '18px' })
 
         }
   
-        else if ($("#imc").val() < 30 && $("#imc").val() >= 25) {
-          $('#imcresult').css({ 'display': 'block' })
-          $("#imcresult").val('ACIMA DO PESO');
-          $('#imcresult').css({ 'color': '#ff8e8e', 'border-bottom': '5px solid #ff8e8e', 'font-size': '18px' })
+        else if (imc < 30 && imc >= 25) {
+
+          $("#imc").val('ACIMA DO PESO');
+          $('#imc').css({ 'color': '#ff8e8e', 'border-bottom': '5px solid #ff8e8e', 'font-size': '18px' })
 
         }
   
-        else if ($("#imc").val() < 25 && $("#imc").val() >= 18.5) {
-          $('#imcresult').css({ 'display': 'block' })
-          $("#imcresult").val('PESO NORMAL');
-          $('#imcresult').css({ 'color': '#2b9527', 'border-bottom': '5px solid #2b9527', 'font-size': '18px' })
+        else if (imc < 25 && imc >= 18.5) {
+
+          $("#imc").val('PESO NORMAL');
+          $('#imc').css({ 'color': '#2b9527', 'border-bottom': '5px solid #2b9527', 'font-size': '18px' })
 
         }
         
-        else if ($("#imc").val() < 18.5 && $("#imc").val() >= 17) {
-          $('#imcresult').css({ 'display': 'block' })
-          $("#imcresult").val('ABAIXO DO PESO');
-          $('#imcresult').css({ 'color': '#ff8e8e', 'border-bottom': '5px solid #ff8e8e', 'font-size': '18px' })
+        else if (imc < 18.5 && imc >= 17) {
+          $("#imcNumero").val(imc.toFixed(2))
+
+          $("#imc").val('ABAIXO DO PESO');
+          $('#imc').css({ 'color': '#ff8e8e', 'border-bottom': '5px solid #ff8e8e', 'font-size': '18px' })
 
         }
   
-        else if ($("#imc").val() < 17 && $("#imc").val() >= 0) {
-          $('#imcresult').css({ 'display': 'block' })
-          $("#imcresult").val('MUITO ABAIXO DO PESO');
-          $('#imcresult').css({ 'color': '#ff3a3a', 'border-bottom': '5px solid #ff3a3a', 'font-size': '18px' })
+        else if (imc < 17 && imc >= 0) {
+          $("#imcNumero").val(imc.toFixed(2))
+
+          $("#imc").val('MUITO ABAIXO DO PESO');
+          $('#imc').css({ 'color': '#ff3a3a', 'border-bottom': '5px solid #ff3a3a', 'font-size': '18px' })
 
         }
   

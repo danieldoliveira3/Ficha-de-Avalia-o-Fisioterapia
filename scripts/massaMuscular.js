@@ -1,29 +1,52 @@
 $(document).ready(function(){
-    var resultadoNumero = $("#resultadoMassaMuscular"), resultadoEscrito = $("#taxaMassaMuscular")
-    resultadoNumero.val('RESULTADO')
-    resultadoEscrito.val("...")
-    resultadoEscrito.css({ 'color': 'gray', 'opacity': '0.5','border-bottom': '5px solid gray', 'font-size': '18px' })
+    var resultadoEscrito = $("#taxaMassaMuscular")
+    resultadoEscrito.addClass('resultGray')
     
     
     
-        $(".massaMuscular").change(function (){
+        $(".massaMuscular").bind('keyup change mouseover', function (){
     
     
             $(document).ready(function(){
+                resultadoEscrito.removeClass('resultGray')
 
-                var massaGorda = $("#resultadoMassaCorporalGorda").val() , massaOssea = $("#resultadoMassaOssea")
-                var massaResidual = $("#resultadoMassaResidual").val(), peso = $("#peso").val()
-                
+                var massaGorda = $("#taxaMassaCorporalGorda").val() , massaOssea = $("#taxaMassaOssea").val()
+                var massaResidual = $("#taxaMassaResidual").val(), peso = $("#peso").val()
+                console.log(massaGorda, massaOssea, massaResidual, peso)
                 var formula = Number(peso) - (Number(massaGorda) + Number(massaOssea) + Number(massaResidual))
-                resultadoEscrito.css({ 'color': 'black', 'opacity': '1','border-bottom': '1px solid #dadada', 'font-size': '18px' })
+                resultadoEscrito.css({ 'color': 'black', 'opacity': '1','border-bottom': '1px solid #dadada' })
     
     
                 /*aguardando os ifs*/
+                if (massaGorda == ""){
+                    resultadoEscrito.attr('placeholder',"Campo 'Massa Corporal Gorda' não calculado")
+                    resultadoEscrito.val("")
+                    resultadoEscrito.addClass("faltaCampo")
+                }
+
+                else if (massaOssea == ""){
+                    resultadoEscrito.attr('placeholder',"Campo 'Massa Óssea' não calculado")
+                    resultadoEscrito.val("")
+                    resultadoEscrito.addClass("faltaCampo")
+                }
+
+                else if (massaResidual == ""){
+                    resultadoEscrito.attr('placeholder',"Campo 'Massa Residual' não calculado")
+                    resultadoEscrito.val("")
+                    resultadoEscrito.addClass("faltaCampo")
+                }
+                else if (peso == ""){
+                    resultadoEscrito.attr('placeholder',"Campo 'Peso' não preenchido")
+                    resultadoEscrito.val("")
+                    resultadoEscrito.addClass("faltaCampo")
+                }
+                 
+                else{
+                    resultadoEscrito.val(formula)
+                    resultadoEscrito.removeClass("faltaCampo")
+                }
     
-    
-                resultadoEscrito.val("FUNCIONOU")
-                resultadoNumero.val(formula.toFixed(2)*100, '%')
-                
+               
     
     
     

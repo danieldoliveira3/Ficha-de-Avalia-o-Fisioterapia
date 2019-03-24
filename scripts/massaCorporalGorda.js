@@ -1,27 +1,48 @@
 $(document).ready(function(){
-    var resultadoNumero = $("#resultadoMassaCorporalGorda"), resultadoEscrito = $("#taxaMassaCorporalGorda")
-    resultadoNumero.val('RESULTADO')
-    resultadoEscrito.val("...")
-    resultadoEscrito.css({ 'color': 'gray', 'opacity': '0.5','border-bottom': '5px solid gray', 'font-size': '18px' })
+    var resultadoEscrito = $("#taxaMassaCorporalGorda")
+    resultadoEscrito.addClass('resultGray')
     
     
     
-        $(".massaCorporalGorda").change(function (){
+        $(".massaCorporalGorda").bind('change keyup mouseover',function (){
     
     
             $(document).ready(function(){
+                resultadoEscrito.removeClass('resultGray')
+
                 var peso = Number($("#peso").val())
                 var percentualGordura = Number($("#resultadodobraNumero").val())
                 var formula = (peso * percentualGordura)/100 
                 console.log(formula)
-                resultadoEscrito.css({ 'color': 'black', 'opacity': '1','border-bottom': '1px solid #dadada', 'font-size': '18px' })
     
+                if (percentualGordura == "" && peso == ""){
+                    resultadoEscrito.attr('placeholder', "Campos 'Peso' e '% de Gordura' vazios")
+                    resultadoEscrito.val("")
+                    resultadoEscrito.addClass("faltaCampo")
+                }
+                else if (percentualGordura == ""){
+                    resultadoEscrito.attr('placeholder',"Campo '% de Gordura' não calculado")
+                    resultadoEscrito.val("")
+                    resultadoEscrito.addClass("faltaCampo")
+                }
+
+                else if (peso ==""){
+                    resultadoEscrito.attr('placeholder',"Campo 'Peso' não preenchido")
+                    resultadoEscrito.val("")
+                    resultadoEscrito.addClass("faltaCampo")
+                }
+                else{
+                    resultadoEscrito.val(formula)
+                    resultadoEscrito.removeClass('resultGray')
+                    resultadoEscrito.removeClass("faltaCampo")
+                }
+
+                
     
                 /*aguardando os ifs*/
     
     
-                resultadoEscrito.val("FUNCIONOU")
-                resultadoNumero.val(formula.toFixed(2))
+                
                 
     
     

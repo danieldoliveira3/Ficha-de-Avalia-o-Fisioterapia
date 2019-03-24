@@ -6,7 +6,7 @@
   /*pra manter funcionando quando o usuario interagir*/
   $(document).ready(function () {
     var resultadoEscrito = $('#resultadoipac')
-    resultadoEscrito.val("...")
+    resultadoEscrito.attr('placeholder',"...")
     resultadoEscrito.css({ 'color': 'gray', 'opacity': '0.5','border-bottom': '5px solid gray', 'font-size': '18px' })
 
     $(".ipac").on("blur change check", function () {//fica observando pra ver se ocorre o evento

@@ -16,13 +16,13 @@ h2{font-size: 20px}
 
   }
   input[type="text"]{
-    text-transform: uppercase;
+    text-transform: none;
     width:100%;
     text-align:center;
 }
 
 input::placeholder{
-    text-transform: none;
+    text-transform: none !important;
 }
 
 input[type="number"]{
@@ -37,7 +37,7 @@ input[type="radio"]{
        padding:0;
        
 }
-input, select{border-radius: 4px; border:1px solid #ccc;}
+input, select{border-radius: 4px; border:1px solid #ccc; height:25px;}
 input[type="tel"]{
     width:100%;
     text-align:center;
@@ -50,11 +50,13 @@ input[type="email"]{
 
 input[type="date"]{
     width:100%;
+    height:25px;
     background: white;
     text-align:center;
 }
 
-  body{color:#000;
+
+  body{color:rgb(37, 37, 37);
     font:100%/1.2 Verdana, Arial, Helvetica, sans-serif;
       margin:0 auto;
     position:relative;
@@ -212,7 +214,7 @@ a:hover{text-decoration: none}
 select{
     background: white;
     width:100%;
-    height:20px;
+    height:25px;
 }
 
 form{
@@ -320,6 +322,7 @@ footer p{
     
     
 }
+
 
 
 @keyframes paginaatual {
@@ -547,9 +550,12 @@ footer{
 }
 
 @media screen and (max-width: 425px) {/*para tablets*/
-    header h1{display:block};
-    header img{width:49%};
-    
+    header h1{display:block}
+    header img{width:49%}
+    .font-sizeMenor{font-size:12px;}
+/*font size para nao bugar o display flex row*/
+    input[placeholder]{font-size:12px;}
+
     article.inicio{width: 100%}
     article p{font-size:13.5px;}
     .titulo{font-size:12px;
@@ -573,6 +579,10 @@ footer{
    
 @media screen and (min-width: 700px){/*para tablets*/
     article.inicio{width: 40%}
+    input[placeholder]{font-size:13px;}
+    .font-sizeMenor{font-size:12px;}
+/*font size para nao bugar o display flex row*/
+
     article{
     
         width:60%;
@@ -605,6 +615,8 @@ footer{
 
 @media screen and (min-width: 1100px){/*para tablets*/
     header nav{display: block}
+    input[placeholder]{font-size:14px;}
+    .font-sizeMenor{font-size:14.5px;}
     .dropdown{display: none !important}
     article{
         
@@ -670,7 +682,7 @@ padding: 5px;
 
 .align-left{text-align: left; }
 .questoes-ipac{font-size:20px; font-weight: bold; border-top:5px solid rgba(134, 134, 134, 0.233) ;}
-.resultado{width:49%; text-align: center; height: 50px !important; font-size:20px; margin: 0 auto; border: 1px solid #dadada; font-weight: bold !important;}
+.resultado{width:49%; text-align: center; height: 40px !important; font-size:18px; margin: 0 auto; border: 1px solid #dadada; font-weight: 500 !important;}
 .flexarticle{display:flex; flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: center;}
 h2.article-title{font-size:24px;  text-align:center;padding:5px; display:block; margin: 0 auto; border-bottom: 0.0007em solid rgb(189, 189, 189); border-width: thin} 
 
@@ -693,3 +705,65 @@ textarea[placeholder]{text-align: center; padding:10px;}
 
 /*imagens do article*/
 article img {width:200px;}
+
+.faltaCampo{/*classe para alertar que está faltando um campo para o teste ser realizado*/
+    animation-name: mover;
+    animation-duration: 0.1s;
+    animation-timing-function: 0.5s;
+    transition-duration: 0.1s;
+    animation-direction: alternate;    transition-property: all;
+    border: 1px solid transparent !important;
+    animation-iteration-count: 3;
+    border-bottom:1px solid transparent;
+    color:rgb(255, 99, 99) !important;   
+    box-shadow: 0px 0px 5px 0px red ;
+}
+
+.faltaCampo::placeholder{color:rgb(255, 99, 99); text-transform: none!important}
+
+
+
+@keyframes mover {
+    25% {margin-right:0px; margin-left:5px;}
+    50% {margin-left:0px; margin-right:5px;}
+    75% {margin-right:0px; margin-left:5px;}
+    100% {margin-left:0px; margin-right:5px;}
+
+
+
+    
+  }
+
+
+
+  /*classe para tornar o resultado verde*/
+.resultBom{
+    border:1px solid #dadada;
+    border-bottom:5px solid rgb(48, 139, 20) !important;
+    color: rgb(48, 139, 20) !important;
+
+
+}
+
+
+.resultMedio{
+    border:1px solid #dadada;
+    border-bottom:5px solid rgb(218, 196, 0) !important;
+    color: rgb(218, 196, 0) !important;
+}
+
+.resultRuim{
+    border:1px solid #dadada !important;
+    border-bottom:5px solid rgb(245, 42, 42) !important;
+    color: rgb(245, 42, 42) !important;
+}
+
+.resultGray{/*pra mostrar o campo no load*/
+ color: rgb(168, 168, 168) !important;  border-bottom: 5px solid rgb(168, 168, 168) !important; font-size: 16px}
+
+
+ .aumentarLetraInput{/*classe para aumentar a letra dos inputs*/
+
+font-size:18px;}
+
+

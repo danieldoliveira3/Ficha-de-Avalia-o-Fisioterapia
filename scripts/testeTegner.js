@@ -16,17 +16,20 @@
   $(document).ready(function () {
     var resultadoNumero = $("#input_resultado")
     var resultadoEscrito = $("#resultado")
-    resultadoNumero.val("RESULTADO")
-    resultadoEscrito.val("Preencha os campos necessários")
-    resultadoEscrito.css({ 'color': 'gray', 'opacity': '0.5','border-bottom': '5px solid gray', 'font-size': '18px' })
+    resultadoNumero.attr('placeholder', "Teste não realizado")
+    resultadoEscrito.attr('placeholder', "Teste não realizado")
+    resultadoEscrito.addClass('resultGray')
+    resultadoNumero.addClass('resultGray')
+
   
 
-    $(".soma").on("load change check", function () {//fica observando pra ver se ocorre o evento
+    $(".soma").bind('change click', function () {//fica observando pra ver se ocorre o evento
       total = 0;
 
 
       $(".soma").each(function () {//pra cada elemento marcado com a class soma ele faz isso 
-
+        resultadoEscrito.removeClass('resultGray')
+        resultadoNumero.removeClass('resultGray')
 
         if ($(this).attr('type') == 'text' || $(this).is('select')) { //se tiver um tipo texto ou um tipo select ele faz isso ai
           total += parseFloat($(this).val());//transforma string em float e soma
@@ -38,7 +41,8 @@
 
       $(document).ready(function () {
 
-        
+        resultadoNumero.removeClass('resultGray')
+
 
         if ($('#input_resultado').val() >= 95) {
           resultadoEscrito.css({'opacity': '1'})

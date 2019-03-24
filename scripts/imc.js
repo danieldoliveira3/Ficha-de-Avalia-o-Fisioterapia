@@ -1,85 +1,109 @@
 /*script para calcular o imc*/
 $(document).ready(function () {
   
-  $("#imc").attr("type","text")
-  $("#imcNumero").val('Resultado')
-  $("#imc").val('...');
-  $('#imc').css({ 'color': 'gray', 'opacity': '0.5','border-bottom': '5px solid gray', 'font-size': '18px' })
+  
+  var resultadoEscrito = $("#imc"), resultadoNumero = $("#imcNumero")
+  resultadoEscrito.attr('placeholder',"...")
+  resultadoNumero.attr('placeholder',"Resultado")
+  resultadoEscrito.addClass('resultGray')
+  resultadoNumero.addClass('resultGray')
     
-  var peso = Number($("#peso").val()), altura = Number($("#altura").val())/100
-  var imc = peso/(altura*altura)
 
-  $(".imc").change("change", function () {//fica observando pra ver se ocorre o evento
+  $(".imc").bind('keyup change mouseover', function () {//fica observando pra ver se ocorre o evento
       
-    
-    
-    peso = Number($("#peso").val()), altura = Number($("#altura").val())/100
-    imc = peso/(altura*altura)
-    
-  
-  
-      $('#imc').css({ 'color': 'black','border-bottom': '5px solid transparent', 'opacity': '1', 'font-size': '18px' })
+        var peso = $("#peso").val(), altura =  ($("#altura").val())/100
+      console.log('altura',altura)
+      console.log('peso', peso)
+      var alturaAoQuadrado = Math.pow(altura, 2)
+      console.log('altura Ao Quadrado', alturaAoQuadrado)
 
-      $(document).ready(function () {
-        
-        imc = peso/(altura*altura)
-        console.log(imc)
-        if (imc >= 40) {
-          $("#imcNumero").val(imc.toFixed(2))
+        formula = peso/alturaAoQuadrado
+        console.log('formula', formula)
 
-          $('#imc').css({ 'color': 'red', 'border-bottom': '5px solid red', 'font-size': '18px' })
-          $("#imc").val('OBESIDADE III');
+        if (peso == ""){
+          resultadoEscrito.attr('placeholder',"Campo 'Peso' não preenchido")
+          resultadoEscrito.val("")
+          resultadoEscrito.removeClass("resultGray")
+          resultadoEscrito.addClass("faltaCampo")
+        }
+
+        else if (altura == ""){ 
+          resultadoEscrito.attr('placeholder',"Campo 'Altura' não preenchido")
+          resultadoEscrito.val("");
+          resultadoEscrito.removeClass("resultGray")
+          resultadoEscrito.addClass("faltaCampo");
+        }
+
+        else{
+          resultadoEscrito.removeClass("resultGray")
+          resultadoNumero.removeClass("resultGray")
+          resultadoEscrito.removeClass("faltaCampo")
           
           
-          $('#imc').css({ 'font-size': '18px' })
-        }
-        else if (imc < 40 && imc >= 35) {
-          $("#imcNumero").val(imc.toFixed(2))
+          
+          if (formula<17){
+            resultadoNumero.val(formula.toFixed(2))
+            resultadoEscrito.val('Muito abaixo do peso')
+            resultadoEscrito.removeClass('resultBom')
+            resultadoEscrito.removeClass('resultMedio')
+            resultadoEscrito.addClass('resultRuim')
+          }
+          else if (formula>=17 && formula<=18.49){
+            resultadoNumero.val(formula.toFixed(2))
+            resultadoEscrito.val('Abaixo do peso')
+            resultadoEscrito.removeClass('resultBom')
+            resultadoEscrito.removeClass('resultRuim')
+            resultadoEscrito.addClass('resultMedio')
+          }
 
-          $("#imc").val('OBESIDADE II');
-          $('#imc').css({ 'color': 'red', 'border-bottom': '5px solid red', 'font-size': '18px' })
+          else if (formula>18.49 && formula<=24.99){
+            resultadoNumero.val(formula.toFixed(2))
+            resultadoEscrito.val('Peso Normal')
+            resultadoEscrito.removeClass('resultMedio')
+            resultadoEscrito.removeClass('resultRuim')
+            resultadoEscrito.addClass('resultBom')
+          }
+          else if (formula>24.99 && formula<= 29.99){
+            resultadoNumero.val(formula.toFixed(2))
+            resultadoEscrito.val('Acima do Peso')
+            resultadoEscrito.removeClass('resultBom')
+            resultadoEscrito.removeClass('resultRuim')
+            resultadoEscrito.addClass('resultMedio')
+          }
+
+          else if (formula>29.99 && formula<= 34.99){
+            resultadoNumero.val(formula.toFixed(2))
+            resultadoEscrito.val('Obesidade I')
+            resultadoEscrito.removeClass('resultBom')
+            resultadoEscrito.removeClass('resultMedio')
+            resultadoEscrito.addClass('resultRuim')
+          }
+
+          else if (formula>34.99 && formula<= 39.99){
+            resultadoNumero.val(formula.toFixed(2))
+            resultadoEscrito.val('Obesidade II')
+            resultadoEscrito.removeClass('resultBom')
+            resultadoEscrito.removeClass('resultMedio')
+            resultadoEscrito.addClass('resultRuim')
+          }
+
+          else if (formula>39.99){
+            resultadoNumero.val(formula.toFixed(2))
+            resultadoEscrito.val('Obesidade III')
+            resultadoEscrito.removeClass('resultBom')
+            resultadoEscrito.removeClass('resultMedio')
+            resultadoEscrito.addClass('resultRuim')
+          }
+
+          
+
+
+          
           
         }
-  
-        else if (imc < 35 && imc >= 30) {
-          $("#imcNumero").val(imc.toFixed(2))
 
-          $("#imc").val('OBESIDADE I');
-          $('#imc').css({ 'color': 'red', 'border-bottom': '5px solid red', 'font-size': '18px' })
 
-        }
-  
-        else if (imc < 30 && imc >= 25) {
 
-          $("#imc").val('ACIMA DO PESO');
-          $('#imc').css({ 'color': '#ff8e8e', 'border-bottom': '5px solid #ff8e8e', 'font-size': '18px' })
-
-        }
-  
-        else if (imc < 25 && imc >= 18.5) {
-
-          $("#imc").val('PESO NORMAL');
-          $('#imc').css({ 'color': '#2b9527', 'border-bottom': '5px solid #2b9527', 'font-size': '18px' })
-
-        }
-        
-        else if (imc < 18.5 && imc >= 17) {
-          $("#imcNumero").val(imc.toFixed(2))
-
-          $("#imc").val('ABAIXO DO PESO');
-          $('#imc').css({ 'color': '#ff8e8e', 'border-bottom': '5px solid #ff8e8e', 'font-size': '18px' })
-
-        }
-  
-        else if (imc < 17 && imc >= 0) {
-          $("#imcNumero").val(imc.toFixed(2))
-
-          $("#imc").val('MUITO ABAIXO DO PESO');
-          $('#imc').css({ 'color': '#ff3a3a', 'border-bottom': '5px solid #ff3a3a', 'font-size': '18px' })
-
-        }
-  
-      })
     });
   
   

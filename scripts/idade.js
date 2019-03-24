@@ -1,5 +1,6 @@
 /*funcao para calcular a idade*/
-function Idade() {
+
+$(document).bind('load keyup change mouseover',function Idade() {
     hoje = new Date;
     dataDeNascimento = new Date($("#data-de-nascimento").val());
     var diferencaAnos = hoje.getFullYear() - dataDeNascimento.getFullYear();
@@ -8,4 +9,4 @@ function Idade() {
       diferencaAnos--;
     $("#idade").val(diferencaAnos);
   
-  }
+  })

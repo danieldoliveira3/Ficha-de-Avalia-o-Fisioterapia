@@ -1,7 +1,7 @@
 $(document).ready(function(){
     var resultadoNumero = $("#resultadoTesteCooper"), resultadoEscrito = $("#taxaTesteCooper")
-    resultadoNumero.attr('placeholder','V02máx.')
-    resultadoEscrito.attr('placeholder',"CAPACIDADE AERÓBICA")
+    resultadoNumero.attr('placeholder','V02máx')
+    resultadoEscrito.attr('placeholder',"Capacidade Aeróbica")
     resultadoEscrito.addClass('resultGray')
     resultadoNumero.addClass('resultGray')
     
@@ -18,13 +18,15 @@ $(document).ready(function(){
                 var distancia = $("#distanciaCooper").val()
                 var formula = (((Number(distancia)-504))/45).toFixed(3)
                 console.log(formula)
-                resultadoEscrito.css({ 'color': 'black', 'opacity': '1','border-bottom': '1px solid #dadada', 'font-size': '18px' })
     
                 resultadoNumero.removeClass('resultGray')
                 /*aguardando os ifs*/
                 if (idade == ""){/*if pra checar se o campo idade ta vazia*/
                     resultadoEscrito.attr('placeholder',"Digite a idade")
             resultadoEscrito.val("")
+            resultadoEscrito.removeClass('resultGray')
+                resultadoEscrito.removeClass('resultMedio')
+                resultadoEscrito.removeClass('resultBom')
                     resultadoEscrito.addClass("faltaCampo")
     
                 }
@@ -32,7 +34,9 @@ $(document).ready(function(){
                 else if (sexo == ""){/*if pra checar se o campo sexo ta vazia*/
                     resultadoEscrito.attr('placeholder',"Preencha o sexo")
                     resultadoEscrito.val("")
-
+                    resultadoEscrito.removeClass('resultGray')
+                    resultadoEscrito.removeClass('resultMedio')
+                    resultadoEscrito.removeClass('resultBom')
                     resultadoEscrito.addClass("faltaCampo")
     
                 }

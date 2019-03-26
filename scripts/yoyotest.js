@@ -1,7 +1,7 @@
 $(document).ready(function(){
 var resultadoNumero = $("#resultadoYoYo"), resultadoEscrito = $("#taxaYoYo")
 
-resultadoNumero.attr('placeholder','RESULTADO')
+resultadoNumero.attr('placeholder','VO2máx')
 resultadoEscrito.attr('placeholder',"...")
 resultadoEscrito.addClass('resultGray')
 resultadoNumero.addClass('resultGray')
@@ -20,16 +20,23 @@ resultadoNumero.addClass('resultGray')
             var distancia = $("#distanciaYoYo").val()
             var formula = ((Number(distancia) * 0.0084) + 36.4).toFixed(3)
             console.log(formula)
-            resultadoEscrito.css({'opacity': '1', 'font-size': '18px' })
+            resultadoEscrito.css({'opacity': '1' })
             resultadoNumero.removeClass('resultGray')
+            
             if (idade == ""){/*if pra checar se o campo idade ta vazia*/
                 resultadoEscrito.attr('placeholder',"Digite a idade")
                 resultadoEscrito.addClass("faltaCampo")
+                resultadoEscrito.removeClass('resultGray')
+                resultadoEscrito.removeClass('resultMedio')
+                resultadoEscrito.removeClass('resultBom')
 
             }
 
             else if (sexo == ""){/*if pra checar se o campo sexo ta vazia*/
                 resultadoEscrito.attr('placeholder',"Preencha o sexo")
+                resultadoEscrito.removeClass('resultGray')
+                resultadoEscrito.removeClass('resultMedio')
+                resultadoEscrito.removeClass('resultBom')
                 resultadoEscrito.addClass("faltaCampo")
 
             }

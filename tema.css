@@ -20,6 +20,11 @@ h2{font-size: 20px}
     width:100%;
     text-align:center;
 }
+input[type="password"]{
+    text-transform: none;
+    width:100%;
+    text-align:center;
+}
 
 input::placeholder{
     text-transform: none !important;
@@ -79,9 +84,10 @@ header{
     justify-items: center;
     align-items: center; 
     padding:5px;
+    width:100%;
     padding-top:10px;
     height: 120px;
-
+    z-index: 300 !important;
     background: #fff;  
     box-shadow: 1px 0.5px 10px  rgb(0, 0, 0, 0.2);
 }
@@ -260,7 +266,7 @@ input.numero{
 .ficha-de-avaliacao{
 
     position:relative;
-    top:30px;
+    top:0px;
     margin-bottom:0px;
     padding:10px 3px;
     width:100%;
@@ -471,7 +477,7 @@ h2.DATA {
 }
 
 article{
-    
+    z-index:  -1 !important;;
     position:relative;
     margin-bottom:5px;
     padding:5px 5px;
@@ -563,7 +569,7 @@ footer{
 
     .ajeita-botao{width:100%; margin-bottom:10px;}
     .responsive-button{width:100%;}
-    .resultado{width:100% !important;}
+    .resultado{width:100% !important; font-size: 14px !important;}
 
     header{flex-direction:column; flex-wrap: wrap; height: auto;}
     header nav{margin-left:0; text-align: center; align-items: center; justify-content: center; display:none}
@@ -598,7 +604,7 @@ footer{
     .dropdown-menu{width:100%!important}
     .ajeita-botao{width:60%; margin-bottom:10px;}
     .responsive-button{width:60%;}
-    .resultado{width:100% !important;}
+    .resultado{width:100% !important; font-size:14px!important}
     nav ul{display:flex; justify-content: center; align-content: center;}
 
     
@@ -714,7 +720,7 @@ article img {width:200px;}
     animation-direction: alternate;    transition-property: all;
     border: 1px solid transparent !important;
     animation-iteration-count: 3;
-    border-bottom:1px solid transparent;
+    border-bottom:1px solid transparent !important;
     color:rgb(255, 99, 99) !important;   
     box-shadow: 0px 0px 5px 0px red ;
 }
@@ -762,8 +768,13 @@ article img {width:200px;}
  color: rgb(168, 168, 168) !important;  border-bottom: 5px solid rgb(168, 168, 168) !important; font-size: 16px}
 
 
- .aumentarLetraInput{/*classe para aumentar a letra dos inputs*/
+ .aumentarLetraInput{/*classe para aumentar a letra dos inputs*/font-size:18px;}
 
-font-size:18px;}
+#fakelogin{width:100%; font-size:16px;
+    color:#000; background:#fefefe; top:0; height:100%; display:flex; flex-direction:column; align-items: center; justify-content: center; position: fixed; z-index:200}
+#fakelogin input{width:150px;padding:10px; margin:0 auto;}
 
-
+.loginESenha{}
+.fieldsetLogin{border:2px solid #000;}
+#wrapLoginESenha{height:auto; margin:0 auto;border:1px solid rgb(197, 197, 197); border-radius:24px; padding:10px 30px 10px 30px;}
+#fakelogin h2{font-size:1.6em!important}

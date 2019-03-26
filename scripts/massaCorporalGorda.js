@@ -16,12 +16,12 @@ $(document).ready(function(){
                 console.log(formula)
     
                 if (percentualGordura == "" && peso == ""){
-                    resultadoEscrito.attr('placeholder', "Campos 'Peso' e '% de Gordura' vazios")
+                    resultadoEscrito.attr('placeholder', "Campos 'Peso' e 'Dobras Cutaneas' vazios")
                     resultadoEscrito.val("")
                     resultadoEscrito.addClass("faltaCampo")
                 }
                 else if (percentualGordura == ""){
-                    resultadoEscrito.attr('placeholder',"Campo '% de Gordura' não calculado")
+                    resultadoEscrito.attr('placeholder',"Campo 'Dobras Cutaneas' não calculado")
                     resultadoEscrito.val("")
                     resultadoEscrito.addClass("faltaCampo")
                 }

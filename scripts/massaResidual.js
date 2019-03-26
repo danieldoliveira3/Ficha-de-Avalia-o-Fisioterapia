@@ -22,9 +22,13 @@ $(document).ready(function(){
 
                         resultadoEscrito.attr('placeholder',"Campo 'Peso' não preenchido")
                         resultadoEscrito.val("")
+                        resultadoEscrito.removeClass('resultGray')
+                resultadoEscrito.removeClass('resultMedio')
+                resultadoEscrito.removeClass('resultBom')
+                        resultadoEscrito.removeClass('resultGray')
                         resultadoEscrito.addClass("faltaCampo")
                     }
-                    else{
+                    else{                        
                         resultadoEscrito.removeClass('resultGray')
                         resultadoEscrito.removeClass("faltaCampo")
                         resultadoEscrito.val(formulaMulher.toFixed(2))}
@@ -35,6 +39,10 @@ $(document).ready(function(){
                     if (peso == ""){
                         resultadoEscrito.attr('placeholder',"Campo 'Peso' não preenchido")
                         resultadoEscrito.val("")
+                        resultadoEscrito.removeClass('resultGray')
+                resultadoEscrito.removeClass('resultMedio')
+                resultadoEscrito.removeClass('resultBom')
+                        resultadoEscrito.removeClass('resultGray')
                         resultadoEscrito.addClass("faltaCampo")
                     }
                     else{

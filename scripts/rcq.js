@@ -41,6 +41,8 @@
         else{
           resultadoEscrito.removeClass("resultGray")
           resultadoEscrito.removeClass("faltaCampo")
+          resultadoNumero.removeClass('resultGray')
+      
             if (sexo == "MASCULINO"){
             /*20 - 29*/
             if (idade >=20 && idade <=29 && rcq<0.83){

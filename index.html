@@ -17,9 +17,9 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 
-    <link href="tema.css" rel="stylesheet">
+  <link href="tema.css" rel="stylesheet">
   <!---começo dos scripts usados-->
-  <script src="scripts/login.js"></script>
+  <!--Login <script src="scripts/login.js"></script>improvisado-->
 
   <script src="scripts/desabilitarSubmit.js"></script>
   <script src="scripts/formMaiusculo.js"></script>
@@ -34,6 +34,7 @@
   <script src="scripts/verificaPreenchimento.js"></script>
   <script src="scripts/percentualGordura.js"></script>
   <script src="scripts/stepDown.js"></script>
+  <script src="scripts/stepDownDireito.js"></script>
   <script src="scripts/yteste.js">  </script>
   <script src="scripts/testeDeImpulsao.js"></script>
   <script src="scripts/yoyotest.js"></script>
@@ -73,7 +74,7 @@
       <h1>Laboratório de Cinesiologia <br>e
         Avaliação Funcional<br>
         LACAF - UFPE</h1>
-     
+
 
       <div class="dropdown" style="display:none">
         <a class="btn button btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
@@ -110,7 +111,7 @@
 
     </header>
     <form data-persist="garlic" name="submit-to-google-sheet" method="POST" onsubmit="desabilitar(form)">
-
+      <!--FAKE LOGIN ====================================================
     <div id="fakelogin" class="loginDeNovo">
         <h2>Faça login para ter acesso a<span style="font-weight:bold"> Ficha de Avaliação</span></h2>
         <br><div id="wrapLoginESenha">
@@ -134,14 +135,14 @@
             </div>
        </div></div></div>
        
-          <input id="aux" style="width:0px; opacity:0" value="">
-      
-      
-         
-    <section id="ficha">
-      <div class="ficha-de-avaliacao">
-        <h2>FICHA DE AVALIAÇÃO PARA ATLETAS</h2>
-      </div>
+          <input id="aux" style="width:0px; opacity:0" value="">-->
+
+
+
+      <section id="ficha">
+        <div class="ficha-de-avaliacao">
+          <h2>FICHA DE AVALIAÇÃO PARA ATLETAS</h2>
+        </div>
 
 
 
@@ -158,7 +159,7 @@
           <h2 class="text-left">DADOS DO AVALIADOR</h2>
 
           <br> AVALIADOR<span class="vermelho none"> <b>*</b></span><br>
-          <input required name="AVALIADOR" type="text" class="maiuscula" placeholder="Nome do avaliador"
+          <input  name="AVALIADOR" type="text" class="maiuscula" placeholder="Nome do avaliador"
             maxlength="140">
           <br><br>
           <!-- DATA<span class="vermelho none"> *</span><br>
@@ -170,26 +171,27 @@
 
             <h2 class="text-left">DADOS DO PACIENTE</h2>
 
-            <span class="text-align-left none" style="color: red; text-align:left !important">PREENCHA CUIDADOSAMENTE OS DADOS ABAIXO</span>
+            <span class="text-align-left none" style="color: red; text-align:left !important">PREENCHA CUIDADOSAMENTE OS
+              DADOS ABAIXO</span>
 
 
           </div>
           <br><br><br>
           <br>NOME COMPLETO<span class="vermelho none"> *</span><br>
-          <input id="nome-completo" required name="NOME" type="text" class="maiuscula"
+          <input id="nome-completo"  name="NOME" type="text" class="maiuscula"
             placeholder="Nome Completo do PACIENTE" maxlength="140"> <br><br>
 
           <div class="form-row justify-content-center align-items-center">
 
             <div class="col">
               <span class="font-sizeMenor">DATA DE NASCIMENTO</span><span class="vermelho none"> *</span>
-              <input class="yoyo cooper rcq" onchange="Idade()" required id="data-de-nascimento" name="DATA DE NASCIMENTO" min="1900-01-01"
-                type="date" >
+              <input class="yoyo cooper rcq" onchange="Idade()"  id="data-de-nascimento"
+                name="DATA DE NASCIMENTO" min="1900-01-01" type="date">
             </div>
             <div class="col">
               IDADE<span class="vermelho none"> *</span>
-              <input value="" id="idade" required name="IDADE" readonly class="idade yoyo gordura" type="number" placeholder="Idade"
-                min="16" max="130"></div>
+              <input value="" id="idade"  name="IDADE" readonly class="idade yoyo gordura rcq" type="number"
+                placeholder="Idade" min="16" max="130"></div>
           </div>
           <!---sexo-->
           <br>
@@ -198,7 +200,7 @@
               SEXO<span class="vermelho none"> *</span>
               <p class="sexo">
 
-                <select required id="sexo" class="gordura testeDeImpulsao" name="SEXO">
+                <select  id="sexo" class="gordura testeDeImpulsao" name="SEXO">
                   <optgroup label="SEXO">
                     <option value="MASCULINO" selected>MASCULINO</option>
                     <option value="FEMININO">FEMININO</option>
@@ -210,7 +212,7 @@
             <!---estado civil-->
             <div class="col">
               <span class="font-sizeMenor"></span>ESTADO CIVIL<span class="vermelho none"> *</span>
-              <select id="estado-civil" required name="ESTADO CIVIL">
+              <select id="estado-civil"  name="ESTADO CIVIL">
                 <optgroup label="ESTADO CIVIL">
                   <option value="SOLTEIRO" selected>SOLTEIRO</option>
                   <option value="CASADO">CASADO</option>
@@ -220,7 +222,7 @@
                   <option value="OUTRO">OUTRO</option>
                 </optgroup>
               </select>
-              
+
             </div>
           </div>
 
@@ -230,7 +232,7 @@
             <div class="col">
               <span class="font-sizeMenor">GRAU DE INSTRUÇÃO</span><span class="vermelho none"> *</span>
 
-              <select required name="GRAU DE INSTRUCAO">
+              <select  name="GRAU DE INSTRUCAO">
                 <optgroup label="GRAU DE INSTRUÇÃO">
                   <option value="ANALFABETO" selected>ANALFABETO</option>
                   <option value="ENSINO FUNDAMENTAL INCOMPLETO">ENSINO FUND. INCOMPLETO</option>
@@ -238,6 +240,7 @@
                   <option value="ENSINO MEDIO INCOMPLETO">ENSINO MEDIO INCOMPLETO</option>
                   <option value="ENSINO MEDIO COMPLETO">ENSINO MÉDIO COMPLETO</option>
                   <option value="SUPERIOR COMPLETO">SUPERIOR COMPLETO</option>
+                  <option value="SUPERIOR EM ANDAMENTO">SUPERIOR EM ANDAMENTO</option>
                   <option value="PÓS GRADUAÇÃO">PÓS GRADUAÇÃO</option>
                 </optgroup>
               </select>
@@ -246,29 +249,29 @@
             <!---profissão atual-->
             <div class="col">
               <span class="font-sizeMenor">PROFISSÃO ATUAL</span><span class="vermelho none"> *</span>
-              <input required name="PROFISSAO ATUAL" type="text" class="maiuscula" placeholder="Profissao atual"
+              <input  name="PROFISSAO ATUAL" type="text" class="maiuscula" placeholder="Profissao atual"
                 maxlength="100">
             </div>
           </div>
           <br>
           <hr style="padding:5px;">
           ENDEREÇO<span class="vermelho none"> *</span>
-          <input required name="ENDERECO" type="text" class="maiuscula" placeholder="Rua, Nº" maxlength="280">
+          <input  name="ENDERECO" type="text" class="maiuscula" placeholder="Rua, Nº" maxlength="280">
 
           <br><br>
           <div class="form-row justify-content-center align-items-center">
 
             <div class="col">
               CIDADE<span class="vermelho none"> *</span>
-              <input required name="CIDADE" type="text" class="maiuscula" placeholder="Cidade" maxlength="140"></div>
+              <input  name="CIDADE" type="text" class="maiuscula" placeholder="Cidade" maxlength="140"></div>
             <div class="col">BAIRRO<span class="vermelho none"> *</span>
-              <input required name="BAIRRO" type="text" class="maiuscula" placeholder="Bairro" maxlength="140"></div>
+              <input  name="BAIRRO" type="text" class="maiuscula" placeholder="Bairro" maxlength="140"></div>
           </div>
           <br>
           <div class="form-row justify-content-center align-items-center">
 
             <div class="col">ESTADO<span class="vermelho none"> *</span>
-              <select required name="ESTADO">
+              <select  name="ESTADO">
                 <optgroup label="ESTADOS">
                   <option value="AC">AC</option>
                   <option value="AL">AL</option>
@@ -301,7 +304,7 @@
               </select></div>
 
             <div class="col">CEP<span class="vermelho none"> *</span>
-              <input required name="CEP" type="text" class="maiuscula" placeholder="SOMENTE NUMEROS" maxlength="8"
+              <input  name="CEP" type="text" class="maiuscula" placeholder="SOMENTE NUMEROS" maxlength="8"
                 pattern="[0-9]+$"></div>
           </div>
           <br>
@@ -309,7 +312,7 @@
           <div class="form-row justify-content-center align-items-center">
             <div class="col">
               CELULAR<span class="vermelho none"> *</span>
-              <input required name="CELULAR" type="tel" placeholder="DDD 9xxxx-xxxx" value="" maxlength="12"
+              <input  name="CELULAR" type="tel" placeholder="DDD 9xxxx-xxxx" value="" maxlength="12"
                 pattern="[0-9]+$"></div>
             <div class="col">
 
@@ -320,7 +323,7 @@
 
 
           <br>Email<span class="vermelho none"> *</span>
-          <input required name="EMAIL" type="email" placeholder="email@email.com">
+          <input  name="EMAIL" type="email" placeholder="email@email.com">
 
           <br><br>
           <hr style="padding:5px;">
@@ -339,7 +342,7 @@
 
             <div class="col">
               <span class="font-sizeMenor">MEMBRO SUPERIOR DOMINANTE</span><span class="vermelho none"> *</span>
-              <select required name="MEMBRO SUPERIOR DOMINANTE">
+              <select  name="MEMBRO SUPERIOR DOMINANTE">
                 <optgroup label="MEMBRO SUPERIOR DOMINANTE">
                   <option value="DIREITO" selected>DIREITO</option>
                   <option value="ESQUERDO">ESQUERDO</option>
@@ -348,7 +351,7 @@
               </select></div>
             <div class="col">
               <span class="font-sizeMenor">MEMBRO INFERIOR DOMINANTE</span><span class="vermelho none"> *</span>
-              <select required name="MEMBRO INFERIOR DOMINANTE">
+              <select  name="MEMBRO INFERIOR DOMINANTE">
                 <optgroup label="MEMBRO INFERIOR DOMINANTE">
                   <option value="DIREITO" selected>DIREITO</option>
                   <option value="ESQUERDO">ESQUERDO</option>
@@ -362,7 +365,7 @@
           <div class="form-row justify-content-center align-items-center">
 
             <div class="col">FUMANTE<span class="vermelho none"> *</span>
-              <select required onchange="DesabilitarOpcao()" id="fumante" name="FUMANTE">
+              <select  onchange="DesabilitarOpcao()" id="fumante" name="FUMANTE">
                 <optgroup label="FUMANTE">
                   <option value="SIM">SIM</option>
                   <option value="NÃO" selected>NÃO</option>
@@ -381,7 +384,7 @@
 
             <div class="col">
               ETILISMO<span class="vermelho none"> *</span>
-              <select required name="ETILISMO">
+              <select  name="ETILISMO">
                 <optgroup label="ETILISMO">
                   <option value="SIM">SIM</option>
                   <option value="NÃO" selected>NÃO</option>
@@ -390,7 +393,7 @@
               </select></div>
 
             <div class="col"> HAS<span class="vermelho none"> *</span>
-              <select required name="HAS">
+              <select  name="HAS">
                 <optgroup label="HAS">
                   <option value="SIM">SIM</option>
                   <option value="NÃO" selected>NÃO</option>
@@ -402,7 +405,7 @@
           <br>
           <div class="form-row justify-content-center align-items-center">
             <div class="col">DIABETES MELLITUS<span class="vermelho none"> *</span>
-              <select required name="DIABETES">
+              <select  name="DIABETES">
                 <optgroup label="DIABETES MELLITUS">
                   <option value="SIM">SIM</option>
                   <option value="NÃO" selected>NÃO</option>
@@ -414,7 +417,7 @@
 
             <div class="col"><span class="font-sizeMenor">DOENÇAS CARDIOVASCULARES</span><span class="vermelho none">
                 *</span>
-              <select required name="DOENCAS CARDIACAS">
+              <select  name="DOENCAS CARDIACAS">
                 <optgroup label="DOENÇAS CARDIOVASCULARES">
                   <option value="SIM">SIM</option>
                   <option value="NÃO" selected>NÃO</option>
@@ -427,7 +430,7 @@
           <br>
           <span class="font-sizeMenor">PRÁTICA DE EXERCÍCIO FÍSICO ALÉM DA MODALIDADE ESPORTIVA</span> <span
             class="vermelho none"> *</span>
-          <select required onchange="DesabilitarOpcao()" id="exercicio-fisico" name="EXERCICIO FISICO">
+          <select  onchange="DesabilitarOpcao()" id="exercicio-fisico" name="EXERCICIO FISICO">
             <optgroup label="EXERCÍCIO FÍSICO">
               <option value="SIM">SIM</option>
               <option value="NÃO" selected>NÃO</option>
@@ -525,7 +528,7 @@
           <br>HISTÓRIA DA QUEIXA APRESENTADA <span class="vermelho none"
             style="font-weight:bold; font-size: 12px; margin-top:-16px; margin-bottom:-16px; display: block;"><br>(TEMPO
             DE EXISTÊNCIA, TRATAMENTOS REALIZADOS)</span><br>
-          <textarea name="HISTÓRIA DA QUEIXA"  class="maiuscula" maxlength="500"
+          <textarea name="HISTÓRIA DA QUEIXA" class="maiuscula" maxlength="500"
             placeholder="História da queixa"></textarea>
           <br>
 
@@ -571,27 +574,27 @@
 
           <br>
           P.A.<br>
-          <input name="PRESSAO ARTERIAL" class="numero maiuscula" type="text"   
-            placeholder="Pressão Arterial"> mmHg<br><br>
+          <input name="PRESSAO ARTERIAL" class="numero maiuscula" type="text" placeholder="Pressão Arterial">
+          mmHg<br><br>
           F.R.<br>
-          <input name="PFR" class="numero" type="text"  placeholder="P.F.R"> <br><br>
+          <input name="PFR" class="numero" type="text" placeholder="P.F.R"> <br><br>
           F.C.<br>
           <input name="FC" class="numero" type="text" placeholder="F.C"> bpm<br><br>
           SpO2<br>
-          <input name="SPO2" type="text" class="numero"  placeholder="SpO2"><br><br>
+          <input name="SPO2" type="text" class="numero" placeholder="SpO2"><br><br>
 
 
           PESO<BR>
           <input id="peso"
-            class="imc numero massaOssea testeDeImpulsao massaMuscular massaResidual massaCorporalGorda massaCorporalMagra" name="PESO" min="20" max="330"
-            step="0.1" type="number" /> kg<BR><br>
+            class="imc numero massaOssea testeDeImpulsao massaMuscular massaResidual massaCorporalGorda massaCorporalMagra"
+            name="PESO" min="20" max="330" step="0.1" type="number" /> kg<BR><br>
           ALTURA<br>
-          <input id="altura"  class="imc numero massaOssea" name="ALTURA" min="20" max="330" type="number" />
+          <input id="altura" class="imc numero massaOssea" name="ALTURA" min="20" max="330" type="number" />
           cm<BR>
           <br>
           IMC<br>
           <div class="resultadoFixer">
-            <input id="imcNumero" type="text"  name="IMC" class="imc resultado" value="" readonly>
+            <input id="imcNumero" type="text" name="IMC" class="imc resultado" value="" readonly>
             <input name="ESCALA IMC" id="imc" readonly class="imc resultado" type="text" style="width:49%; ">
 
             <br><br>
@@ -880,7 +883,7 @@
 
           <label for="rcqNumero">Resultado</label>
           <div class="resultadoFixer">
-           
+
             <input class="resultado inputFalso rcq" style="font-size:18px" id="rcqNumero" name="R.C.Q" readonly>
 
             <input class="resultado rcq" style="font-size:14px;" id="rcq" type="text" readonly
@@ -902,13 +905,15 @@
             <div class="col">
 
               <label for="tricipital">TRICIPITAL</label>
-              <input type="number" class="gordura massaCorporalGorda" id="tricipital" step="0.001" name="TRICIPITAL"><br>
+              <input type="number" class="gordura massaCorporalGorda" id="tricipital" step="0.001"
+                name="TRICIPITAL"><br>
             </div>
 
             <div class="col">
 
               <label for="subescapular">SUBESCAPULAR</label>
-              <input type="number" class="gordura massaCorporalGorda" id="subescapular" step="0.001" name="SUBESCAPULAR"><br>
+              <input type="number" class="gordura massaCorporalGorda" id="subescapular" step="0.001"
+                name="SUBESCAPULAR"><br>
 
             </div>
           </div>
@@ -917,7 +922,8 @@
 
             <div class="col"><br>
               <label for="axilar">AXILAR MÉDIA</label>
-              <input type="number" class="gordura massaCorporalGorda" id="axilar" step="0.001" name="AXILAR MÉDIA"><br><br>
+              <input type="number" class="gordura massaCorporalGorda" id="axilar" step="0.001"
+                name="AXILAR MÉDIA"><br><br>
             </div>
 
             <div class="col">
@@ -931,12 +937,14 @@
 
             <div class="col">
               <label for="supra">SUPRA-ÍLIACA</label><br>
-              <input type="number" class="gordura massaCorporalGorda massaCorporalGorda" id="supra" step="0.001" name="SUPRA-ÍLIACA"><br>
+              <input type="number" class="gordura massaCorporalGorda massaCorporalGorda" id="supra" step="0.001"
+                name="SUPRA-ÍLIACA"><br>
             </div>
 
             <div class="col">
               <label for="abdomen">ABDOMÊN</label><br>
-              <input type="number" class="gordura massaCorporalGorda massaCorporalGorda" id="abdomen" step="0.001" name="ABDOMÊN"><br>
+              <input type="number" class="gordura massaCorporalGorda massaCorporalGorda" id="abdomen" step="0.001"
+                name="ABDOMÊN"><br>
             </div>
           </div>
 
@@ -946,13 +954,14 @@
             <div class="col">
               <br>
               <label for="coxadobra">COXA</label>
-              <input type="number" class="gordura massaCorporalGorda massaCorporalGorda" step="0.001" id="coxadobra" name="COXA"><br><br>
+              <input type="number" class="gordura massaCorporalGorda massaCorporalGorda" step="0.001" id="coxadobra"
+                name="COXA"><br><br>
             </div>
           </div>
           <label for="resultadodobraNumero">Resultado</label>
           <div class="resultadoFixer">
-            <input type="text" readonly id="resultadodobraNumero" class="gordura resultado inputFalso">
-            <input type="text" readonly id="resultadodobra" name="Percentual Gordura"
+            <input type="text" readonly id="resultadodobraNumero" class="gordura resultado inputFalso" name="Gordura%">
+            <input type="text" readonly id="resultadodobra" name="PERCENTUAL GORDURA"
               class="resultado gordura massaMuscular massaCorporalGorda massaCorporalGorda">
           </div>
 
@@ -985,8 +994,8 @@
           <br>
           <label for="taxaMassaOssea">Resultado</label><br>
           <div class="resultadoFixer">
-            <input type="text" placeholder="..." readonly name="massaOssea"
-              id="taxaMassaOssea" class="resultado massaMuscular" style="width: 100% !important"></div>
+            <input type="text" placeholder="..." readonly name="Massa Ossea" id="taxaMassaOssea"
+              class="resultado massaMuscular" style="width: 100% !important"></div>
           <!--FIM MASSA OSSEA-->
 
           <!---MASSA RESIDUAL =========================== -->
@@ -997,14 +1006,16 @@
           formula:
           HOMEM: peso*0.241
           MULHER: peso*0.209
-<br>
-          <input type="text" readonly name="taxa MR" id="taxaMassaResidual" class="resultado massaMuscular massaResidual" style="width: 100% !important">
+          <br>
+          <input type="text" readonly name="Massa Residual" id="taxaMassaResidual"
+            class="resultado massaMuscular massaResidual" style="width: 100% !important">
           <br>
           <br>
           <h2 class="text-left">MASSA CORPORAL GORDA</h2>
           forumla: peso*percentual de gordura massaCorporalGorda/100
           <label for="taxaMassaCorporalGorda">Resultado</label><br>
-          <input type="text" placeholder="..." name="taxa MCG" readonly id="taxaMassaCorporalGorda" class="resultado massaCorporalMagra massaMuscular massaCorporalGorda" style="width: 100% !important">
+          <input type="text" placeholder="..." name="M Corporal Gorda" readonly id="taxaMassaCorporalGorda"
+            class="resultado massaCorporalMagra massaMuscular massaCorporalGorda" style="width: 100% !important">
 
           <br><br>
           <h2 class="text-left">MASSA MUSCULAR</h2>
@@ -1012,7 +1023,8 @@
           RESULTADO EM PORCENTAGEM
 
           <label for="taxaMassaMuscular">Resultado</label><br>
-          <input type="text" placeholder="..." readonly name="taxa MM" id="taxaMassaMuscular" class="resultado massaMuscular" style="width:100% !important">
+          <input type="text" placeholder="..." readonly name="M Muscular" id="taxaMassaMuscular"
+            class="resultado massaMuscular" style="width:100% !important">
 
 
           <br><br>
@@ -1020,7 +1032,8 @@
           FORMULA: Peso – massa corporal gorda
 
           <label for="taxaMassaCorporalMagra">Resultado</label><br>
-          <input type="text" placeholder="..." readonly value="" name="taxa MCM" id="taxaMassaCorporalMagra" class="resultado massaCorporalMagra" style="width: 100% !important">
+          <input type="text" placeholder="..." readonly value="" name="M Corporal Magra" id="taxaMassaCorporalMagra"
+            class="resultado massaCorporalMagra" style="width: 100% !important">
 
 
         </article>
@@ -1029,74 +1042,81 @@
 
 
         <article>
-          <h2 class="article-title">F.M.S.</h2>
+          <h2 class="article-title">Testes Funcionais</h2>
           <br><br>
+          F.M.S.
+
           <h2 class="text-left">Y BALANCE TEST</h2>
 
           <br>
           <div class="form-row justify-content-center align-items-center">
             <div class="col">
               <label for="paytestright">PA (Direito)</label>
-              <input type="number" id="paytestright" class="ytest" step="0.001" name="posturaAnterior">
+              <input type="number" id="paytestright" class="ytest" step="0.001" name="PA Direito">
             </div>
             <div class="col">
-                <label for="pmytestright">PM (Direito)</label>
-                <input type="number" id="pmytestright" class="ytest" step="0.001" name="posturaAnterior">
-              </div>
-            
+              <label for="pmytestright">PM (Direito)</label>
+              <input type="number" id="pmytestright" class="ytest" step="0.001" name="PM Direito">
+            </div>
 
 
-            </div>          
+
+          </div>
 
           <div class="form-row justify-content-center align-items-center">
             <div class="col"><br>
               <label for="plytestright">PL (Direito)</label>
-              <input type="number" id="plytestright" class="ytest" step="0.001" name="posturaAnterior">
+              <input type="number" id="plytestright" class="ytest" step="0.001" name="PL Direito">
             </div>
             <div class="col"><br>
               <label for="cmytestright">CM (Direito)</label>
-              <input type="number" id="cmytestright" class="ytest" step="0.001" name="posturaAnterior">
+              <input type="number" id="cmytestright" class="ytest" step="0.001" name="CM Direito">
             </div>
 
           </div>
-<br>
-<label for="resultadoYDireita">Perna Direita</label><br>
+          <br>
+          <label for="resultadoYDireita">Perna Direita</label><br>
 
           <div class="resultadoFixer">
-              <input type="text" placeholder="Resultado" readonly class="resultado" name="ESCORE Y TEST" id="resultadoYDireita"  value="">
-             <input type="text" placeholder="..." readonly class="resultado" name="ESCORE Y TEST" id="escoreFinalYDireita"  value="">
+            <input type="text" placeholder="Resultado" readonly class="resultado" name="Ytest Direita"
+              id="resultadoYDireita" value="">
+            <input type="text" placeholder="..." readonly class="resultado" name="Yteste Direita Taxa"
+              id="escoreFinalYDireita" value="">
           </div>
           <hr style="padding:5px;">
 
           <div class="form-row justify-content-center align-items-center">
-            
-            <div class="col">
-              <label for="plytesteleft">PL (Esquerdo)</label>
-              <input type="number" id="plytesteleft" class="ytest" step="0.001" name="posturaAnterior">
-            </div>
-            <div class="col">
-              <label for="cmytestleft">CM (Esquerdo)</label>
-              <input type="number" id="cmytestleft" class="ytest" step="0.001" name="posturaAnterior">
-            </div>
-
-          </div><br>
-          <div class="form-row justify-content-center align-items-center">
               <div class="col">
-                  <label for="paytestleft">PA (Esquerdo)</label>
-                  <input type="number" id="paytestleft" class="ytest" step="0.001" name="posturaAnterior">
-                </div>
+                <label for="paytestleft">PA (Esquerdo)</label>
+                <input type="number" id="paytestleft" class="ytest" step="0.001" name="PA Esquerdo">
+              </div>
+  
+              <div class="col">
+                <label for="pmytestleft">PM (Esquerdo)</label>
+                <input type="number" id="pmytestleft" class="ytest" step="0.001" name="PM Esquerdo">
+              </div>
+  
+            </div><br>
+          <div class="form-row justify-content-center align-items-center">
 
-            <div class="col">
-              <label for="pmytestleft">PM (Esquerdo)</label>
-              <input type="number" id="pmytestleft" class="ytest" step="0.001" name="posturaAnterior">
+              <div class="col">
+                <label for="plytesteleft">PL (Esquerdo)</label>
+                <input type="number" id="plytesteleft" class="ytest" step="0.001" name="PL Esquerdo">
+              </div>
+              <div class="col">
+                <label for="cmytestleft">CM (Esquerdo)</label>
+                <input type="number" id="cmytestleft" class="ytest" step="0.001" name="CM Esquerdo">
+              </div>
+  
             </div>
-
-          </div>
-<br>            <label for="resultadoYEsquerda">Perna Esquerda</label><br>
+          
+          <br> <label for="resultadoYEsquerda">Perna Esquerda</label><br>
 
           <div class="resultadoFixer">
-              <input type="text" placeholder="Resultado" readonly class="resultado" name="ESCORE Y TEST" id="resultadoYEsquerda"  value="">
-             <input type="text" placeholder="..." readonly class="resultado" name="ESCORE Y TEST" id="escoreFinalYEsquerda"  value="">
+            <input type="text" placeholder="Resultado" readonly class="resultado" name="Ytest Esquerdo"
+              id="resultadoYEsquerda" value="">
+            <input type="text" placeholder="..." readonly class="resultado" name="Ytest Esquerdo Taxa"
+              id="escoreFinalYEsquerda" value="">
           </div>
 
 
@@ -1107,50 +1127,97 @@
 
           <!--STEP DOWN=================================================================-->
           <h2 class="text-left">STEP DOWN</h2><br>
+          <h2 class="text-left" style="border-bottom: 1px solid #ccc">Lado Esquerdo</h2>
           <div class="form-row justify-content-center align-items-center">
             <div class="col">
               <label for="estrategiademms">Estratégia de mmss</label>
-              <input type="number" class="stepdown" name="Estratégia de mmss" id="estrategiademms" min="0"
+              <input type="number" class="stepdown" name="Estratégia de mmss Esquerdo" id="estrategiademms" min="0"
                 max="1"><br><br></div>
             <div class="col">
               <label for="movtronco">Movimento de tronco</label>
-              <input type="number" class="stepdown" name="Movimento de tronco" id="movtronco" min="0" max="1"><br><br>
+              <input type="number" class="stepdown" name="Movimento de tronco Esquerdo" id="movtronco" min="0" max="1"><br><br>
             </div>
           </div>
 
           <div class="form-row justify-content-center align-items-center">
             <div class="col">
               <label for="planoPelve">Plano da pelve</label>
-              <input type="number" class="stepdown" name="Plano da pelve" id="planoPelve" min="0" max="1"><br><br></div>
+              <input type="number" class="stepdown" name="Plano da pelve Esquerdo" id="planoPelve" min="0" max="1"><br><br></div>
             <div class="col">
               <label for="posJoelho">Posição do joelho</label>
-              <input type="number" class="stepdown" name="Posição do joelho" id="posJoelho" min="0" max="1"><br><br>
+              <input type="number" class="stepdown" name="Posição do joelho Esquerdo" id="posJoelho" min="0" max="1"><br><br>
             </div>
           </div>
 
 
-
           <label for="valgo2Dedo">Valgo- TAT até o segundo dedo</label>
-          <input type="number" class="stepdown" name="Valgo- TAT até o segundo dedo" id="valgo2Dedo" min="0"
+          <input type="number" class="stepdown" name="Valgo- TAT até o segundo dedo Esquerdo" id="valgo2Dedo" min="0"
             max="2"><br><br>
 
           <label for="manutencaoEmApoioUnipodal">Manutenção da postura em apoio unipodal: Oscilação do membro testado ou
             queda do step</label>
-          <input type="number" class="stepdown" name="Manutenção da postura" id="manutencaoEmApoioUnipodal" min="0"
+          <input type="number" class="stepdown" name="Manutenção da postura Esquerdo" id="manutencaoEmApoioUnipodal" min="0"
             max="1">
 
           <br><br>
 
-          
+
           <label for="resultadoStepDown">Análise quantitativa do movimento</label><br>
 
 
           <div class="resultadoFixer">
-            <input class="resultado" value="" id="resultadoStepDown" readonly placeholder="Resultado">
-            <input type="text" readonly id="scorestepdown" class="resultado" style="font-size:16px"
-              placeholder="...">
+            <input class="resultado" value="" name="StepDown Esquerdo" id="resultadoStepDown" readonly placeholder="Resultado">
+            <input type="text" readonly id="scorestepdown" name="StepDown Esquerdo Taxa" class="resultado" style="font-size:16px" placeholder="...">
+          </div>
+          <!---------FIM DO STEP DOWN--><br><br>
+          <h2 class="text-left" style="border-bottom: 1px solid #ccc">Lado Direito</h2>
+          <div class="form-row justify-content-center align-items-center">
+            <div class="col">
+              <label for="estrategiademms">Estratégia de mmss</label>
+              <input type="number" class="stepdownDireito" name="Estratégia de mmss Direito" id="estrategiademmsDireito" min="0"
+                max="1"><br><br></div>
+            <div class="col">
+              <label for="movtroncodireito">Movimento de tronco</label>
+              <input type="number" class="stepdownDireito" name="Movimento de tronco Direito" id="movtroncodireito" min="0"
+                max="1"><br><br>
+            </div>
           </div>
 
+          <div class="form-row justify-content-center align-items-center">
+            <div class="col">
+              <label for="planoPelvedireito">Plano da pelve</label>
+              <input type="number" class="stepdownDireito" name="Plano da pelve Direito" id="planoPelvedireito" min="0"
+                max="1"><br><br></div>
+            <div class="col">
+              <label for="posJoelhodireito">Posição do joelho</label>
+              <input type="number" class="stepdownDireito" name="Posição do joelho Direito" id="posJoelhodireito" min="0"
+                max="1"><br><br>
+            </div>
+          </div>
+
+
+          <label for="valgo2Dedodireito">Valgo- TAT até o segundo dedo</label>
+          <input type="number" class="stepdownDireito" name="Valgo- TAT até o segundo dedo Direito" id="valgo2Dedodireito"
+            min="0" max="2"><br><br>
+
+          <label for="manutencaoEmApoioUnipodaldireito">Manutenção da postura em apoio unipodal: Oscilação do membro
+            testado ou
+            queda do step</label>
+          <input type="number" class="stepdownDireito" name="Manutenção da postura Direito"
+            id="manutencaoEmApoioUnipodaldireito" min="0" max="1">
+
+          <br><br>
+
+
+          <label for="resultadoStepDownDireito">Análise quantitativa do movimento</label><br>
+
+
+          <div class="resultadoFixer">
+            <input class="resultado" value="" name="StepDown Direito" id="resultadoStepDownDireito" readonly placeholder="Resultado">
+            <input type="text" readonly name="StepDown Direito Taxa" id="scorestepdownDireito" class="resultado" style="font-size:16px"
+              placeholder="...">
+          </div>
+          <!---------FIM DO STEP DOWN-->
 
         </article>
 
@@ -1164,99 +1231,99 @@
           <h2 class="article-title">QUESTIONÁRIO DE TEGNER E LYSHOLM</h2>
 
           <br>
-<div class="form-row justify-content-center align-items-center">
-  <div class="col">INSTABILIDADE
-      <select name="INSTABILIDADE" class="soma">
-        <optgroup label="INSTABILIDADE">
-          <option value="25">NUNCA FALSEIA (25)</option>
-          <option value="20">RARAMENTE DURANTE ATIVIDADES FISICAS OU OUTROS
-            EXERCICIOS
-            PESADOS (20)</option>
-          <option value="15">FREQUENTEMENTE DURANTE ATIVIDADES ATLÉTICAS OU OUTROS
-            EXERCÍCIOS PESADOS (OU INCAPAZ DE PARTICIPAÇÃO) (15)</option>
-          <option value="10">OCASIONALMENTE EM ATIVIDADES DIÁRIAS (10)</option>
-          <option value="5">FREQUENTEMENTE EM ATIVIDADES DIÁRIAS (5)</option>
-          <option value="0">EM CADA PASSO (0)</option>
-        </optgroup>
-      </select></div>
-  <div class="col">DOR
-      <select name="DOR" class="soma">
-        <optgroup label="DOR">
-          <option value="25" selected>NENHUMA (25)</option>
-          <option value="20">INSCONSTANTE OU LEVE DURANTE EXERCÍCIOS PESADOS (20)</option>
-          <option value="15">MARCADA DURANTE EXERCÍCIOS PESADOS (15)</option>
-          <option value="10">MARCARDA DURANTE OU APÓS CAMINHAR MAIS DE 2KM (10)</option>
-          <option value="5">MARCADA DURANTE OU APÓS CAMINHAR MENOS DE 2KM (5)</option>
-          <option value="0">CONSTANTE (0)</option>
-        </optgroup>
-      </select></div>
-</div>
-<br>
-<div class="form-row justify-content-center align-items-center">
-    <div class="col">INCHAÇO
-        <select name="INCHACO" class="soma">
-          <optgroup label="INCHAÇO">
-            <option value="10" selected>NENHUM (10)</option>
-            <option value="6">COM EXERCÍCIOS PESADOS (6)</option>
-            <option value="2">COM EXERCÍCIOS COMUNS (2)</option>
-            <option value="0">CONSTANTE (0)</option>
-          </optgroup>
-        </select></div>
-    <div class="col">AO SUBIR ESCADAS
-        <select name="SUBINDO ESCADAS" class="soma">
-          <optgroup label="AO SUBIR ESCADAS">
-            <option value="10" selected>NENHUM PROBLEMA (10)</option>
-            <option value="6">LEVEMENTE PREJUDICADO (6)</option>
-            <option value="2">UM DEGRAU DE CADA VEZ (2)</option>
-            <option value="0">IMPOSSÍVEL (0)</option>
-          </optgroup>
-        </select></div>
-  </div><br>
-  <div class="form-row justify-content-center align-items-center">
-      <div class="col">AGACHAMENTO
-          <select name="AGACHAR" class="soma">
-            <optgroup label="AGACHAMENTO">
-              <option value="5" selected>NENHUM PROBLEMA (5)</option>
-              <option value="4">LEVEMENTE PREJUDICADO (4)</option>
-              <option value="2">NÃO ALÉM DE 90 GRAUS (2)</option>
-              <option value="0">IMPOSSÍVEL (0)</option>
-            </optgroup>
-          </select></div>
-      <div class="col">TRAVAMENTO
-          <select name="TRAVAMENTO" class="soma">
-            <optgroup label="TRAVAMENTO">
-              <option value="15" selected>NENHUM TRAVAMENTO OU SENSAÇÃO DE TRAVAMENTO (15)</option>
-              <option value="10">TEM SENSAÇÃO, MAS SEM TRAVAMENTO (10)</option>
-              <option value="6">TRAVAMENTO OCASIONAL (6)</option>
-              <option value="2">FREQUENTE (2)</option>
-            </optgroup>
-          </select></div>
-    </div>
-    <br>
-    <div class="form-row justify-content-center align-items-center">
-        <div class="col">MANCAR
-            <select name="MANCAR" class="soma">
-              <optgroup label="MANCAR">
-                <option value="5" selected>NUNCA (5)</option>
-                <option value="3">LEVE OU PERIODICAMENTE (3)</option>
-                <option value="0">INTENSO E CONSTANTEMENTE (0)</option>
-              </optgroup>
-            </select></div>
-        <div class="col">APOIO
-            <select name="APOIO" class="soma">
-              <optgroup label="APOIO">
-                <option value="5" selected>NUNCA (5)</option>
-                <option value="3">BENGALA OU MULETA (3)</option>
-                <option value="0">IMPOSSÍVEL (0)</option>
-              </optgroup>
-            </select></div>
-      </div>
+          <div class="form-row justify-content-center align-items-center">
+            <div class="col">INSTABILIDADE
+              <select name="INSTABILIDADE" class="soma">
+                <optgroup label="INSTABILIDADE">
+                  <option value="25">NUNCA FALSEIA (25)</option>
+                  <option value="20">RARAMENTE DURANTE ATIVIDADES FISICAS OU OUTROS
+                    EXERCICIOS
+                    PESADOS (20)</option>
+                  <option value="15">FREQUENTEMENTE DURANTE ATIVIDADES ATLÉTICAS OU OUTROS
+                    EXERCÍCIOS PESADOS (OU INCAPAZ DE PARTICIPAÇÃO) (15)</option>
+                  <option value="10">OCASIONALMENTE EM ATIVIDADES DIÁRIAS (10)</option>
+                  <option value="5">FREQUENTEMENTE EM ATIVIDADES DIÁRIAS (5)</option>
+                  <option value="0">EM CADA PASSO (0)</option>
+                </optgroup>
+              </select></div>
+            <div class="col">DOR
+              <select name="DOR" class="soma">
+                <optgroup label="DOR">
+                  <option value="25" selected>NENHUMA (25)</option>
+                  <option value="20">INSCONSTANTE OU LEVE DURANTE EXERCÍCIOS PESADOS (20)</option>
+                  <option value="15">MARCADA DURANTE EXERCÍCIOS PESADOS (15)</option>
+                  <option value="10">MARCARDA DURANTE OU APÓS CAMINHAR MAIS DE 2KM (10)</option>
+                  <option value="5">MARCADA DURANTE OU APÓS CAMINHAR MENOS DE 2KM (5)</option>
+                  <option value="0">CONSTANTE (0)</option>
+                </optgroup>
+              </select></div>
+          </div>
+          <br>
+          <div class="form-row justify-content-center align-items-center">
+            <div class="col">INCHAÇO
+              <select name="INCHACO" class="soma">
+                <optgroup label="INCHAÇO">
+                  <option value="10" selected>NENHUM (10)</option>
+                  <option value="6">COM EXERCÍCIOS PESADOS (6)</option>
+                  <option value="2">COM EXERCÍCIOS COMUNS (2)</option>
+                  <option value="0">CONSTANTE (0)</option>
+                </optgroup>
+              </select></div>
+            <div class="col">AO SUBIR ESCADAS
+              <select name="SUBINDO ESCADAS" class="soma">
+                <optgroup label="AO SUBIR ESCADAS">
+                  <option value="10" selected>NENHUM PROBLEMA (10)</option>
+                  <option value="6">LEVEMENTE PREJUDICADO (6)</option>
+                  <option value="2">UM DEGRAU DE CADA VEZ (2)</option>
+                  <option value="0">IMPOSSÍVEL (0)</option>
+                </optgroup>
+              </select></div>
+          </div><br>
+          <div class="form-row justify-content-center align-items-center">
+            <div class="col">AGACHAMENTO
+              <select name="AGACHAR" class="soma">
+                <optgroup label="AGACHAMENTO">
+                  <option value="5" selected>NENHUM PROBLEMA (5)</option>
+                  <option value="4">LEVEMENTE PREJUDICADO (4)</option>
+                  <option value="2">NÃO ALÉM DE 90 GRAUS (2)</option>
+                  <option value="0">IMPOSSÍVEL (0)</option>
+                </optgroup>
+              </select></div>
+            <div class="col">TRAVAMENTO
+              <select name="TRAVAMENTO" class="soma">
+                <optgroup label="TRAVAMENTO">
+                  <option value="15" selected>NENHUM TRAVAMENTO OU SENSAÇÃO DE TRAVAMENTO (15)</option>
+                  <option value="10">TEM SENSAÇÃO, MAS SEM TRAVAMENTO (10)</option>
+                  <option value="6">TRAVAMENTO OCASIONAL (6)</option>
+                  <option value="2">FREQUENTE (2)</option>
+                </optgroup>
+              </select></div>
+          </div>
+          <br>
+          <div class="form-row justify-content-center align-items-center">
+            <div class="col">MANCAR
+              <select name="MANCAR" class="soma">
+                <optgroup label="MANCAR">
+                  <option value="5" selected>NUNCA (5)</option>
+                  <option value="3">LEVE OU PERIODICAMENTE (3)</option>
+                  <option value="0">INTENSO E CONSTANTEMENTE (0)</option>
+                </optgroup>
+              </select></div>
+            <div class="col">APOIO
+              <select name="APOIO" class="soma">
+                <optgroup label="APOIO">
+                  <option value="5" selected>NUNCA (5)</option>
+                  <option value="3">BENGALA OU MULETA (3)</option>
+                  <option value="0">IMPOSSÍVEL (0)</option>
+                </optgroup>
+              </select></div>
+          </div>
           <br>
           <div class="resultadoFixer">
-            <input type="text" class="maiuscula resultado aumentarLetraInput" style=" font-weight: bold;" readonly id="input_resultado"
-              name="RESULTADO" value="">
-            <input type="text" readonly class="texto-center resultado aumentarLetraInput" id="resultado" name="ESCALA TEGNER E LYSHOLM"
-              value="" style=" margin: 0 auto; "></div>
+            <input type="text" class="maiuscula resultado aumentarLetraInput" style=" font-weight: bold;" readonly
+              id="input_resultado" name="RESULTADO" value="">
+            <input type="text" readonly class="texto-center resultado aumentarLetraInput" id="resultado"
+              name="ESCALA TEGNER E LYSHOLM" value="" style=" margin: 0 auto; "></div>
 
         </article>
 
@@ -1267,24 +1334,27 @@
           <h2 class="article-title">TESTE DE COOPER</h2>
           <br>
           formula: V02máx. (ml. Kg-1, min-1) = Distancia - 504 ÷ 45
-          
+
           <br><br>
-          
-          
-            <div class="form-row justify-content-center align-items-center">
-                    <div class="col">
-                        <label for="distanciaCooper">Distância (m)</label><br>
-                        <input type="number" style="width:100% !important;" class="cooper resultado" name="Distancia Teste Cooper" id="distanciaCooper">
+
+
+          <div class="form-row justify-content-center align-items-center">
+            <div class="col">
+              <label for="distanciaCooper">Distância (m)</label><br>
+              <input type="number" style="width:100% !important;" class="cooper resultado" name="Distancia Teste Cooper"
+                id="distanciaCooper">
             </div>
             <div class="col">
-                <label for="taxaTesteCooper"><span class="font-sizeMenor">Capacidade Aeróbica</span></label>
-                <input type="text" readonly style="width:100% !important;" name="taxa Teste  aumentarLetraInput Cooper" id="taxaTesteCooper" class="resultado"></div>
+              <label for="taxaTesteCooper"><span class="font-sizeMenor">Capacidade Aeróbica</span></label>
+              <input type="text" readonly style="width:100% !important;" name="Capacidade Aeróbica"
+                id="taxaTesteCooper" class="resultado"></div>
 
-            
-              </div>
-              <br>
-              <label for="resultadoTesteCooper">V02máx. (ml. Kg-1, min-1)</label>
-              <input type="text" readonly style="width:100% !important;" name="Resultado aumentarLetraInput Teste de Cooper" id="resultadoTesteCooper" class="resultado">
+
+          </div>
+          <br>
+          <label for="resultadoTesteCooper">V02máx. (ml. Kg-1, min-1)</label>
+          <input type="text" readonly style="width:100% !important;" name="Vo2 Máx Cooper"
+            id="resultadoTesteCooper" class="resultado">
 
 
         </article>
@@ -1295,20 +1365,23 @@
           <br>
           formula: (ml/min/kg) = distancia (m) × 0.0084 + 36.4<br>
           <label for="distanciaYoYo">Distância</label>
-<div  class="form-row justify-content-center align-items-center">
-    
-<div class="col">
-  
-  <input type="number" class="yoyo resultado" name="Distancia Teste YoYo" placeholder="Digite a distância" id="distanciaYoYo" style="width: 100%!important"></div>
-<div class="col"><input type="text" readonly name="taxa YoYo" placeholder="VO2max" id="taxaYoYo" class="resultado" style="width: 100% !important"></div>
-</div>
-         
-          
+          <div class="form-row justify-content-center align-items-center">
+
+            <div class="col">
+
+              <input type="number" class="yoyo resultado" name="Distancia Teste YoYo" placeholder="Digite a distância"
+                id="distanciaYoYo" style="width: 100%!important"></div>
+            <div class="col"><input type="text" readonly name="YoYo taxa" placeholder="VO2max" id="taxaYoYo"
+                class="resultado" style="width: 100% !important"></div>
+          </div>
+
+
           <br>
           <label for="resultadoYoYo">VO2max (ml/kg/min)</label><br>
           <div class="resultadoFixer">
-              <input type="text" readonly name="Resultado YoYo" id="resultadoYoYo" class="resultado" style="width: 100%!important">
-            </div>
+            <input type="text" readonly name="Vo2 Máx YoYo" id="resultadoYoYo" class="resultado"
+              style="width: 100%!important">
+          </div>
 
 
         </article>
@@ -1319,36 +1392,39 @@
           <br>
           formula: P (Kgm.s) = 2.21 x peso Corporal x (raiz quadrada de Distancia)<br>
           <div class="form-row justify-content-center align-items-center">
-              <div class="col"> 
-                  <label for="alturaInicial">Altura Inicial (Cm)</label> 
-                  <input type="text" id="alturaInicial" placeholder="Altura Inicial" class="testeDeImpulsao">
-              </div>
             <div class="col">
-                
-              <label for="alturaSalto"><span class="font-sizeMenor">Altura Alcançada (Cm)</span></label> 
-              <input type="text" id="alturaSalto" placeholder="Altura Máxima" class="testeDeImpulsao">
-             
+              <label for="alturaInicial">Altura Inicial (Cm)</label>
+              <input type="text" id="alturaInicial" name="Altura Inicial Impulsão" placeholder="Altura Inicial" class="testeDeImpulsao">
+            </div>
+            <div class="col">
+
+              <label for="alturaSalto"><span class="font-sizeMenor">Altura Alcançada (Cm)</span></label>
+              <input type="text" id="alturaSalto" name="Altura Alcançada Impulsão" placeholder="Altura Máxima" class="testeDeImpulsao">
+
             </div>
           </div>
           <br>
           <div class="form-row justify-content-center align-items-center">
-              <div class="col">
-                  <label for="distanciaAlcançada"><span class="font-sizeMenor">Distância Alcançada (Cm)</span></label> 
-                  <input type="text" id="distanciaAlcançada" readonly placeholder="Distância Alcançada" class="testeDeImpulsao resultado" style="width: 100% !important">
-              </div>
-<div class="col">
-    <label for="resultadoImpulsao"> &nbsp</label> 
-    <input type="text" id="resultadoImpulsao" readonly class="testeDeImpulsao resultado" placeholder="..." style="width: 100% !important">
-</div>         
-         </div>
-<br>
-<label for="potenciaImpulsao">P (Kgm.s) </label>
-<input type="text" id="potenciaImpulsao" readonly class="testeDeImpulsao resultado" placeholder="..." style="width: 100% !important">
+            <div class="col">
+              <label for="distanciaAlcançada"><span class="font-sizeMenor">Distância Alcançada (Cm)</span></label>
+              <input type="text" id="distanciaAlcançada" name="Distancia Alcançada Impulsão" readonly placeholder="Distância Alcançada"
+                class="testeDeImpulsao resultado" style="width: 100% !important">
+            </div>
+            <div class="col">
+              <label for="resultadoImpulsao"> &nbsp</label>
+              <input type="text" id="resultadoImpulsao" name="Resultado Teste Impulsão" readonly class="testeDeImpulsao resultado" placeholder="..."
+                style="width: 100% !important">
+            </div>
+          </div>
+          <br>
+          <label for="potenciaImpulsao">P (Kgm.s) </label>
+          <input type="text" id="potenciaImpulsao" name="P (kgm.s) Impulsão" readonly class="testeDeImpulsao resultado" placeholder="..."
+            style="width: 100% !important">
 
 
 
           <br>
-          
+
 
 
         </article>
@@ -1362,7 +1438,7 @@
             <div class="col"><label for="MTornozeloDireito">Torzonelo (Direito)</label>
               <input type="number" name="M. Tornozelo Direito" id="MTornozeloDireito"></div>
             <div class="col"><label for="MTornozeloEsquerdo">Tornozelo (Esquerdo)</label>
-              <input type="number" name="M. Tornozelo Direito" id="MTornozeloEsquerdo"></div>
+              <input type="number" name="M. Tornozelo Esquerdo" id="MTornozeloEsquerdo"></div>
           </div>
         </article>
 
@@ -1381,8 +1457,8 @@
               <label for="naoquedadireito"><img src="img/ponte-e-extensao/nao-queda.jpg" alt="nao queda"></label></div>
             <div class="col">
               <input type="radio" id="quedaleve" value="QUEDA PÉLVICA LEVE" name="Ponte e Extensão (DIREITO)">
-              <label for="quedaleve"><img src="img/ponte-e-extensao/queda-leve.jpg"
-                  alt="queda pelvica leve"></label></div>
+              <label for="quedaleve"><img src="img/ponte-e-extensao/queda-leve.jpg" alt="queda pelvica leve"></label>
+            </div>
           </div><br>
           <div class="form-row justify-content-center align-items-center" style="width:100%;padding-left:20px;">
 
@@ -1401,8 +1477,8 @@
           <div class="form-row justify-content-center align-items-center" style="width:100%;padding-left:20px;">
 
             <div class="col">
-              <input type="radio" id="naoquedaesquerda" checked value="NÃO QUEDA" name="Ponte e Extensão (ESQUERDO)"> <label
-                for="naoquedaesquerda"><img src="img/ponte-e-extensao/nao-queda.jpg" alt="nao queda"></label></div>
+              <input type="radio" id="naoquedaesquerda" checked value="NÃO QUEDA" name="Ponte e Extensão (ESQUERDO)">
+              <label for="naoquedaesquerda"><img src="img/ponte-e-extensao/nao-queda.jpg" alt="nao queda"></label></div>
             <div class="col">
               <input type="radio" id="quedaleveesquerda" value="QUEDA PÉLVICA LEVE" name="Ponte e Extensão (ESQUERDO)">
               <label for="quedaleveesquerda"><img src="img/ponte-e-extensao/queda-leve.jpg"
@@ -1411,11 +1487,13 @@
           <div class="form-row justify-content-center align-items-center" style="width:100%;padding-left:20px;">
 
             <div class="col">
-              <input type="radio" id="quedamoderadaesquerda" value="QUEDA PÉLVICA MODERADA" name="Ponte e Extensão (ESQUERDO)">
+              <input type="radio" id="quedamoderadaesquerda" value="QUEDA PÉLVICA MODERADA"
+                name="Ponte e Extensão (ESQUERDO)">
               <label for="quedamoderadaesquerda"><img src="img/ponte-e-extensao/queda-moderada.jpg"
                   alt="queda pelvica moderada"></label></div>
             <div class="col">
-              <input type="radio" id="quedaacentuadaesquerda" value="QUEDA PÉLVICA ACENTUADA" name="Ponte e Extensão (ESQUERDO)">
+              <input type="radio" id="quedaacentuadaesquerda" value="QUEDA PÉLVICA ACENTUADA"
+                name="Ponte e Extensão (ESQUERDO)">
               <label for="quedaacentuadaesquerda"><img src="img/ponte-e-extensao/queda-acentuada.jpg"
                   alt="queda pelvica acentuada"></label></div>
           </div>
@@ -1424,7 +1502,127 @@
 
         </article>
 
+        <article>
 
+          <h2 class="article-title">DINAMOMETRIA</h2>
+<br>
+          <table class="text-center" width="100%">
+            <tr>
+                <td colspan="2" rowspan="2"></td>
+              
+              <th class="text-center" style="background:#eee; border-right:1px solid #000" colspan="3">Extensão</th>
+              <th class="text-center" style="background:#eee" colspan="3">Flexão</th>
+            </tr>
+
+            <tr>
+
+              
+              <td style="background:#eee;">D</td>
+              <td style="background:#eee;">E</td>
+              <td style="background:#eee; border-right:1px solid black !important">Deficit</td>
+              <td style=" background:#eee">D</td>
+              <td style="background:#eee;">E</td>
+              <td style="background:#eee;">Deficit</td>
+            </tr>
+            <tr><!--Linha do torque-->
+
+
+              <td>Pico de Torque</td>
+              <td>60°</td>
+              <td><input type="text" class="inputTable" id="ExtensãoTorque60Direita" name="Torque Extensão 60 Direita"></td><!--extensão direita-->
+              <td><input type="text" class="inputTable" id="ExtensãoTorque60Direita" name="Torque Extensão 60 Esquerda"></td><!--extensão esquerda-->
+              <td class="tableBorderRight"><input type="text"  class="inputTable" id="ExtensãoTorque60Deficit" name="Torque Extensão 60 Deficit"></td><!--extensao deficit-->
+              <td><input type="text" class="inputTable" id="FlexãoTorque60Direita" name="Torque Flexão 60 Direita"></td><!--flexao direita-->
+              <td><input type="text" class="inputTable" id="FlexãoTorque60Direita" name="Torque Flexão 60 Esquerda"></td><!--flexao esquerda-->
+              <td><input type="text" class="inputTable" id="FlexãoTorque60Deficit" name="Torque Flexão 60 Deficit"></td><!--flexao deficit-->
+              
+            </tr>
+            <tr style="background: #fff"><!--Linha do potencia-->
+
+
+              <td style="background: #fff" width="24%"rowspan="2" >Potência</td>
+              <td class="font-sizeMenor" style="background: #fff">180°/s</td>
+              
+              <td><input type="text" class="inputTable" id="ExtensãoPotencia180Direita" name="Potencia Extensão 180 Direita"></td><!--extensão direita-->
+              <td><input type="text" class="inputTable" id="ExtensãoPotencia180Esquerda" name="Potencia Extensão 180 Esquerda"></td><!--extensão esquerda-->
+              <td class="tableBorderRight"><input type="text" class="inputTable" id="ExtensãoPotencia180Deficit" name="Potencia Extensão 180 Deficit"></td><!--extensao deficit-->
+              <td><input type="text" class="inputTable" id="FlexãoPotencia180Direita" name="Potencia Flexão 180 Direita"></td><!--flexao direita-->
+              <td><input type="text" class="inputTable" id="FlexãoPotencia180Esquerda" name="Potencia Flexão 180 Esquerda"></td><!--flexao esquerda-->
+              <td><input type="text" class="inputTable" id="FlexãoPotencia180Deficit" name="Potencia Flexão 180 Deficit"></td><!--flexao deficit-->
+              
+            </tr>
+            
+            <tr style="background: #fff"><!--Linha do potencia-->
+
+
+                <td class="font-sizeMenor">300°/s</td>
+                
+              <td><input type="text" class="inputTable" id="extensãoPotencia300Direita" name="Potencia Extensão 300 Direita"></td><!--extensão direita-->
+              <td><input type="text" class="inputTable" id="extensãoPotencia300Esquerda" name="Potencia Extensão 300 Esquerda"></td><!--extensão esquerda-->
+              <td class="tableBorderRight"><input type="text" class="inputTable" id="ExtensãoPotencia300Deficit" name="Potencia Extensão 300 Deficit"></td><!--extensao deficit-->
+              <td><input type="text" class="inputTable" id="FlexãoPotencia300Direita" name="Potencia Flexão 300 Direita"></td><!--flexao direita-->
+              <td><input type="text" class="inputTable" id="FlexãoPotencia300Esquerda" name="Potencia Flexão 300 Esquerda"></td><!--flexao esquerda-->
+              <td><input type="text" class="inputTable" id="FlexãoPotencia300Deficit" name="Potencia Flexão 300 Deficit"></td><!--flexao deficit-->
+              
+            </tr>
+            <tr><!--Linha do trabalho-->
+
+              <td rowspan="2">Trabalho</td>
+              <td class="font-sizeMenor">180°/s</td>
+              
+              <td><input type="text" class="inputTable" id="ExtensãoTrabalho180Direita" name="Trabalho Extensão 180 Direita"></td><!--extensão direita-->
+              <td><input type="text" class="inputTable" id="ExtensãoTrabalho180Esquerda" name="Trabalho Extensão 180 Esquerda"></td><!--extensão esquerda-->
+              <td class="tableBorderRight"><input type="text" class="inputTable" id="ExtensãoTrabalho180Deficit" name="Trabalho Extensão 180 Deficit"></td><!--extensao deficit-->
+              <td><input type="text" class="inputTable" id="FlexãoTrabalho180Direita" name="Trabalho Flexão 180 Direita"></td><!--flexao direita-->
+              <td><input type="text" class="inputTable" id="FlexãoTrabalho180Esquerda" name="Trabalho Flexão 180 Esquerda"></td><!--flexao esquerda-->
+              <td><input type="text" class="inputTable" id="FlexãoTrabalho180Deficit" name="Trabalho Flexão 180 Deficit"></td><!--flexao deficit-->
+              
+            </tr>
+            <tr><!--Linha do trabalho-->
+
+
+              
+              <td class="font-sizeMenor">300°/s</td>
+              
+              <td><input type="text" class="inputTable" id="ExtensãoTrabalho300Direita" name="Trabalho Extensão 300 Direita"></td><!--extensão direita-->
+              <td><input type="text" class="inputTable" id="ExtensãoTrabalho300Esquerda" name="Trabalho Extensão 300 Esquerda"></td><!--extensão esquerda-->
+              <td class="tableBorderRight"><input type="text" class="inputTable" id="ExtensãoTrabalho300Deficit" name="Trabalho Extensão 300 Deficit"></td><!--extensao deficit-->
+              <td><input type="text" class="inputTable" id="FlexãoTrabalho300Direita" name="Trabalho Flexão 300 Direita"></td><!--flexao direita-->
+              <td><input type="text" class="inputTable" id="FlexãoTrabalho300Esquerda" name="Trabalho Flexão 300 Esquerda"></td><!--flexao esquerda-->
+              <td><input type="text" class="inputTable" id="FlexãoTrabalho300Deficit" name="Trabalho Flexão 300 Deficit"></td><!--flexao deficit-->
+              
+            </tr>
+            <tr style="background: #fff"><!--Linha do Indice de fadiga-->
+
+
+              <td class="font-sizeMenor">Índice de Fadiga</td>
+              <td class="font-sizeMenor">300°/s</td>
+              <td><input type="text" class="inputTable" id="extensãoIndiceDeFadiga300Direita" name="Índice de Fadiga Extensão 300 Direita"></td><!--extensão direita-->
+              <td><input type="text" class="inputTable" id="ExtensãoIndiceDeFadiga300Direita" name="Índice de Fadiga Extensão 300 Esquerda"></td><!--extensão esquerda-->
+              <td class="tableBorderRight"><input type="text" class="inputTable" id="ExtensãoIndiceDeFadiga300Deficit" name="Índice de Fadiga Extensão 300 Deficit"></td><!--extensao deficit-->
+              <td><input type="text" class="inputTable" id="FlexãoIndiceDeFadiga300Direita" name="Índice de Fadiga Flexão 300 Direita"></td><!--flexao direita-->
+              <td><input type="text" class="inputTable" id="FlexãoIndiceDeFadiga300Direita" name="Índice de Fadiga Flexão 300 Esquerda"></td><!--flexao esquerda-->
+              <td><input type="text" class="inputTable" id="FlexãoIndiceDeFadiga300Deficit" name="Índice de Fadiga Flexão 300 Deficit"></td><!--flexao deficit-->
+              
+            </tr>
+            <tr>
+
+              <td colspan="2" class="font-sizeMenor">IDM</td><!--linha idm-->
+              <td colspan="3" class="tableBorderRight"><input type="text" class="inputTable" id="extensaoIDM" name="IDM Extensão"></td><!--extensão direita-->
+              <td colspan="3"><input type="text" class="inputTable" id="flexaoIDM" name="IDM Flexão"></td><!--extensão esquerda-->
+                            
+            </tr>
+            <tr style="background: #fff"><!---linha R QI-->
+
+                <td colspan="2" class="font-sizeMenor">Relação Q/I</td>
+                <td><input type="text" class="inputTable" id="direitaRelacaoQI" name="Relacao Q/I Direita"></td><!--extensão direita-->
+              <td><input type="text" class="inputTable" id="esquerdaRelacaoQI" name="Relacao Q/I Esquerda"></td><!--extensão esquerda-->
+              
+              
+              </tr>
+          </table>
+
+        </article>
 
         <BR><BR>
 
@@ -1432,7 +1630,8 @@
 
         <div id="botoes">
           <div class="ajeita-botao">
-            <button id="true-button" class="none resultado" style="display:block; border-radius:20px; font-size:20px !important;" type="submit"
+            <button id="true-button" class="none resultado"
+              style="display:block; border-radius:20px; font-size:20px !important;" type="submit"
               name="myButton">Enviar</button>
             <button id="fake-button" class="none" type="button" style="display:none; "
               onclick="semInternet()">Enviar</button>
@@ -1456,7 +1655,7 @@
         </div>
 
 
-      </form>
+    </form>
     </section>
     <!--COMEÇO DA SESSAO REFERENCIAS
   <section id="referencias">
@@ -1500,7 +1699,7 @@ FIM DA SESSAO REFERENCIAS-->
 
 
 
- 
+
 
 
 

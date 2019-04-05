@@ -41,7 +41,6 @@
         else{
           resultadoEscrito.removeClass("resultGray")
           resultadoEscrito.removeClass("faltaCampo")
-          resultadoNumero.removeClass('resultGray')
       
             if (sexo == "MASCULINO"){
             /*20 - 29*/

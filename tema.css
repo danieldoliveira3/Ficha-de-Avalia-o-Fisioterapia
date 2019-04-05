@@ -287,7 +287,9 @@ input.numero{
     text-align: center;
     background-attachment: scroll;
     color: black;
+    margin-top:30px;
     font-size: 30px;
+    font-weight: bold;
 }
 
 footer{position: absolute;display: flex;justify-content: center; align-items: center;
@@ -778,3 +780,12 @@ article img {width:200px;}
 .fieldsetLogin{border:2px solid #000;}
 #wrapLoginESenha{height:auto; margin:0 auto;border:1px solid rgb(197, 197, 197); border-radius:24px; padding:10px 30px 10px 30px;}
 #fakelogin h2{font-size:1.6em!important}
+
+.desativar{opacity: 0.4;}
+
+table{border:1px solid #ccc;}
+table td{border: 1px solid #ccc; text-align:center;}
+table th{border: 1px solid #ccc}
+
+.inputTable{width:100%!important; text-align:center; background:transparent; border:none; font-size:12px; box-shadow:none;border-radius:0; padding:0;}
+.tableBorderRight{border-right:1px solid black !important}
